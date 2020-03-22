@@ -1,0 +1,11 @@
+- platform: rpi_gpio
+  ports:
+    18: gas_boiler
+    23: pump_fireplace_first_floor
+    24: pump_fireplace_second_floor
+    23: pump_first_floor
+    24: pump_second_floor
+    25: red_led
+    26: orange_led
+    27: blue_led
+  invert_logic: true

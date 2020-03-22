@@ -1,0 +1,77 @@
+gas_boiler_summer_temp_from:
+  name: 'Min. teplota pro zapnutí'
+  min: 0
+  max: 50
+  mode: box
+  step: 1
+  unit_of_measurement: °C
+gas_boiler_summer_temp_to:
+  name: 'Max. teplota pro vypnutí'
+  min: 0
+  max: 80
+  mode: box
+  step: 1
+  unit_of_measurement: °C
+gas_boiler_winter_temp_from:
+  name: 'Min. teplota pro zapnutí'
+  min: 0
+  max: 50
+  mode: box
+  step: 1
+  unit_of_measurement: °C
+gas_boiler_winter_temp_to:
+  name: 'Max. teplota pro vypnutí'
+  min: 0
+  max: 80
+  mode: box
+  step: 1
+  unit_of_measurement: °C
+gas_boiler_temp_hysteresis:
+  name: 'Hystereze'
+  min: 0
+  max: 20
+  mode: box
+  step: 0.1
+  unit_of_measurement: °C
+led_indication_min_value_temp_top_sensor:
+  name: 'Min. hodnota pro indikaci modré LED'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  unit_of_measurement: °C
+led_indication_max_value_temp_middle_sensor:
+  name: 'Max. hodnota pro indikaci oranžové LED'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  unit_of_measurement: °C
+led_indication_max_value_temp_bottom_sensor:
+  name: 'Max. hodnota pro indikaci červené LED'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  unit_of_measurement: °C
+fireplace_first_floor_min_temp_value:
+  name: 'Min. hodnota pro zapnutí čerpadla krbu pro první patro'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  unit_of_measurement: °C
+fireplace_first_second_min_temp_value:
+  name: 'Min. hodnota pro zapnutí čerpadla krbu pro druhé patro'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  unit_of_measurement: °C
+min_temp_summer_mode:
+  name: 'Min. hodnota venkovní teploty pro letní mód'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  unit_of_measurement: °C

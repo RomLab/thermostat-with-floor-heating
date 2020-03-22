@@ -1,0 +1,10 @@
+manual_control_mode:
+  name: 'Manuální mód řízení'
+manual_summer_mode:
+  name: 'Manuální letní mód'
+manual_winter_mode:
+  name: 'Manuální zimní mód'
+control_mode_from_outdoor_temp_sensor:
+  name: 'Režim ovládání režim podle venk. teplo. čidla'
+keep_same_states:
+  name: 'Nechá nastavené stavy'

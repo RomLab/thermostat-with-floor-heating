@@ -1,0 +1,5 @@
+binary_sensor:
+  - platform: rpi_gpio
+    ports:
+      11: temp_first_floor
+      12: temp_second_floor

@@ -1,0 +1,5 @@
+turn_on_gas_boiler:
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.gas_boiler

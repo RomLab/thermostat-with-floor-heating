@@ -1,0 +1,8 @@
+- platform: onewire
+  names:
+    28-031730664fff: hot_water_tank_top
+    28-0317305433ff: hot_water_tank_middle
+    28-0114326b35cc: hot_water_tank_bottom
+    28-0114327e34bb: fireplace_second_floor
+    28-0114327e34bb: fireplace_first_floor
+    28-0114327e34bb: outdoor
