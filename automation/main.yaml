@@ -5,12 +5,12 @@
     event: start
   action:
     - service: script.turn_on
-        entity_id: >
-          - script.hot_water_tank_top_sensor_gas_boiler, 
-          - script.temp_corridor_first_floor
-          - script.temp_corridor_second_floor
-          - script.fireplace_first_floor_temp_sensor
-          - script.fireplace_second_floor_temp_sensor
-          - script.hot_water_tank_top_sensor_led_indication
-          - script.hot_water_tank_middle_sensor_led_indication
-          - script.hot_water_tank_bottom_sensor_led_indication
+      entity_id: 
+        - script.hot_water_tank_top_sensor_gas_boiler 
+        - script.temp_corridor_first_floor
+        - script.temp_corridor_second_floor
+        - script.fireplace_first_floor_temp_sensor
+        - script.fireplace_second_floor_temp_sensor
+        - script.hot_water_tank_top_sensor_led_indication
+        - script.hot_water_tank_middle_sensor_led_indication
+        - script.hot_water_tank_bottom_sensor_led_indication

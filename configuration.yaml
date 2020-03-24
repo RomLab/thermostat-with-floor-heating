@@ -1,0 +1,25 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+lovelace:
+  mode: yaml
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+
+input_number: !include_dir_merge_named input_numbers/
+input_boolean: !include_dir_merge_named input_booleans/
+switch: !include_dir_merge_list control_gpio_devices/
+binary_sensor: !include_dir_merge_list read_gpio_devices/
+
+sensor: !include_dir_merge_list sensors/
+
+automation: !include_dir_merge_list automation/
+script: !include_dir_merge_named scripts/
+

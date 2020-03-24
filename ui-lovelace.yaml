@@ -1,0 +1,39 @@
+views:
+  - title: Home
+    cards:
+      - type: glance
+        title: 'Spínání kotle – léto'
+        entities:
+          - input_number.gas_boiler_summer_temp_from
+          - input_number.gas_boiler_summer_temp_to
+      - type: glance
+        title: 'Spínání kotle – zima'
+        entities:
+          - input_number.gas_boiler_winter_temp_from
+          - input_number.gas_boiler_winter_temp_to
+      - type: glance
+        title: 'Ostatní nastavení'
+        entities:
+          - input_number.gas_boiler_temp_hysteresis
+          - input_number.min_temp_summer_mode
+      - type: glance
+        title: 'LED indikace – mezní parametry'
+        entities:
+          - input_number.led_indication_min_value_temp_top_sensor
+          - input_number.led_indication_max_value_temp_middle_sensor
+          - input_number.led_indication_max_value_temp_bottom_sensor
+      - type: glance
+        title: 'Krby – spínání čerpadel'
+        entities:
+          - input_number.fireplace_first_floor_min_temp_value
+          - input_number.fireplace_first_second_min_temp_value
+      - type: glance
+        title: 'Manuální mód řízení'
+        entities:
+          - input_boolean.manual_control_mode
+          - input_boolean.manual_summer_mode
+          - input_boolean.manual_winter_mode
+      - type: glance
+        title: 'Automatický mód řízení'
+        entities:
+          - input_boolean.control_mode_from_outdoor_temp_sensor
