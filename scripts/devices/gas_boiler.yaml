@@ -3,3 +3,9 @@ turn_off_gas_boiler:
     - service: switch.turn_off
       data:
         entity_id: switch.gas_boiler
+
+turn_on_gas_boiler:
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.gas_boiler

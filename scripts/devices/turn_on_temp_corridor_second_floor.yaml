@@ -1,5 +1,0 @@
-turn_on_temp_corridor_second_floor:
-  sequence:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.pump_second_floor

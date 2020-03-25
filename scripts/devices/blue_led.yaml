@@ -3,3 +3,9 @@ turn_off_blue_led:
     - service: switch.turn_off
       data:
         entity_id: switch.blue_led
+
+turn_on_blue_led:
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.blue_led

@@ -3,3 +3,9 @@ turn_off_pump_fireplace_first_floor:
     - service: switch.turn_off
       data:
         entity_id: switch.pump_fireplace_first_floor
+
+turn_on_pump_fireplace_first_floor:
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.pump_fireplace_first_floor
