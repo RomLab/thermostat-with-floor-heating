@@ -1,7 +1,7 @@
 temp_corridor_second_floor:
   sequence:
     - service_template: >
-        {%- if is_state('binary_sensor.temp_second_floor', 'off') and (is_state('sensor.mode_control_from_manual_control', 'winter') or is_state('sensor.mode_control_from_outdoor_temp_sensor', 'winter')) -%}
+        {%- if is_state('binary_sensor.temp_second_floor', 'off') and (is_state('input_boolean.manual_winter_mode', 'on') or is_state('sensor.mode_control_from_outdoor_temp_sensor', 'winter')) -%}
            script.turn_on_pump_second_floor
         {%- else -%}
             script.turn_off_pump_second_floor

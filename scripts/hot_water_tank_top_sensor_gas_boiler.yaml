@@ -3,7 +3,7 @@ hot_water_tank_top_sensor_gas_boiler:
     - service_template: >
         {%- set hot_water_tank_top_sensor = states('sensor.hot_water_tank_top_temperature') | int -%}
         {%- set gas_boiler_temp_hysteresis = states('sensor.gas_boiler_temp_hysteresis') | float -%}
-        {%- if is_state('sensor.mode_control_from_manual_control', 'summer') or is_state('sensor.mode_control_from_outdoor_temp_sensor', 'summer') -%}
+        {%- if is_state('input_boolean.manual_summer_mode', 'on') or is_state('sensor.mode_control_from_outdoor_temp_sensor', 'summer') -%}
             {%- if hot_water_tank_top_sensor < (states('input_number.gas_boiler_summer_temp_from') | float) - gas_boiler_temp_hysteresis -%}
               script.turn_on_gas_boiler
             {%- elif hot_water_tank_top_sensor >= states('input_number.gas_boiler_summer_temp_to') -%}
@@ -11,7 +11,7 @@ hot_water_tank_top_sensor_gas_boiler:
             {%- else -%}
               script.keep_same_states
             {%- endif -%}
-        {%- elif is_state('sensor.mode_control_from_manual_control', 'winter') or is_state('sensor.mode_control_from_outdoor_temp_sensor', 'winter') -%}
+        {%- elif is_state('sensor.manual_winter_mode', 'on') or is_state('sensor.mode_control_from_outdoor_temp_sensor', 'winter') -%}
             {%- if hot_water_tank_top_sensor < (states('input_number.gas_boiler_winter_temp_from') | float) - gas_boiler_temp_hysteresis -%}
               script.turn_on_gas_boiler
             {%- elif hot_water_tank_top_sensor >= states('input_number.gas_boiler_winter_temp_to') -%}

@@ -8,3 +8,5 @@ control_mode_from_outdoor_temp_sensor:
   name: 'Podle venkovní teploty'
 keep_same_states:
   name: 'Nechá nastavené stavy'
+manual_control_devices:
+  name: 'Manuální ovládání koncových zařízení'

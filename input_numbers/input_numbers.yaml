@@ -39,7 +39,7 @@ gas_boiler_temp_hysteresis:
   initial: 2
   unit_of_measurement: °C
 led_indication_min_value_temp_top_sensor:
-  name: 'Min. hodnota pro indikaci modré LED'
+  name: 'Min. hodnota'
   min: 0
   max: 100
   mode: slider
@@ -47,7 +47,7 @@ led_indication_min_value_temp_top_sensor:
   initial: 45
   unit_of_measurement: °C
 led_indication_max_value_temp_middle_sensor:
-  name: 'Max. hodnota pro indikaci oranžové LED'
+  name: 'Max. hodnota'
   min: 0
   max: 100
   mode: slider
@@ -55,7 +55,7 @@ led_indication_max_value_temp_middle_sensor:
   initial: 85
   unit_of_measurement: °C
 led_indication_max_value_temp_bottom_sensor:
-  name: 'Max. hodnota pro indikaci červené LED'
+  name: 'Max. hodnota'
   min: 0
   max: 100
   mode: slider
