@@ -1,0 +1,39 @@
+sensor.hot_water_tank_top_temperature:
+  friendly_name: 'Zásobník vody horní čidlo'
+  icon:  mdi:format-vertical-align-top
+sensor.hot_water_tank_middle_temperature:
+  friendly_name: 'Zásobník vody střední čidlo'
+  icon: mdi:format-align-middle
+sensor.hot_water_tank_bottom_temperature:
+  friendly_name: 'Zásobník vody spodní čidlo'
+  icon: mdi:format-vertical-align-bottom
+sensor.fireplace_first_floor_temperature:
+  friendly_name: 'První patro krb'
+  icon: mdi:fireplace
+sensor.fireplace_second_floor_temperature:
+  friendly_name: 'Druhé patro krb'
+  icon: mdi:fireplace
+sensor.outdoor_temperature:
+  friendly_name: 'Venkovní teplota'
+  icon: mdi:home-thermometer   
+input_number.led_indication_min_value_temp_top_sensor:
+  entity_picture: /local/images/icons/red-led.png
+input_number.led_indication_max_value_temp_middle_sensor:
+  entity_picture: /local/images/icons/orange-led.png
+input_number.led_indication_max_value_temp_bottom_sensor:
+  entity_picture: /local/images/icons/blue-led.png
+switch.gas_boiler: 
+  friendly_name: 'Plynový kotel'
+  icon: mdi:water-boiler
+switch.pump_fireplace_first_floor:
+  friendly_name: 'První patro čerpadlo krbu'
+  icon: mdi:fireplace
+switch.pump_fireplace_second_floor:
+  friendly_name: 'Druhé patro čerpadlo krbu'
+  icon: mdi:fireplace
+switch.pump_first_floor:
+  friendly_name: 'První patro podlahové topení'
+  icon: mdi:home-floor-1
+switch.pump_second_floor:
+  friendly_name: 'Druhé patro podlahové topení'
+  icon: mdi:home-floor-2

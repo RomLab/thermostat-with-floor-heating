@@ -1,76 +1,77 @@
 views:
   - title: 'Nastavení'
+    path: nastaveni
     cards:
       - type: horizontal-stack
         title: 'Módy řízení'
         cards:
           - type: entity-button
             entity: input_boolean.manual_summer_mode
-            icon: mdi:white-balance-sunny
           - type: entity-button
             entity: input_boolean.manual_winter_mode
-            icon: mdi:snowflake
           - type: entity-button
             entity: input_boolean.control_mode_from_outdoor_temp_sensor
-            icon: mdi:home-thermometer
       - type: horizontal-stack
         title: 'Spínání plynového kotle'
         cards:
           - type: glance
             title: 'Léto'
             entities:
-              - entity: input_number.gas_boiler_summer_temp_from
-                icon: mdi:thermometer
-              - entity: input_number.gas_boiler_summer_temp_to
-                icon: mdi:thermometer
+              - input_number.gas_boiler_summer_temp_from
+              - input_number.gas_boiler_summer_temp_to
           - type: glance
             title: 'Zima'
             entities:
-              - entity: input_number.gas_boiler_winter_temp_from
-                icon: mdi:thermometer
-              - entity: input_number.gas_boiler_winter_temp_to
-                icon: mdi:thermometer
+              - input_number.gas_boiler_winter_temp_from
+              - input_number.gas_boiler_winter_temp_to
       - type: glance
         title: 'Krby – spínání čerpadel'
         entities:
-          - entity: input_number.fireplace_first_floor_min_temp_value
-            icon: mdi:thermometer
-          - entity: input_number.fireplace_first_second_min_temp_value
-            icon: mdi:thermometer
+          - input_number.fireplace_first_floor_min_temp_value
+          - input_number.fireplace_first_second_min_temp_value
       - type: glance
         title: 'LED indikace – mezní parametry'
         entities:
-          - entity: input_number.led_indication_min_value_temp_top_sensor
-            image: /local/images/icons/red-led.png
-          - entity: input_number.led_indication_max_value_temp_middle_sensor
-            image: /local/images/icons/orange-led.png
-          - entity: input_number.led_indication_max_value_temp_bottom_sensor
-            image: /local/images/icons/blue-led.png
+          - input_number.led_indication_min_value_temp_top_sensor
+          - input_number.led_indication_max_value_temp_middle_sensor
+          - input_number.led_indication_max_value_temp_bottom_sensor
       - type: glance
         title: 'Ostatní nastavení'
         entities:
-          - entity: input_number.gas_boiler_temp_hysteresis
-            icon: mdi:thermometer
-          - entity: input_number.min_temp_summer_mode
-            icon: mdi:thermometer
+          - input_number.gas_boiler_temp_hysteresis
+          - input_number.min_temp_summer_mode
+      - type: vertical-stack
+        title: 'Teploty'
+        cards:
+          - type: history-graph
+            title: 'Porovnání teploty'
+            entities:
+              - entity: sensor.hot_water_tank_top_temperature
+              - entity: sensor.hot_water_tank_middle_temperature
+              - entity: sensor.hot_water_tank_bottom_temperature
+              - entity: sensor.fireplace_first_floor_temperature
+              - entity: sensor.fireplace_second_floor_temperature
+              - entity: sensor.outdoor_temperature
+          - type: entities
+            title: 'Jednotlivé sensory'
+            show_header_toggle: false
+            entities:
+              - entity: sensor.hot_water_tank_top_temperature
+              - entity: sensor.hot_water_tank_middle_temperature
+              - entity: sensor.hot_water_tank_bottom_temperature
+              - entity: sensor.fireplace_first_floor_temperature
+              - entity: sensor.fireplace_second_floor_temperature
+              - entity: sensor.outdoor_temperature     
   - title: 'Zařízení'
+    path: zarizeni
     cards:
       - type: entities
         title: 'Koncová zařízení'
+        show_header_toggle: false
         entities:
           - input_boolean.manual_control_devices
           - entity: switch.gas_boiler
-            name: 'Plynový kotel'
-            icon: mdi:water-boiler
           - entity: switch.pump_fireplace_first_floor
-            name: 'První patro čerpadlo krbu'
-            icon: mdi:fireplace
           - entity: switch.pump_fireplace_second_floor
-            name: 'Druhé patro čerpadlo krbu'
-            icon: mdi:fireplace
           - entity: switch.pump_first_floor
-            name: 'První patro podlahové topení'
-            icon: mdi:home-floor-1
           - entity: switch.pump_second_floor
-            name: 'Druhé patro podlahové topení'
-            icon: mdi:home-floor-2

@@ -2,11 +2,14 @@ manual_control_mode:
   name: 'Manuální mód řízení'
 manual_summer_mode:
   name: 'Letní mód'
+  icon: mdi:white-balance-sunny
 manual_winter_mode:
   name: 'Zimní mód'
+  icon: mdi:snowflake
 control_mode_from_outdoor_temp_sensor:
-  name: 'Podle venkovní teploty'
+  name: 'Venkovní teplota'
+  icon: mdi:home-thermometer
 keep_same_states:
   name: 'Nechá nastavené stavy'
 manual_control_devices:
-  name: 'Manuální ovládání koncových zařízení'
+  name: 'Manuální ovládání zařízení'

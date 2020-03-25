@@ -6,6 +6,7 @@ gas_boiler_summer_temp_from:
   step: 1
   initial: 45
   unit_of_measurement: °C
+  icon: mdi:thermometer
 gas_boiler_summer_temp_to:
   name: 'Max. vypnutí'
   min: 0
@@ -14,6 +15,7 @@ gas_boiler_summer_temp_to:
   step: 1
   initial: 75
   unit_of_measurement: °C
+  icon: mdi:thermometer
 gas_boiler_winter_temp_from:
   name: 'Min. zapnutí'
   min: 0
@@ -22,6 +24,7 @@ gas_boiler_winter_temp_from:
   step: 1
   initial: 40
   unit_of_measurement: °C
+  icon: mdi:thermometer
 gas_boiler_winter_temp_to:
   name: 'Max. vypnutí'
   min: 0
@@ -30,6 +33,7 @@ gas_boiler_winter_temp_to:
   step: 1
   initial: 50
   unit_of_measurement: °C
+  icon: mdi:thermometer
 gas_boiler_temp_hysteresis:
   name: 'Hystereze kotle'
   min: 0
@@ -38,6 +42,7 @@ gas_boiler_temp_hysteresis:
   step: 0.1
   initial: 2
   unit_of_measurement: °C
+  icon: mdi:thermometer
 led_indication_min_value_temp_top_sensor:
   name: 'Min. hodnota'
   min: 0
@@ -69,6 +74,7 @@ fireplace_first_floor_min_temp_value:
   mode: slider
   step: 1
   unit_of_measurement: °C
+  icon: mdi:thermometer
 fireplace_first_second_min_temp_value:
   name: 'Min. druhé patro'
   min: 0
@@ -76,6 +82,7 @@ fireplace_first_second_min_temp_value:
   mode: slider
   step: 1
   unit_of_measurement: °C
+  icon: mdi:thermometer
 min_temp_summer_mode:
   name: 'Min. venkovní teplota pro letní mód'
   min: 0
@@ -83,3 +90,4 @@ min_temp_summer_mode:
   mode: slider
   step: 1
   unit_of_measurement: °C
+  icon: mdi:thermometer
