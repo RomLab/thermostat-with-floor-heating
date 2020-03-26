@@ -39,7 +39,7 @@ gas_boiler_temp_hysteresis:
   min: 0
   max: 20
   mode: slider
-  step: 0.1
+  step: 1
   initial: 2
   unit_of_measurement: °C
   icon: mdi:thermometer
@@ -75,7 +75,7 @@ fireplace_first_floor_min_temp_value:
   step: 1
   unit_of_measurement: °C
   icon: mdi:thermometer
-fireplace_first_second_min_temp_value:
+fireplace_second_floor_min_temp_value:
   name: 'Min. druhé patro'
   min: 0
   max: 100

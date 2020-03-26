@@ -4,8 +4,8 @@ hot_water_tank_bottom_sensor_led_indication:
     - service_template: >
         {%- set hot_water_tank_bottom_sensor = states('sensor.hot_water_tank_bottom_temperature') | int -%}
         {%- set gas_boiler_temp_hysteresis = states('sensor.gas_boiler_temp_hysteresis') | float -%}
-        {%- set led_indication_min_value_temp_bottom_sensor = states('input_number.led_indication_min_value_temp_bottom_sensor') | float -%}
-        {%- if hot_water_tank_bottom_sensor >= led_indication_min_value_temp_bottom_sensor - gas_boiler_temp_hysteresis -%}
+        {%- set led_indication_max_value_temp_bottom_sensor = states('input_number.led_indication_max_value_temp_bottom_sensor') | float -%}
+        {%- if hot_water_tank_bottom_sensor >= led_indication_max_value_temp_bottom_sensor - gas_boiler_temp_hysteresis -%}
           script.turn_on_red_led
         {%- else -%}
           script.turn_off_red_led

@@ -1,0 +1,47 @@
+- platform: template
+  sensors:
+    blue_led:
+      friendly_name_template: >-
+        {% set led_indication_min_value_temp_top_sensor = states('input_number.led_indication_min_value_temp_top_sensor') | int %}
+        {% if is_state('switch.blue_led', 'on') %}
+          Teplota pod {{ led_indication_min_value_temp_top_sensor }} °C 
+        {% else %}
+          Teplota nad {{ led_indication_min_value_temp_top_sensor }} °C
+        {% endif %}
+      value_template: >-
+        {% if is_state('switch.blue_led', 'on') %}
+          Zapnuto
+        {% else %}
+          Vypnuto
+        {% endif %}
+      entity_picture_template: '/local/images/icons/blue-led.png'
+    orange_led:
+      friendly_name_template: >-
+        {% set led_indication_min_value_temp_middle_sensor = states('input_number.led_indication_min_value_temp_middle_sensor') | int %}
+        {% if is_state('switch.orange_led', 'on') %}
+          Teplota nad {{ led_indication_min_value_temp_middle_sensor }} °C 
+        {% else %}
+          Teplota pod {{ led_indication_min_value_temp_middle_sensor }} °C
+        {% endif %}
+      value_template: >-
+        {% if is_state('switch.orange_led', 'on') %}
+          Zapnuto
+        {% else %}
+          Vypnuto
+        {% endif %}
+      entity_picture_template: '/local/images/icons/orange-led.png'
+    red_led:
+      friendly_name_template: >-
+        {% set led_indication_min_value_temp_bottom_sensor = states('input_number.led_indication_min_value_temp_bottom_sensor') | int %}
+        {% if is_state('switch.red_led', 'on') %}
+          Teplota nad {{ led_indication_min_value_temp_bottom_sensor }} °C 
+        {% else %}
+          Teplota pod {{ led_indication_min_value_temp_bottom_sensor }} °C
+        {% endif %}
+      value_template: >-
+        {% if is_state('switch.red_led', 'on') %}
+          Zapnuto
+        {% else %}
+          Vypnuto
+        {% endif %}
+      entity_picture_template: '/local/images/icons/red-led.png'

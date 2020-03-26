@@ -17,11 +17,11 @@ sensor.outdoor_temperature:
   friendly_name: 'Venkovní teplota'
   icon: mdi:home-thermometer   
 input_number.led_indication_min_value_temp_top_sensor:
-  entity_picture: /local/images/icons/red-led.png
+  entity_picture: /local/images/icons/blue-led.png
 input_number.led_indication_max_value_temp_middle_sensor:
   entity_picture: /local/images/icons/orange-led.png
 input_number.led_indication_max_value_temp_bottom_sensor:
-  entity_picture: /local/images/icons/blue-led.png
+  entity_picture: /local/images/icons/red-led.png
 switch.gas_boiler: 
   friendly_name: 'Plynový kotel'
   icon: mdi:water-boiler
@@ -36,4 +36,10 @@ switch.pump_first_floor:
   icon: mdi:home-floor-1
 switch.pump_second_floor:
   friendly_name: 'Druhé patro podlahové topení'
+  icon: mdi:home-floor-2
+binary_sensor.temp_first_floor:
+  friendly_name: 'První patro'
+  icon: mdi:home-floor-1
+binary_sensor.temp_second_floor:
+  friendly_name: 'Druhé patro'
   icon: mdi:home-floor-2

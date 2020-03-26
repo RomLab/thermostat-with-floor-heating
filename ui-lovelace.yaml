@@ -28,7 +28,7 @@ views:
         title: 'Krby – spínání čerpadel'
         entities:
           - input_number.fireplace_first_floor_min_temp_value
-          - input_number.fireplace_first_second_min_temp_value
+          - input_number.fireplace_second_floor_min_temp_value
       - type: glance
         title: 'LED indikace – mezní parametry'
         entities:
@@ -75,3 +75,12 @@ views:
           - entity: switch.pump_fireplace_second_floor
           - entity: switch.pump_first_floor
           - entity: switch.pump_second_floor
+          - sensor.blue_led
+          - sensor.orange_led
+          - sensor.red_led
+      - type: glance
+        title: 'Termostaty chodby – požadavek topení'
+        entities:
+          - binary_sensor.temp_first_floor
+          - binary_sensor.temp_second_floor
+    
