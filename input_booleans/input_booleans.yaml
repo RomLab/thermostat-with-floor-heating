@@ -1,5 +1,3 @@
-manual_control_mode:
-  name: 'Manuální mód řízení'
 manual_summer_mode:
   name: 'Letní mód'
   icon: mdi:white-balance-sunny
