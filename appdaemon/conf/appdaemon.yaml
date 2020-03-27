@@ -1,0 +1,25 @@
+#secrets:  /home/appdaemon/.appdaemon/conf/secrets.yaml
+appdaemon:
+  threads: 10
+  time_zone: Europe/Prague
+  latitude: 32.87336
+  longitude: 117.22743
+  elevation: 430
+  app_dir: /home/appdaemon/.appdaemon/conf/apps
+  plugins:
+    HASS:
+      type: hass
+      ha_url: http://192.168.0.2:8123
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhNTBmNjU3YzYzMGY0OWI3OGFiNzNhOWQ0YTgwYTJkNiIsImlhdCI6MTU4MTc5NzM3NywiZXhwIjoxODk3MTU3Mzc3fQ.ICikaZlvE4zdNmitf8lWsL5DQ9EkPQzYvEtwKE6Lcp8
+
+http:
+  url: http://192.168.0.2:5050
+logs:
+  main_log: 
+    filename: /home/appdaemon/.appdaemon/conf/logs/appdaemon.log
+  access_log:
+    filename: /home/appdaemon/.appdaemon/conf/logs/access.log
+  error_log:
+    filename: /home/appdaemon/.appdaemon/conf/logs/error.log
+  diag_log:
+    filename: /home/appdaemon/.appdaemon/conf/logs/diag.log
