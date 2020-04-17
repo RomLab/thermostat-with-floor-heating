@@ -78,3 +78,13 @@ Vložit na nový řádek
 local homeassistant homeassistant peer
 Refresh PostgreSQL nastavení
 sudo -i -u postgres psql -c "SELECT pg_reload_conf();"
+
+Přidání služby do Home Assistant služby:
+sudo nano /etc/systemd/system/home-assistant@homeassistant.service
+Přidat na řádek:
+[Unit]
+Description=Home Assistant
+After=network.target postgresql.service
+
+Refresh:
+sudo systemctl daemon-reload
