@@ -1,6 +1,7 @@
 - platform: rpi_gpio
   ports:
-    11: temp_first_floor
-    12: temp_second_floor
+    23: temp_first_floor
+    24: temp_second_floor
   invert_logic: true
   pull_mode: UP
+  bouncetime: 1
