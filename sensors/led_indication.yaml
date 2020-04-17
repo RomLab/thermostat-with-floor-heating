@@ -1,6 +1,7 @@
 - platform: template
   sensors:
     blue_led:
+      friendly_name: 'Modrá LED indikace'
       friendly_name_template: >-
         {% set led_indication_min_value_temp_top_sensor = states('input_number.led_indication_min_value_temp_top_sensor') | int %}
         {% if is_state('switch.blue_led', 'on') %}
@@ -16,6 +17,7 @@
         {% endif %}
       entity_picture_template: '/local/images/icons/blue-led.png'
     orange_led:
+      friendly_name: 'Oranžová LED indikace'
       friendly_name_template: >-
         {% set led_indication_min_value_temp_middle_sensor = states('input_number.led_indication_min_value_temp_middle_sensor') | int %}
         {% if is_state('switch.orange_led', 'on') %}
@@ -31,6 +33,7 @@
         {% endif %}
       entity_picture_template: '/local/images/icons/orange-led.png'
     red_led:
+      friendly_name: 'Červená LED indikace'
       friendly_name_template: >-
         {% set led_indication_min_value_temp_bottom_sensor = states('input_number.led_indication_min_value_temp_bottom_sensor') | int %}
         {% if is_state('switch.red_led', 'on') %}
