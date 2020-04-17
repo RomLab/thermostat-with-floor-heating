@@ -49,8 +49,8 @@ views:
               - entity: sensor.hot_water_tank_top_temperature
               - entity: sensor.hot_water_tank_middle_temperature
               - entity: sensor.hot_water_tank_bottom_temperature
-              - entity: sensor.fireplace_first_floor_temperature
-              - entity: sensor.fireplace_second_floor_temperature
+              - entity: sensor.fireplace_first_floor
+              - entity: sensor.fireplace_second_floor
               - entity: sensor.outdoor_temperature
           - type: entities
             title: 'Jednotlivé sensory'
@@ -59,8 +59,8 @@ views:
               - entity: sensor.hot_water_tank_top_temperature
               - entity: sensor.hot_water_tank_middle_temperature
               - entity: sensor.hot_water_tank_bottom_temperature
-              - entity: sensor.fireplace_first_floor_temperature
-              - entity: sensor.fireplace_second_floor_temperature
+              - entity: sensor.fireplace_first_floor
+              - entity: sensor.fireplace_second_floor
               - entity: sensor.outdoor_temperature     
   - title: 'Zařízení'
     path: zarizeni

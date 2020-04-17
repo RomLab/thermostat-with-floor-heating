@@ -1,0 +1,10 @@
+- platform: template
+  sensors:
+    fireplace_first_floor:
+      friendly_name: 'První patro krb'
+      unit_of_measurement: '°C'
+      value_template: '0'
+    fireplace_second_floor:
+      friendly_name: 'Druhé patro krb'
+      unit_of_measurement: '°C'
+      value_template: '0'
