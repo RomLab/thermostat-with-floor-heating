@@ -1,4 +1,6 @@
 fireplace_first_floor_temp_sensor:
+  alias: 'Control of a pump fireplace in first floor'
+  description: 'Control of a pump fireplace in a first floor according to a temp. from sensor and temp. limit from a user'
   sequence:
     - service_template: >
         {%- set fireplace_first_floor_temperature = states('sensor.fireplace_first_floor') | int -%}
@@ -8,4 +10,3 @@ fireplace_first_floor_temp_sensor:
         {%- else -%}
             script.turn_off_pump_fireplace_first_floor
         {%- endif -%}
-# Active on logic zero

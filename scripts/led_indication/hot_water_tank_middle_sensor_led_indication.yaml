@@ -1,5 +1,7 @@
 
 hot_water_tank_middle_sensor_led_indication:
+  alias: 'Control of orange LED'
+  description: 'Control of a orange LED according to a temp. sensor in a middle part of hot water tank'
   sequence:
     - service_template: >
         {%- set hot_water_tank_middle_sensor = states('sensor.hot_water_tank_middle_temperature') | int -%}

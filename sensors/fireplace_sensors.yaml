@@ -1,3 +1,4 @@
+# Sensors from a fireplace (MAX31850K)
 - platform: template
   sensors:
     fireplace_first_floor:

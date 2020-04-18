@@ -1,3 +1,5 @@
+# Only active one a mode, all others are off
+
 - alias: 'Control mode from outdoor temp. sensor'
   initial_state: 'on'
   trigger:
@@ -10,7 +12,7 @@
         - input_boolean.manual_summer_mode
         - input_boolean.manual_winter_mode
 
-- alias: 'Manual winter control'
+- alias: 'Manual winter mode'
   initial_state: 'on'
   trigger:
     platform: state
@@ -22,7 +24,7 @@
     - service: input_boolean.turn_off
       entity_id: input_boolean.manual_summer_mode
 
-- alias: 'Manual summer control'
+- alias: 'Manual summer mode'
   initial_state: 'on'
   trigger:
     platform: state

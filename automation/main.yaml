@@ -1,4 +1,5 @@
-- alias: 'main'
+# Refresh every 5 second, checks changes
+- alias: 'Main loop all script'
   initial_state: 'on'
   trigger:
     platform: time_pattern

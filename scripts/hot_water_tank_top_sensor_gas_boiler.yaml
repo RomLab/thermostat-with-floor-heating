@@ -1,4 +1,6 @@
 hot_water_tank_top_sensor_gas_boiler:
+  alias: 'Control of gas boiler'
+  description: 'Control of a gas boiler from the top temp. sensor in a hot water tank, control according to a winter/summer mode and temperature limits from an user'
   sequence: 
     - service_template: >
         {%- set hot_water_tank_top_sensor = states('sensor.hot_water_tank_top_temperature') | int -%}

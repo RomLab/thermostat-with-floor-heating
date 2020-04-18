@@ -1,3 +1,4 @@
+# Settings a friendly name and value (on/off) for LED indication according to temp.
 - platform: template
   sensors:
     blue_led:
