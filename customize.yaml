@@ -35,6 +35,12 @@ switch.pump_first_floor:
 switch.pump_second_floor:
   friendly_name: 'Druhé patro podlahové topení'
   icon: mdi:home-floor-2
+switch.red_led:
+  friendly_name: 'Červená LED'
+switch.orange_led:
+  friendly_name: 'Oranžová LED'
+switch.blue_led:
+  friendly_name: 'Modrá LED'
 binary_sensor.temp_first_floor:
   friendly_name: 'První patro'
   icon: mdi:home-floor-1
