@@ -1,3 +1,4 @@
+# Settings of mode according to temperature
 - platform: template
   sensors:
     mode_control_from_outdoor_temp_sensor:
@@ -12,17 +13,4 @@
           {%- endif -%}
         {%- else -%}
           null
-        {%- endif -%}
-    mode_control_from_manual_control:
-      value_template: >
-        {%- if is_state('input_boolean.manual_control_mode', 'on') -%}
-          {%- if is_state('input_boolean.manual_summer_mode', 'on') -%}
-            summer
-          {%- elif is_state('input_boolean.manual_winter_mode', 'on') -%}
-            winter
-          {%- else -%}
-            null
-          {%- endif -%}
-        {%- else -%}
-           null        
         {%- endif -%}
