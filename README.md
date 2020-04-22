@@ -88,3 +88,6 @@ After=network.target postgresql.service
 
 Refresh:
 sudo systemctl daemon-reload
+
+## Ostatní instalace
+Doinstalovat pip3 install RPi.GPIO do virtual environment appdaemon pro práci s GPIO RPI
