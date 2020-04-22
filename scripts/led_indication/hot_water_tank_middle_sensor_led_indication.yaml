@@ -4,7 +4,7 @@ hot_water_tank_middle_sensor_led_indication:
   description: 'Control of a orange LED according to a temp. sensor in a middle part of hot water tank'
   sequence:
     - service_template: >
-        {%- set hot_water_tank_middle_sensor = states('sensor.hot_water_tank_middle_temperature') | int -%}
+        {%- set hot_water_tank_middle_sensor = states('sensor.hot_water_tank_middle') | int -%}
         {%- set gas_boiler_temp_hysteresis = states('sensor.gas_boiler_temp_hysteresis') | float -%}
         {%- set led_indication_max_value_temp_middle_sensor = states('input_number.led_indication_max_value_temp_middle_sensor') | float -%}
         {%- if hot_water_tank_middle_sensor >= led_indication_max_value_temp_middle_sensor - gas_boiler_temp_hysteresis -%}

@@ -9,11 +9,11 @@ appdaemon:
   plugins:
     HASS:
       type: hass
-      ha_url: http://192.168.0.12:8123
+      ha_url: http://192.168.11.247:8123
       token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhNDA3YjVjOTUyNDY0NzU0YmQ0YmNkYjcxYzViYWRlYSIsImlhdCI6MTU4Njk4MDM3OSwiZXhwIjoxOTAyMzQwMzc5fQ.9Mqk44pl2HHvapAS6wQuc5CyT7kytlRJ7CdTq48Hly0
 
 http:
-  url: http://192.168.0.12:5050
+  url: http://192.168.11.247:5050
 logs:
   main_log: 
     filename: /home/appdaemon/.appdaemon/conf/logs/appdaemon.log

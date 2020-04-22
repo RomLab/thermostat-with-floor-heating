@@ -47,8 +47,8 @@ views:
             title: 'Porovnání teploty'
             entities:
               - entity: sensor.hot_water_tank_top_temperature
-              - entity: sensor.hot_water_tank_middle_temperature
-              - entity: sensor.hot_water_tank_bottom_temperature
+              - entity: sensor.hot_water_tank_middle
+              - entity: sensor.hot_water_tank_bottom
               - entity: sensor.fireplace_first_floor
               - entity: sensor.fireplace_second_floor
               - entity: sensor.outdoor_temperature
@@ -57,8 +57,8 @@ views:
             show_header_toggle: false
             entities:
               - entity: sensor.hot_water_tank_top_temperature
-              - entity: sensor.hot_water_tank_middle_temperature
-              - entity: sensor.hot_water_tank_bottom_temperature
+              - entity: sensor.hot_water_tank_middle
+              - entity: sensor.hot_water_tank_bottom
               - entity: sensor.fireplace_first_floor
               - entity: sensor.fireplace_second_floor
               - entity: sensor.outdoor_temperature     
@@ -81,6 +81,6 @@ views:
       - type: glance
         title: 'Termostaty chodby – požadavek topení'
         entities:
-          - binary_sensor.temp_first_floor
-          - binary_sensor.temp_second_floor
+          - sensor.thermostat_first_floor
+          - sensor.thermostat_second_floor
     

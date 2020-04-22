@@ -20,8 +20,8 @@ recorder:
   include:
     entities:
       - sensor.hot_water_tank_top_temperature
-      - sensor.hot_water_tank_middle_temperature
-      - sensor.hot_water_tank_bottom_temperature
+      - sensor.hot_water_tank_middle
+      - sensor.hot_water_tank_bottom
       - sensor.outdoor_temperature
       - sensor.fireplace_first_floor
       - sensor.fireplace_second_floor
@@ -40,8 +40,8 @@ history:
   include:
     entities:
       - sensor.hot_water_tank_top_temperature
-      - sensor.hot_water_tank_middle_temperature
-      - sensor.hot_water_tank_bottom_temperature
+      - sensor.hot_water_tank_middle
+      - sensor.hot_water_tank_bottom
       - sensor.outdoor_temperature
       - sensor.fireplace_first_floor
       - sensor.fireplace_second_floor
@@ -60,8 +60,8 @@ logbook:
   include:
     entities:
       - sensor.hot_water_tank_top_temperature
-      - sensor.hot_water_tank_middle_temperature
-      - sensor.hot_water_tank_bottom_temperature
+      - sensor.hot_water_tank_middle
+      - sensor.hot_water_tank_bottom
       - sensor.outdoor_temperature
       - sensor.fireplace_first_floor
       - sensor.fireplace_second_floor

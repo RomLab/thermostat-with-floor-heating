@@ -6,7 +6,7 @@ import time
 import datetime
 from datetime import timedelta
 
-class TEMPMAX31850K(hass.Hass):
+class TEMP18B20(hass.Hass):
 
     def initialize(self):
         interval_of_reading = 10
@@ -14,16 +14,16 @@ class TEMPMAX31850K(hass.Hass):
         self.handle = self.run_every(self.read_and_set_temp, start_time, interval_of_reading)
 
     def read_and_set_temp(self, kwargs): 
-        fireplace_first_floor_temperature = self.read_temp("3b-4cc80984ea83")
-        fireplace_second_floor_temperature = self.read_temp("3b-2cc80984fc57")
+        hot_water_tank_middle_temperature = self.read_temp("28-031097941634")
+        hot_water_tank_bottom_temperature = self.read_temp("28-03219779109c")
 
-        states_fireplace_first_floor = self.get_state("sensor.fireplace_first_floor", attribute='all')
-        attributes_fireplace_first_floor = states_fireplace_first_floor['attributes']
-        self.set_state("sensor.fireplace_first_floor", state = fireplace_first_floor_temperature, attributes = attributes_fireplace_first_floor)
+        states_hot_water_tank_middle = self.get_state("sensor.hot_water_tank_middle", attribute='all')
+        attributes_hot_water_tank_middle = states_hot_water_tank_middle['attributes']
+        self.set_state("sensor.hot_water_tank_middle", state = hot_water_tank_middle_temperature, attributes = attributes_hot_water_tank_middle)
         
-        states_fireplace_second_floor = self.get_state("sensor.fireplace_second_floor", attribute='all')
-        attributes_fireplace_second_floor = states_fireplace_second_floor['attributes']
-        self.set_state("sensor.fireplace_second_floor",  state = fireplace_second_floor_temperature, attributes = attributes_fireplace_second_floor)
+        states_hot_water_tank_bottom = self.get_state("sensor.hot_water_tank_bottom", attribute='all')
+        attributes_hot_water_tank_bottom = states_hot_water_tank_bottom['attributes']
+        self.set_state("sensor.hot_water_tank_bottom",  state = hot_water_tank_bottom_temperature, attributes = attributes_hot_water_tank_bottom)
 
     # Function that reads and returns the raw content of 'w1_slave' file
     def read_temp_raw(self, deviceCode):

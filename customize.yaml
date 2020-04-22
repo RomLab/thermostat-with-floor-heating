@@ -1,11 +1,9 @@
 sensor.hot_water_tank_top_temperature:
   friendly_name: 'Zásobník vody horní čidlo'
   icon:  mdi:format-vertical-align-top
-sensor.hot_water_tank_middle_temperature:
-  friendly_name: 'Zásobník vody střední čidlo'
+sensor.hot_water_tank_middle:
   icon: mdi:format-align-middle
-sensor.hot_water_tank_bottom_temperature:
-  friendly_name: 'Zásobník vody spodní čidlo'
+sensor.hot_water_tank_bottom:
   icon: mdi:format-vertical-align-bottom
 sensor.fireplace_first_floor:
   icon: mdi:fireplace
