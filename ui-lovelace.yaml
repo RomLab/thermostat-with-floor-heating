@@ -81,6 +81,6 @@ views:
       - type: glance
         title: 'Termostaty chodby – požadavek topení'
         entities:
-          - sensor.thermostat_first_floor
-          - sensor.thermostat_second_floor
+          - sensor.thermostat_first_floor_display
+          - sensor.thermostat_second_floor_display
     

@@ -3,7 +3,35 @@
   sensors:
     thermostat_first_floor:
       friendly_name: 'Termostat první patro'
-      value_template: '0'
+      value_template: '1'
     thermostat_second_floor:
       friendly_name: 'Termostat druhé patro'
-      value_template: '0'
+      value_template: '1'
+    thermostat_first_floor_display:
+      friendly_name: 'Termostat první patro'
+      value_template: >-
+        {% if is_state('sensor.thermostat_first_floor', '0') %}
+          Zapnuto
+        {% else %}
+          Vypnuto
+        {% endif %}
+      entity_picture_template: >-
+          {% if is_state('sensor.thermostat_first_floor', '0') %}
+            /local/images/icons/floor-heating-on.png
+          {% else %}
+            /local/images/icons/floor-heating-off.png
+          {% endif %}
+    thermostat_second_floor_display:
+      friendly_name: 'Termostat druhé patro'
+      value_template: >-
+        {% if is_state('sensor.thermostat_second_floor', '0') %}
+          Zapnuto
+        {% else %}
+          Vypnuto
+        {% endif %}
+      entity_picture_template: >-
+          {% if is_state('sensor.thermostat_second_floor', '0') %}
+            /local/images/icons/floor-heating-on.png
+          {% else %}
+            /local/images/icons/floor-heating-off.png
+          {% endif %}
