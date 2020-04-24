@@ -16,12 +16,12 @@ class READTHERMOSTAT(hass.Hass):
 
     def read_thermostat(self, kwargs): 
         GPIO.setmode(GPIO.BCM) 
-        GPIO.setup(23, GPIO.IN) 
-        state_first_floor = GPIO.input(23)
         
         GPIO.setup(24, GPIO.IN) 
-        state = GPIO.input(24)
-        state_second_floor = GPIO.input(24)
+        state_first_floor = GPIO.input(24)
+        
+        GPIO.setup(23, GPIO.IN) 
+        state_second_floor = GPIO.input(23)
         
         states_thermostat_first_floor = self.get_state("sensor.thermostat_first_floor", attribute='all')
         attributes_thermostat_first_floor = states_thermostat_first_floor['attributes']
