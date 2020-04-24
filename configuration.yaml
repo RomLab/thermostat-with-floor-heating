@@ -79,7 +79,6 @@ logbook:
 input_number: !include_dir_merge_named input_numbers/
 input_boolean: !include_dir_merge_named input_booleans/
 switch: !include_dir_merge_list control_gpio_devices/
-binary_sensor: !include_dir_merge_list read_gpio_devices/
 
 sensor: !include_dir_merge_list sensors/
 
