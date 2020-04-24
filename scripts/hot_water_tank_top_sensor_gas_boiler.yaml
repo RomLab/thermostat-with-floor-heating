@@ -23,7 +23,7 @@ hot_water_tank_top_sensor_gas_boiler:
             {%- elif hot_water_tank_top_sensor >= gas_boiler_winter_temp_to -%}
               script.turn_off_gas_boiler
             {%- else -%}
-              script.keep_set_states
+              script.keep_same_states
             {%- endif -%}
         {%- else -%}
             script.turn_off_gas_boiler
