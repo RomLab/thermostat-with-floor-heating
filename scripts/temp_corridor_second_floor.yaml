@@ -3,7 +3,7 @@ temp_corridor_second_floor:
   description: 'Control according to winter mode and control according to request from a corridor thermostat on a second floor (active on login zero)'
   sequence:
     - service_template: >
-        {%- if is_state('binary_sensor.temp_second_floor', 'on') and (is_state('input_boolean.manual_winter_mode', 'on') or is_state('sensor.mode_control_from_outdoor_temp_sensor', 'winter')) -%}
+        {%- if is_state('sensor.thermostat_second_floor', '0') and (is_state('input_boolean.manual_winter_mode', 'on') or is_state('sensor.mode_control_from_outdoor_temp_sensor', 'winter')) -%}
            script.turn_on_pump_corridor_second_floor
         {%- else -%}
             script.turn_off_pump_corridor_second_floor
