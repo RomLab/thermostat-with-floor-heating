@@ -16,10 +16,10 @@ tts:
 
 recorder:
   db_url: postgresql://@/homeassistant
-  purge_keep_days: 1
+  purge_keep_days: 3
   include:
     entities:
-      - sensor.hot_water_tank_top_temperature
+      - sensor.hot_water_tank_top
       - sensor.hot_water_tank_middle
       - sensor.hot_water_tank_bottom
       - sensor.outdoor_temperature
@@ -39,7 +39,7 @@ recorder:
 history:
   include:
     entities:
-      - sensor.hot_water_tank_top_temperature
+      - sensor.hot_water_tank_top
       - sensor.hot_water_tank_middle
       - sensor.hot_water_tank_bottom
       - sensor.outdoor_temperature
@@ -59,7 +59,7 @@ history:
 logbook:
   include:
     entities:
-      - sensor.hot_water_tank_top_temperature
+      - sensor.hot_water_tank_top
       - sensor.hot_water_tank_middle
       - sensor.hot_water_tank_bottom
       - sensor.outdoor_temperature

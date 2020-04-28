@@ -30,7 +30,7 @@ views:
           - input_number.fireplace_first_floor_min_temp_value
           - input_number.fireplace_second_floor_min_temp_value
       - type: glance
-        title: 'LED indikace – mezní parametry'
+        title: 'LED indikace – mezní parametry zásobníku teplé vody'
         entities:
           - input_number.led_indication_min_value_temp_top_sensor
           - input_number.led_indication_max_value_temp_middle_sensor
@@ -46,7 +46,7 @@ views:
           - type: history-graph
             title: 'Porovnání teploty'
             entities:
-              - entity: sensor.hot_water_tank_top_temperature
+              - entity: sensor.hot_water_tank_top
               - entity: sensor.hot_water_tank_middle
               - entity: sensor.hot_water_tank_bottom
               - entity: sensor.fireplace_first_floor
@@ -56,7 +56,7 @@ views:
             title: 'Jednotlivé sensory'
             show_header_toggle: false
             entities:
-              - entity: sensor.hot_water_tank_top_temperature
+              - entity: sensor.hot_water_tank_top
               - entity: sensor.hot_water_tank_middle
               - entity: sensor.hot_water_tank_bottom
               - entity: sensor.fireplace_first_floor

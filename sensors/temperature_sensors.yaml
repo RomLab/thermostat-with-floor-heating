@@ -1,4 +1,3 @@
 - platform: onewire
   names:
-    28-032197799ee1: hot_water_tank_top
     28-03219779a92f: outdoor

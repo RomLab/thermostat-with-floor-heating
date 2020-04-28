@@ -9,13 +9,18 @@ from datetime import timedelta
 class TEMP18B20(hass.Hass):
 
     def initialize(self):
-        interval_of_reading = 10
+        interval_of_reading = 30
         start_time = self.datetime() + datetime.timedelta(seconds = 1)
         self.handle = self.run_every(self.read_and_set_temp, start_time, interval_of_reading)
 
     def read_and_set_temp(self, kwargs): 
+        hot_water_tank_top_temperature = self.read_temp("28-031297941b3a")
         hot_water_tank_middle_temperature = self.read_temp("28-031097941634")
         hot_water_tank_bottom_temperature = self.read_temp("28-03219779109c")
+
+        states_hot_water_tank_top = self.get_state("sensor.hot_water_tank_top", attribute='all')
+        attributes_hot_water_tank_top = states_hot_water_tank_top['attributes']
+        self.set_state("sensor.hot_water_tank_top", state = hot_water_tank_top_temperature, attributes = attributes_hot_water_tank_top)
 
         states_hot_water_tank_middle = self.get_state("sensor.hot_water_tank_middle", attribute='all')
         attributes_hot_water_tank_middle = states_hot_water_tank_middle['attributes']

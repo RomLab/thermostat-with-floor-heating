@@ -1,6 +1,10 @@
 # Sensors for 18B20
 - platform: template
   sensors:
+    hot_water_tank_top:
+      friendly_name: 'Zásobník vody horní čidlo'
+      unit_of_measurement: '°C'
+      value_template: '0'
     hot_water_tank_middle:
       friendly_name: 'Zásobník vody střední čidlo'
       unit_of_measurement: '°C'
