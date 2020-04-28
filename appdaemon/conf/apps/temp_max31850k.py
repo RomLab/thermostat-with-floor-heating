@@ -9,7 +9,7 @@ from datetime import timedelta
 class TEMPMAX31850K(hass.Hass):
 
     def initialize(self):
-        interval_of_reading = 10
+        interval_of_reading = 30
         start_time = self.datetime() + datetime.timedelta(seconds = 1)
         self.handle = self.run_every(self.read_and_set_temp, start_time, interval_of_reading)
 
