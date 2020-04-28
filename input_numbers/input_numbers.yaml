@@ -44,7 +44,7 @@ gas_boiler_temp_hysteresis:
   unit_of_measurement: °C
   icon: mdi:thermometer
 led_indication_min_value_temp_top_sensor:
-  name: 'Min. hodnota'
+  name: 'Horní čidlo min. pod'
   min: 0
   max: 100
   mode: slider
@@ -52,7 +52,7 @@ led_indication_min_value_temp_top_sensor:
   initial: 45
   unit_of_measurement: °C
 led_indication_max_value_temp_middle_sensor:
-  name: 'Max. hodnota'
+  name: 'Střední čidlo max. nad'
   min: 0
   max: 100
   mode: slider
@@ -60,7 +60,7 @@ led_indication_max_value_temp_middle_sensor:
   initial: 85
   unit_of_measurement: °C
 led_indication_max_value_temp_bottom_sensor:
-  name: 'Max. hodnota'
+  name: 'Spodní čidlo max. nad'
   min: 0
   max: 100
   mode: slider
