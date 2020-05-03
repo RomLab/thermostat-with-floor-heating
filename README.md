@@ -91,3 +91,5 @@ sudo systemctl daemon-reload
 
 ## Ostatní instalace
 Doinstalovat pip3 install RPi.GPIO do virtual environment appdaemon pro práci s GPIO RPI
+Práva na spuštení shell_commnad: https://community.home-assistant.io/t/is-adding-the-hass-user-to-sudoers-for-script-a-good-idea/78862
+Spustit přes sudo visudo
