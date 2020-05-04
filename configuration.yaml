@@ -84,4 +84,5 @@ sensor: !include_dir_merge_list sensors/
 
 automation: !include_dir_merge_list automation/
 script: !include_dir_merge_named scripts/
+shell_command: !include shell_command.yaml
 

@@ -83,4 +83,13 @@ views:
         entities:
           - sensor.thermostat_first_floor_display
           - sensor.thermostat_second_floor_display
+  - title: 'Ovládání RPi'
+    path: ovladani-rpi
+    cards:
+    - type: entities
+      title: 'Ovládání RPi'
+      show_header_toggle: false
+      entities:
+        - script.shutdown_rpi
+        - script.restart_rpi
     
