@@ -82,7 +82,7 @@ createuser homeassistant
 createdb -O homeassistant homeassistant
 ```
 
-- Instalace závislostí do systému (kde X.Y je verze PostgreSQL):
+- Instalace závislostí do systému (kde X.Y je verze PostgreSQL)(možné stéjné jako instalace výše, zjistit rozdíl):
 ```sudo apt-get install postgresql-server-dev-X.Y```
 - Přepnutí do virtual environment homeassistant: 
 ```
