@@ -47,7 +47,8 @@ sudo service smbd restart
 ```
 [Unit]
 Description=App Deamon
-After=network-online.target
+After=home-assistant@homeasssistant.service
+Requires=home-assistant@homeasssistant.service
 
 [Service]
 Type=simple
