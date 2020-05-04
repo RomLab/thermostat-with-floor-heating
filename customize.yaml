@@ -22,16 +22,16 @@ switch.gas_boiler:
   friendly_name: 'Plynový kotel'
   icon: mdi:water-boiler
 switch.pump_fireplace_first_floor:
-  friendly_name: 'První patro čerpadlo krbu'
+  friendly_name: 'Přízemí – čerpadlo krbu'
   icon: mdi:fireplace
 switch.pump_fireplace_second_floor:
-  friendly_name: 'Druhé patro čerpadlo krbu'
+  friendly_name: 'Patro – čerpadlo krbu'
   icon: mdi:fireplace
 switch.pump_first_floor:
-  friendly_name: 'První patro podlahové topení'
+  friendly_name: 'Přízemí – podlahové topení'
   icon: mdi:home-floor-1
 switch.pump_second_floor:
-  friendly_name: 'Druhé patro podlahové topení'
+  friendly_name: 'Patro – podlahové topení'
   icon: mdi:home-floor-2
 switch.red_led:
   friendly_name: 'Červená LED'
@@ -40,8 +40,8 @@ switch.orange_led:
 switch.blue_led:
   friendly_name: 'Modrá LED'
 binary_sensor.temp_first_floor:
-  friendly_name: 'První patro'
+  friendly_name: 'Přízemí'
   icon: mdi:home-floor-1
 binary_sensor.temp_second_floor:
-  friendly_name: 'Druhé patro'
+  friendly_name: 'Patro'
   icon: mdi:home-floor-2
