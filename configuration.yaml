@@ -16,7 +16,7 @@ tts:
 
 recorder:
   db_url: postgresql://@/homeassistant
-  purge_keep_days: 3
+  purge_keep_days: 6
   include:
     entities:
       - sensor.hot_water_tank_top
