@@ -61,7 +61,7 @@ WantedBy=multi-user.target
 
 ## LCD I2C
 - Postupovat podle: https://www.circuitbasics.com/raspberry-pi-i2c-lcd-set-up-and-programming/
-- Instalovat:  ```sudo apt-get install i2c-tools do systému```
+- Instalovat do systému:  ```sudo apt-get install i2c-tools ```
 - Přepnutí do virtual environment appdaemon:
 ```
 sudo -u appdaemon -H -s
