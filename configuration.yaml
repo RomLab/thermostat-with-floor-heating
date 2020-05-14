@@ -16,13 +16,14 @@ tts:
 
 recorder:
   db_url: postgresql://@/homeassistant
-  purge_keep_days: 6
+  purge_interval: 0
+  purge_keep_days: 365
   include:
     entities:
       - sensor.hot_water_tank_top
       - sensor.hot_water_tank_middle
       - sensor.hot_water_tank_bottom
-      - sensor.outdoor_temperature
+      - sensor.outdoor
       - sensor.fireplace_first_floor
       - sensor.fireplace_second_floor
       - binary_sensor.temp_first_floor
@@ -42,7 +43,7 @@ history:
       - sensor.hot_water_tank_top
       - sensor.hot_water_tank_middle
       - sensor.hot_water_tank_bottom
-      - sensor.outdoor_temperature
+      - sensor.outdoor
       - sensor.fireplace_first_floor
       - sensor.fireplace_second_floor
       - binary_sensor.temp_first_floor
@@ -62,7 +63,7 @@ logbook:
       - sensor.hot_water_tank_top
       - sensor.hot_water_tank_middle
       - sensor.hot_water_tank_bottom
-      - sensor.outdoor_temperature
+      - sensor.outdoor
       - sensor.fireplace_first_floor
       - sensor.fireplace_second_floor
       - binary_sensor.temp_first_floor

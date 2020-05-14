@@ -13,3 +13,7 @@
       friendly_name: 'Zásobník vody spodní čidlo'
       unit_of_measurement: '°C'
       value_template: '0'
+    outdoor:
+      friendly_name: 'Venkovní teplota'
+      unit_of_measurement: '°C'
+      value_template: '0'

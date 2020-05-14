@@ -18,6 +18,8 @@ class TEMP18B20(hass.Hass):
         hot_water_tank_middle_temperature = self.read_temp("28-031097941634")
         hot_water_tank_bottom_temperature = self.read_temp("28-03219779109c")
 
+        outdoor_temperature = self.read_temp("28-03219779a92f")
+
         states_hot_water_tank_top = self.get_state("sensor.hot_water_tank_top", attribute='all')
         attributes_hot_water_tank_top = states_hot_water_tank_top['attributes']
         self.set_state("sensor.hot_water_tank_top", state = hot_water_tank_top_temperature, attributes = attributes_hot_water_tank_top)
@@ -30,6 +32,9 @@ class TEMP18B20(hass.Hass):
         attributes_hot_water_tank_bottom = states_hot_water_tank_bottom['attributes']
         self.set_state("sensor.hot_water_tank_bottom",  state = hot_water_tank_bottom_temperature, attributes = attributes_hot_water_tank_bottom)
 
+        states_outdoor = self.get_state("sensor.outdoor", attribute='all')
+        attributes_outdoor = states_outdoor['attributes']
+        self.set_state("sensor.outdoor",  state = outdoor_temperature, attributes = attributes_outdoor)
     # Function that reads and returns the raw content of 'w1_slave' file
     def read_temp_raw(self, deviceCode):
         w1DeviceFolder = '/sys/bus/w1/devices'
