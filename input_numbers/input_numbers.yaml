@@ -57,7 +57,7 @@ led_indication_max_value_temp_middle_sensor:
   max: 100
   mode: slider
   step: 1
-  initial: 85
+  initial: 70
   unit_of_measurement: °C
 led_indication_max_value_temp_bottom_sensor:
   name: 'Spodní čidlo max. nad'
