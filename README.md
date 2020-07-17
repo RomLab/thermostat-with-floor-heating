@@ -60,6 +60,25 @@ WantedBy=multi-user.target
 ```
 - Pokračovat dále v části **NEXT STEPS** (místo home-assistant => **app-daemon**)
 
+**Přidání složky do Samby**
+- Editace konfiguračního souboru:
+```
+sudo nano /etc/samba/smb.conf
+```
+- Na konec souboru smb.conf vložit:
+```
+[homeassistant]
+path = /home/homeassistant/.homeassistant/
+read only = no
+valid users = homeassistant
+writable = yes
+create mask = 0777
+directory mask = 0777
+force user = appdaemon
+force create mode = 0777
+force directory mode = 0777
+```
+
 ## LCD I2C
 - Postupovat podle: https://www.circuitbasics.com/raspberry-pi-i2c-lcd-set-up-and-programming/
 - Instalovat do systému:  ```sudo apt-get install i2c-tools ```
