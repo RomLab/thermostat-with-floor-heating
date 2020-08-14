@@ -14,11 +14,11 @@ class TEMP18B20(hass.Hass):
         self.handle = self.run_every(self.read_and_set_temp, start_time, interval_of_reading)
 
     def read_and_set_temp(self, kwargs): 
-        hot_water_tank_top_temperature = self.read_temp("28-031297941b3a")
-        hot_water_tank_middle_temperature = self.read_temp("28-031097941634")
-        hot_water_tank_bottom_temperature = self.read_temp("28-03219779109c")
+        hot_water_tank_top_temperature = self.read_temp("28-00000c859e14")
+        hot_water_tank_middle_temperature = self.read_temp("28-00000c85a5bc")
+        hot_water_tank_bottom_temperature = self.read_temp("28-00000c864409")
 
-        outdoor_temperature = self.read_temp("28-03219779a92f")
+        outdoor_temperature = self.read_temp("28-00000c85a20f")
 
         states_hot_water_tank_top = self.get_state("sensor.hot_water_tank_top", attribute='all')
         attributes_hot_water_tank_top = states_hot_water_tank_top['attributes']
