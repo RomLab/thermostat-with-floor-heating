@@ -1,5 +1,6 @@
 pumps_start_cleaning:
     name: 'Den spuštění'
+    icon: mdi:calendar-today
     options:
       - Pondělí
       - Úterý

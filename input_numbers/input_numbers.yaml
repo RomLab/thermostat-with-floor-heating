@@ -98,4 +98,4 @@ pumps_lenght_of_run:
   mode: slider
   step: 1
   unit_of_measurement: minuty
-  icon: mdi:water-pump
+  icon: mdi:alarm
