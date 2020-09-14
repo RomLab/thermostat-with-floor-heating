@@ -2,7 +2,10 @@ turn_off_pump_fireplace_second_floor:
   sequence:
     - condition: state
       entity_id: input_boolean.manual_control_devices
-      state: 'off'
+      state: 'off' 
+    - condition: state
+      entity_id: input_boolean.pumps_auto_start_cleaning_indication
+      state: 'off'  
     - service: switch.turn_off
       data:
         entity_id: switch.pump_fireplace_second_floor

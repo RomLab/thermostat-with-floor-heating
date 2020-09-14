@@ -83,6 +83,14 @@ views:
         entities:
           - sensor.thermostat_first_floor_display
           - sensor.thermostat_second_floor_display
+      - type: entities
+        title: 'Ovládání čerpadel – vodní kámen'
+        entities: 
+          - input_boolean.pumps_auto_start_cleaning
+          - input_select.pumps_start_cleaning
+          - input_datetime.pumps_start_cleaning
+          - input_number.pumps_lenght_of_run
+
   - title: 'Ovládání RPi'
     path: ovladani-rpi
     cards:

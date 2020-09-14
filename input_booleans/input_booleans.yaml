@@ -11,3 +11,11 @@ keep_same_states:
   name: 'Nechá nastavené stavy'
 manual_control_devices:
   name: 'Manuální ovládání zařízení'
+pumps_auto_start_cleaning:
+  name: 'Automatické zapnutí (čištění) čerpadel'
+pumps_auto_start_cleaning_indication:
+  name: 'Indikace automatické zapnutí (čístění) čerpadel'
+pump_fireplace_first_floor_indication:
+  name: 'Indikace zapnutí čerpadla v přízemí'
+pump_fireplace_second_floor_indication:
+  name: 'Indikace zapnutí čerpadla v druhém patře'

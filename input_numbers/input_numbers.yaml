@@ -91,3 +91,11 @@ min_temp_summer_mode:
   step: 1
   unit_of_measurement: °C
   icon: mdi:thermometer
+pumps_lenght_of_run:
+  name: 'Délka spuštění'
+  min: 1
+  max: 59
+  mode: slider
+  step: 1
+  unit_of_measurement: minuty
+  icon: mdi:water-pump

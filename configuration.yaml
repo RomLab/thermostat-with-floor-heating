@@ -1,4 +1,5 @@
 homeassistant:
+  time_zone: Europe/Prague
   customize: !include customize.yaml
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
@@ -79,11 +80,13 @@ logbook:
 
 input_number: !include_dir_merge_named input_numbers/
 input_boolean: !include_dir_merge_named input_booleans/
+input_datetime: !include_dir_merge_named input_datetimes/
+input_select: !include_dir_merge_named input_selects/
 switch: !include_dir_merge_list control_gpio_devices/
-
 sensor: !include_dir_merge_list sensors/
 
 automation: !include_dir_merge_list automation/
 script: !include_dir_merge_named scripts/
+group: !include_dir_merge_named groups/
 shell_command: !include shell_command.yaml
 

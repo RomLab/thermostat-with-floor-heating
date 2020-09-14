@@ -1,0 +1,10 @@
+pumps_start_cleaning:
+    name: 'Den spuštění'
+    options:
+      - Pondělí
+      - Úterý
+      - Středa
+      - Čvrtek
+      - Pátek
+      - Sobota
+      - Neděle

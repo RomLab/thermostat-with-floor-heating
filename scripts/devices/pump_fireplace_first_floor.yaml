@@ -3,6 +3,9 @@ turn_off_pump_fireplace_first_floor:
     - condition: state
       entity_id: input_boolean.manual_control_devices
       state: 'off'
+    - condition: state
+      entity_id: input_boolean.pumps_auto_start_cleaning_indication
+      state: 'off'
     - service: switch.turn_off
       data:
         entity_id: switch.pump_fireplace_first_floor
