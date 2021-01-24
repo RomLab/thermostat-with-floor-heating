@@ -67,6 +67,14 @@ led_indication_max_value_temp_bottom_sensor:
   step: 1
   initial: 85
   unit_of_measurement: °C
+fireplace_cellar_min_temp_value:
+  name: 'Min. sklep'
+  min: 0
+  max: 100
+  mode: slider
+  step: 1
+  unit_of_measurement: °C
+  icon: mdi:thermometer
 fireplace_first_floor_min_temp_value:
   name: 'Min. první patro'
   min: 0

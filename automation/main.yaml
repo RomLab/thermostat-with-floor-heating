@@ -10,6 +10,7 @@
         - script.hot_water_tank_top_sensor_gas_boiler 
         - script.temp_corridor_first_floor
         - script.temp_corridor_second_floor
+        - script.fireplace_cellar_temp_sensor
         - script.fireplace_first_floor_temp_sensor
         - script.fireplace_second_floor_temp_sensor
         - script.hot_water_tank_top_sensor_led_indication

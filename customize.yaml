@@ -1,10 +1,12 @@
-sensor.hot_water_tank_top_temperature:
+sensor.hot_water_tank_top:
   friendly_name: 'Zásobník vody horní čidlo'
   icon:  mdi:format-vertical-align-top
 sensor.hot_water_tank_middle:
   icon: mdi:format-align-middle
 sensor.hot_water_tank_bottom:
   icon: mdi:format-vertical-align-bottom
+sensor.fireplace_cellar:
+  icon: mdi:fireplace
 sensor.fireplace_first_floor:
   icon: mdi:fireplace
 sensor.fireplace_second_floor:
@@ -21,6 +23,9 @@ input_number.led_indication_max_value_temp_bottom_sensor:
 switch.gas_boiler: 
   friendly_name: 'Plynový kotel'
   icon: mdi:water-boiler
+switch.pump_fireplace_cellar:
+  friendly_name: 'Sklep – čerpadlo krbu'
+  icon: mdi:fireplace
 switch.pump_fireplace_first_floor:
   friendly_name: 'Přízemí – čerpadlo krbu'
   icon: mdi:fireplace

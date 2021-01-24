@@ -7,7 +7,8 @@ class I2CLCD(hass.Hass):
     self.listen_state(self.trigger, "sensor.hot_water_tank_middle")
     self.listen_state(self.trigger, "sensor.hot_water_tank_bottom")
 
-  def trigger(self, entity, attribute, old, new, kwargs):    
+  def trigger(self, entity, attribute, old, new, kwargs):  
+    cellar_lcd = i2c_lcd_driver.lcd(0x25)  
     first_floor_lcd = i2c_lcd_driver.lcd(0x26)
     second_floor_lcd = i2c_lcd_driver.lcd(0x27)
     degree = [      
@@ -22,10 +23,14 @@ class I2CLCD(hass.Hass):
           ],]
     first_floor_lcd.lcd_load_custom_chars(degree)
     second_floor_lcd.lcd_load_custom_chars(degree)
+    cellar_lcd.lcd_load_custom_chars(degree)
  
     hot_water_tank_middle_temperature = self.get_state("sensor.hot_water_tank_middle")
     hot_water_tank_bottom_temperature = self.get_state("sensor.hot_water_tank_bottom")
     
+    cellar_lcd.lcd_display_string("Cidlo 2: "+ hot_water_tank_middle_temperature + " " + chr(0) + "C", 1)
+    cellar_lcd.lcd_display_string("Cidlo 3: "+ hot_water_tank_bottom_temperature + " " + chr(0) + "C", 2)
+
     first_floor_lcd.lcd_display_string("Cidlo 2: "+ hot_water_tank_middle_temperature + " " + chr(0) + "C", 1)
     first_floor_lcd.lcd_display_string("Cidlo 3: "+ hot_water_tank_bottom_temperature + " " + chr(0) + "C", 2)
 

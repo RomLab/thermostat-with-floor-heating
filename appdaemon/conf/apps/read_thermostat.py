@@ -16,7 +16,6 @@ class READTHERMOSTAT(hass.Hass):
 
     def read_thermostat(self, kwargs): 
         GPIO.setmode(GPIO.BCM) 
-        
         GPIO.setup(24, GPIO.IN) 
         state_first_floor = GPIO.input(24)
         

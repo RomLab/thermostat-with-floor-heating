@@ -4,7 +4,6 @@
   trigger:
     platform: time_pattern
     seconds: '/5'  
-  mode: queued 
   condition:
     condition: and
     conditions:
@@ -30,8 +29,16 @@
     - service: script.turn_on
       data_template:
         entity_id: >
-          {%- if is_state('input_boolean.pump_fireplace_first_floor_indication', 'off') and is_state('input_boolean.pump_fireplace_second_floor_indication', 'off')-%}
+          {%- if is_state('input_boolean.pump_fireplace_first_floor_indication', 'off') and is_state('input_boolean.pump_fireplace_second_floor_indication', 'off') and is_state('input_boolean.pump_fireplace_cellar_indication', 'off') -%}
+            script.turn_on_pump_fireplace_first_floor,script.turn_on_pump_fireplace_second_floor,script.turn_on_pump_fireplace_cellar
+          {%- elif is_state('input_boolean.pump_fireplace_first_floor_indication', 'off') and is_state('input_boolean.pump_fireplace_second_floor_indication', 'off') -%}
             script.turn_on_pump_fireplace_first_floor,script.turn_on_pump_fireplace_second_floor
+          {%- elif is_state('input_boolean.pump_fireplace_first_floor_indication', 'off') and is_state('input_boolean.pump_fireplace_cellar_indication', 'off') -%}
+            script.turn_on_pump_fireplace_first_floor,script.turn_on_pump_fireplace_cellar
+          {%- elif is_state('input_boolean.pump_fireplace_second_floor_indication', 'off') and is_state('input_boolean.pump_fireplace_cellar_indication', 'off') -%}
+            script.turn_on_pump_fireplace_second_floor,script.turn_on_pump_fireplace_cellar
+          {%- elif is_state('input_boolean.pump_fireplace_cellar_indication', 'off') -%}
+             script.turn_on_pump_fireplace_cellar
           {%- elif is_state('input_boolean.pump_fireplace_first_floor_indication', 'off') -%}
              script.turn_on_pump_fireplace_first_floor
           {%- elif is_state('input_boolean.pump_fireplace_second_floor_indication', 'off') -%}
@@ -46,8 +53,16 @@
     - service: script.turn_on
       data_template:
         entity_id: >
-          {%- if is_state('input_boolean.pump_fireplace_first_floor_indication', 'off') and is_state('input_boolean.pump_fireplace_second_floor_indication', 'off')-%}
+          {%- if is_state('input_boolean.pump_fireplace_first_floor_indication', 'off') and is_state('input_boolean.pump_fireplace_second_floor_indication', 'off') and is_state('input_boolean.pump_fireplace_cellar_indication', 'off')-%}
+            script.turn_off_pump_fireplace_first_floor,script.turn_off_pump_fireplace_second_floor,script.turn_off_pump_fireplace_cellar
+          {%- elif is_state('input_boolean.pump_fireplace_first_floor_indication', 'off') and is_state('input_boolean.pump_fireplace_second_floor_indication', 'off') -%}
             script.turn_off_pump_fireplace_first_floor,script.turn_off_pump_fireplace_second_floor
+          {%- elif is_state('input_boolean.pump_fireplace_first_floor_indication', 'off') and is_state('input_boolean.pump_fireplace_cellar_indication', 'off') -%}
+            script.turn_off_pump_fireplace_first_floor,script.turn_off_pump_fireplace_cellar
+          {%- elif is_state('input_boolean.pump_fireplace_second_floor_indication', 'off') and is_state('input_boolean.pump_fireplace_cellar_indication', 'off') -%}
+            script.turn_off_pump_fireplace_second_floor,script.turn_off_pump_fireplace_cellar
+          {%- elif is_state('input_boolean.pump_fireplace_cellar_indication', 'off') -%}
+            script.turn_off_pump_fireplace_cellar
           {%- elif is_state('input_boolean.pump_fireplace_first_floor_indication', 'off') -%}
             script.turn_off_pump_fireplace_first_floor
           {%- elif is_state('input_boolean.pump_fireplace_second_floor_indication', 'off') -%}

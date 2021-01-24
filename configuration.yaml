@@ -25,6 +25,7 @@ recorder:
       - sensor.hot_water_tank_middle
       - sensor.hot_water_tank_bottom
       - sensor.outdoor
+      - sensor.fireplace_cellar
       - sensor.fireplace_first_floor
       - sensor.fireplace_second_floor
       - binary_sensor.temp_first_floor
@@ -45,6 +46,7 @@ history:
       - sensor.hot_water_tank_middle
       - sensor.hot_water_tank_bottom
       - sensor.outdoor
+      - sensor.fireplace_cellar
       - sensor.fireplace_first_floor
       - sensor.fireplace_second_floor
       - binary_sensor.temp_first_floor
@@ -65,6 +67,7 @@ logbook:
       - sensor.hot_water_tank_middle
       - sensor.hot_water_tank_bottom
       - sensor.outdoor
+      - sensor.fireplace_cellar
       - sensor.fireplace_first_floor
       - sensor.fireplace_second_floor
       - binary_sensor.temp_first_floor
