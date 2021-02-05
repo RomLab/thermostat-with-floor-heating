@@ -94,7 +94,22 @@ views:
           - input_select.pumps_start_cleaning
           - input_datetime.pumps_start_cleaning
           - input_number.pumps_lenght_of_run
-
+      - type: entities
+        title: 'Nastavení pohonů okruhů podla. vytápění'
+        show_header_toggle: false
+        entities:
+          - input_number.thermo_actuator_bathroom
+          - input_number.thermo_actuator_bathroom_ladder
+          - input_number.thermo_actuator_living_and_diving_room
+          - input_number.thermo_actuator_workroom
+          - input_number.thermo_actuator_kitchen
+          - input_number.thermo_actuator_corridor_and_toilet
+          - input_number.thermo_actuator_north_room
+          - input_number.thermo_actuator_parents_bedroom_window
+          - input_number.thermo_actuator_parents_bedroom_door
+          - input_number.thermo_actuator_middle_room
+          - input_number.thermo_actuator_corner_room
+          - input_number.thermo_actuator_thomas_bedroom
   - title: 'Ovládání RPi'
     path: ovladani-rpi
     cards:
