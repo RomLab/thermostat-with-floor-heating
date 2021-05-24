@@ -148,3 +148,52 @@ Instalace do virtual environment appdaemon: ```pip3 install RPi.GPIO```
 - Upravení práv pro uživatel homeassistant pro spuštení shell_command skrz HA (https://community.home-assistant.io/t/is-adding-the-hass-user-to-sudoers-for-script-a-good-idea/78862)
 - Spustit přes: ```sudo visudo```
 - Vložit na konec souboru (zjistit, jestli neomezit jen pro jakou složku/soubor): ```homeassistant ALL=NOPASSWD: ALL```
+
+## Instalace Mosquitto
+- Instalovat do systému: ```sudo apt-get install mosquitto```
+- ```cd etc/mosquitto```
+- Přidání uživatele:```sudo mosquitto_passwd -c users.passwd <user name-> homeassistant>```
+- ```cd etc/mosquitto/conf.d```
+- ```sudo nano user.conf```
+- - Přidání do souboru:
+- - - ```allow_anonymous false```
+- - - ```password_file /etc/mosquitto/users.passwd```
+- Založit službu/soubor: ```sudo nano -w /etc/systemd/system/mosquitto.service```
+- - Vložit:
+```
+[Unit]
+Description=Mosquitto MQTT Broker daemon
+ConditionPathExists=/etc/mosquitto/mosquitto.conf
+Wants=multi-user.target
+After=multi-user.target
+Requires=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf -d
+ExecReload=/bin/kill -HUP $MAINPID
+PIDFile=/var/run/mosquitto.pid
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+- - Reload systemd: ```sudo systemctl --system daemon-reload```
+- - Povolení služby: ```sudo systemctl enable mosquitto.service```
+- Úprava služby Home Assistant (spuštění až za Mosquittem):
+```
+[Unit]
+Description=Home Assistant
+After=network-online.target mosquitto.service
+Requires=mosquitto.service
+[Service]
+Type=simple
+User=%i
+WorkingDirectory=/home/%i/.homeassistant
+ExecStart=/srv/homeassistant/bin/hass -c "/home/%i/.homeassistant"
+
+[Install]
+WantedBy=multi-user.target
+```
+- - Reload systemd: ```sudo systemctl --system daemon-reload```
+- - Spuštění služby: ```sudo systemctl start mosquitto.service``` 
