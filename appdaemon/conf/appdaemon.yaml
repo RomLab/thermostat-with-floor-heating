@@ -1,6 +1,6 @@
 #secrets:  /home/appdaemon/.appdaemon/conf/secrets.yaml
 appdaemon:
-  threads: 10
+  threads: 60
   time_zone: Europe/Prague
   latitude: 32.87336
   longitude: 117.22743

@@ -14,7 +14,7 @@ class TEMPMAX31850K(hass.Hass):
         self.handle = self.run_every(self.read_and_set_temp, start_time, interval_of_reading)
 
     def read_and_set_temp(self, kwargs): 
-        fireplace_cellar_temperature = self.read_temp("3b-0cfc0d8bcc8e")
+        fireplace_cellar_temperature = self.read_temp("3b-0cfc0d8bc6a4")
         fireplace_first_floor_temperature = self.read_temp("3b-4cc80984ea83")
         fireplace_second_floor_temperature = self.read_temp("3b-2cc80984fc57")
 
