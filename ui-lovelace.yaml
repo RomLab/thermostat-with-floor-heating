@@ -11,6 +11,12 @@ views:
             entity: input_boolean.manual_winter_mode
           - type: entity-button
             entity: input_boolean.control_mode_from_outdoor_temp_sensor
+      - type: entities
+        title: 'Řízení podle snímaní teploty'
+        show_header_toggle: false
+        entities:
+          - input_boolean.manual_control_corridor_thermostat
+          - input_boolean.manual_control_room_thermostat
       - type: horizontal-stack
         title: 'Spínání plynového kotle'
         cards:
@@ -110,6 +116,13 @@ views:
           - input_number.thermo_actuator_middle_room
           - input_number.thermo_actuator_corner_room
           - input_number.thermo_actuator_thomas_bedroom
+     
+  - title: 'Termostaty'
+    path: termostaty
+    cards:
+      - type: thermostat
+        entity: climate.parents_bedroom
+        name: 'Ložnice rodičů'
   - title: 'Ovládání RPi'
     path: ovladani-rpi
     cards:

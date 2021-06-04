@@ -1,0 +1,8 @@
+- platform: mqtt
+  name: 'parents_bedroom_temp'
+  state_topic: 'home/first-floor/parents-bedroom/temperature'
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: 'parents_bedroom_required_temp_from_device'
+  state_topic: 'home/first-floor/parents-bedroom/required-temperature-from-device'
+  unit_of_measurement: '°C'

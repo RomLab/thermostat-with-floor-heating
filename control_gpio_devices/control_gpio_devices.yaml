@@ -1,8 +1,8 @@
 - platform: rpi_gpio
   ports:
-    21: gas_boiler
-    25: pump_fireplace_cellar # originally gas_boiler
+    25: gas_boiler
     17: pump_fireplace_first_floor
+    19: pump_fireplace_cellar
     27: pump_fireplace_second_floor
     22: pump_first_floor
     5: pump_second_floor

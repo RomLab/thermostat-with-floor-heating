@@ -1,0 +1,2 @@
+mqtt_req_temp_record_from_parents_bedroom:
+  name: 'Indikace přenosu (MQTT) požadované teploty z ložnice rodičů'

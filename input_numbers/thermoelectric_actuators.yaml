@@ -4,7 +4,7 @@ thermo_actuator_bathroom:
   max: 100
   mode: box
   step: 1
-  initial: 50
+  initial: 0
   unit_of_measurement: '%'
   icon: mdi:valve
 thermo_actuator_bathroom_ladder:
@@ -13,7 +13,7 @@ thermo_actuator_bathroom_ladder:
   max: 100
   mode: box
   step: 1
-  initial: 50
+  initial: 0
   unit_of_measurement: '%'
   icon: mdi:valve
 thermo_actuator_living_and_diving_room:
@@ -22,7 +22,7 @@ thermo_actuator_living_and_diving_room:
   max: 100
   mode: box
   step: 1
-  initial: 50
+  initial: 0
   unit_of_measurement: '%'
   icon: mdi:valve
 thermo_actuator_workroom:
@@ -31,7 +31,7 @@ thermo_actuator_workroom:
   max: 100
   mode: box
   step: 1
-  initial: 50
+  initial: 0
   unit_of_measurement: '%'
   icon: mdi:valve
 thermo_actuator_kitchen:
@@ -40,7 +40,7 @@ thermo_actuator_kitchen:
   max: 100
   mode: box
   step: 1
-  initial: 50
+  initial: 0
   unit_of_measurement: '%'
   icon: mdi:valve
 thermo_actuator_thomas_bedroom:
@@ -49,7 +49,7 @@ thermo_actuator_thomas_bedroom:
   max: 100
   mode: box
   step: 1
-  initial: 50
+  initial: 0
   unit_of_measurement: '%'
   icon: mdi:valve
 thermo_actuator_north_room:
@@ -58,7 +58,7 @@ thermo_actuator_north_room:
   max: 100
   mode: box
   step: 1
-  initial: 50
+  initial: 0
   unit_of_measurement: '%'
   icon: mdi:valve
 thermo_actuator_middle_room:
@@ -67,7 +67,7 @@ thermo_actuator_middle_room:
   max: 100
   mode: box
   step: 1
-  initial: 50
+  initial: 0
   unit_of_measurement: '%'
   icon: mdi:valve
 thermo_actuator_corner_room:
@@ -76,7 +76,7 @@ thermo_actuator_corner_room:
   max: 100
   mode: box
   step: 1
-  initial: 50
+  initial: 0
   unit_of_measurement: '%'
   icon: mdi:valve
 thermo_actuator_parents_bedroom_window:
@@ -85,7 +85,7 @@ thermo_actuator_parents_bedroom_window:
   max: 100
   mode: box
   step: 1
-  initial: 50
+  initial: 0
   unit_of_measurement: '%'
   icon: mdi:valve
 thermo_actuator_parents_bedroom_door:
@@ -94,7 +94,7 @@ thermo_actuator_parents_bedroom_door:
   max: 100
   mode: box
   step: 1
-  initial: 50
+  initial: 0
   unit_of_measurement: '%'
   icon: mdi:valve
 thermo_actuator_corridor_and_toilet:
@@ -103,6 +103,6 @@ thermo_actuator_corridor_and_toilet:
   max: 100
   mode: box
   step: 1
-  initial: 50
+  initial: 0
   unit_of_measurement: '%'
   icon: mdi:valve
