@@ -8,9 +8,9 @@ class I2CLCD(hass.Hass):
     self.listen_state(self.trigger, "sensor.hot_water_tank_bottom")
 
   def trigger(self, entity, attribute, old, new, kwargs):  
-    cellar_lcd = i2c_lcd_driver.lcd(0x25)  
-    first_floor_lcd = i2c_lcd_driver.lcd(0x26)
-    second_floor_lcd = i2c_lcd_driver.lcd(0x27)
+    cellar_lcd = i2c_lcd_driver.lcd(0x25)
+    first_floor_lcd= i2c_lcd_driver.lcd(0x27)  
+    second_floor_lcd= i2c_lcd_driver.lcd(0x26)
     degree = [      
         [ 0b00111,
 	      0b00101,
