@@ -1,3 +1,102 @@
+# Bathroom
+- platform: generic_thermostat
+  name: bathroom
+  heater: input_boolean.zone_bathroom
+  target_sensor: sensor.bathroom_temp
+  min_temp: 0
+  max_temp: 30
+  ac_mode: false
+  target_temp: 20
+  cold_tolerance: 0.5
+  hot_tolerance: 0
+  initial_hvac_mode: 'heat'
+  away_temp: 16
+  precision: 0.1
+# Kitchen, workroom, living and diving room
+- platform: generic_thermostat
+  name: kitchen_workroom_living_and_diving_room
+  heater: input_boolean.zone_kitchen_workroom_living_and_diving_room
+  target_sensor: sensor.kitchen_workroom_living_and_diving_room_temp
+  min_temp: 0
+  max_temp: 30
+  ac_mode: false
+  target_temp: 20
+  cold_tolerance: 0.5
+  hot_tolerance: 0
+  initial_hvac_mode: 'heat'
+  away_temp: 16
+  precision: 0.1
+# Thomas bedroom
+- platform: generic_thermostat
+  name: thomas_bedroom
+  heater: input_boolean.zone_thomas_bedroom
+  target_sensor: sensor.thomas_bedroom_temp
+  min_temp: 0
+  max_temp: 30
+  ac_mode: false
+  target_temp: 20
+  cold_tolerance: 0.5
+  hot_tolerance: 0
+  initial_hvac_mode: 'heat'
+  away_temp: 16
+  precision: 0.1
+# North room
+- platform: generic_thermostat
+  name: north_room
+  heater: input_boolean.zone_north_room
+  target_sensor: sensor.north_room_temp
+  min_temp: 0
+  max_temp: 30
+  ac_mode: false
+  target_temp: 20
+  cold_tolerance: 0.5
+  hot_tolerance: 0
+  initial_hvac_mode: 'heat'
+  away_temp: 16
+  precision: 0.1
+# Middle room
+- platform: generic_thermostat
+  name: middle_room
+  heater: input_boolean.zone_middle_room
+  target_sensor: sensor.middle_room_temp
+  min_temp: 0
+  max_temp: 30
+  ac_mode: false
+  target_temp: 20
+  cold_tolerance: 0.5
+  hot_tolerance: 0
+  initial_hvac_mode: 'heat'
+  away_temp: 16
+  precision: 0.1
+# Corner room
+- platform: generic_thermostat
+  name: corner_room
+  heater: input_boolean.zone_corner_room
+  target_sensor: sensor.corner_room_temp
+  min_temp: 0
+  max_temp: 30
+  ac_mode: false
+  target_temp: 20
+  cold_tolerance: 0.5
+  hot_tolerance: 0
+  initial_hvac_mode: 'heat'
+  away_temp: 16
+  precision: 0.1
+# Corridor and toilet
+- platform: generic_thermostat
+  name: corridor_and_toilet
+  heater: input_boolean.zone_corridor_and_toilet
+  target_sensor: sensor.corridor_and_toilet_temp
+  min_temp: 0
+  max_temp: 30
+  ac_mode: false
+  target_temp: 20
+  cold_tolerance: 0.5
+  hot_tolerance: 0
+  initial_hvac_mode: 'heat'
+  away_temp: 16
+  precision: 0.1
+# Parents bedroom
 - platform: generic_thermostat
   name: parents_bedroom
   heater: input_boolean.zone_parents_bedroom
@@ -8,6 +107,6 @@
   target_temp: 20
   cold_tolerance: 0.5
   hot_tolerance: 0
-  initial_hvac_mode: "heat"
+  initial_hvac_mode: 'heat'
   away_temp: 16
   precision: 0.1

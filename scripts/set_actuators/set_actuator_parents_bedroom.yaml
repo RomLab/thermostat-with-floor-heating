@@ -1,9 +1,9 @@
 turn_on_actuator_parents_bedroom:
-  alias: 'Turn on actuators for parents bedroom'
-  description: 'Turn on actuators for parents bedroom'
+  alias: 'Turn on actuators for a parents bedroom'
+  description: 'Turn on actuators for a parents bedroom'
   sequence:
     - condition: template
-      value_template: "{{ is_state_attr('climate.parents_bedroom','hvac_action', 'heating') }}"
+      value_template: "{{ is_state_attr('climate.parents_bedroom', 'hvac_action', 'heating') }}"
     - service: input_number.set_value
       data:
         entity_id: 
@@ -14,11 +14,11 @@ turn_on_actuator_parents_bedroom:
       entity_id: script.turn_on_pump_corridor_second_floor
 
 turn_off_actuator_parents_bedroom:
-  alias: 'Turn off actuators for parents bedroom'
-  description: 'Turn off actuators for parents bedroom'
+  alias: 'Turn off actuators for a parents bedroom'
+  description: 'Turn off actuators for a parents bedroom'
   sequence:
     - condition: template
-      value_template: "{{ is_state_attr('climate.parents_bedroom','hvac_action', 'idle') or  is_state_attr('climate.parents_bedroom','hvac_action', 'off')}}"
+      value_template: "{{ is_state_attr('climate.parents_bedroom', 'hvac_action', 'idle') or  is_state_attr('climate.parents_bedroom', 'hvac_action', 'off')}}"
     - service: input_number.set_value
       data:
         entity_id: 

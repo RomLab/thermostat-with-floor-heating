@@ -29,6 +29,7 @@
            trigger.to_state !=
            trigger.from_state }}
   action:
+    # Disable sets required temp. from system
     - service: input_boolean.turn_on
       entity_id: input_boolean.mqtt_req_temp_record_from_parents_bedroom
     - service: climate.set_temperature

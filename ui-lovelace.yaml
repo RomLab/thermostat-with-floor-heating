@@ -121,6 +121,27 @@ views:
     path: termostaty
     cards:
       - type: thermostat
+        entity: climate.bathroom
+        name: 'Koupelna'
+      - type: thermostat
+        entity: climate.kitchen_workroom_living_and_diving_room
+        name: 'Kuchyň, pracovna, obývací/jidelní pokoj'
+      - type: thermostat
+        entity: climate.thomas_bedroom
+        name: 'Tomáš ložnice'
+      - type: thermostat
+        entity: climate.north_room
+        name: 'Severní pokoj'
+      - type: thermostat
+        entity: climate.middle_room
+        name: 'Střední pokoj'
+      - type: thermostat
+        entity: climate.corner_room
+        name: 'Rohový pokoj'
+      - type: thermostat
+        entity: climate.corridor_and_toilet
+        name: 'Chodba a toaleta'
+      - type: thermostat
         entity: climate.parents_bedroom
         name: 'Ložnice rodičů'
   - title: 'Ovládání RPi'

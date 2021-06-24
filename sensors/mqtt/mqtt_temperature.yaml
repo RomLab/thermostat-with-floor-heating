@@ -1,3 +1,67 @@
+# Bathroom
+- platform: mqtt
+  name: 'bathroom_temp'
+  state_topic: 'home/first-floor/bathroom/temperature'
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: 'bathroom_required_temp_from_device'
+  state_topic: 'home/first-floor/bathroom/required-temperature-from-device'
+  unit_of_measurement: '°C'
+# Kitchen, workroom, living and diving room
+- platform: mqtt
+  name: 'kitchen_workroom_living_and_diving_room_temp'
+  state_topic: 'home/first-floor/kitchen_workroom_living_and_diving_room/temperature'
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: 'kitchen_workroom_living_and_diving_room_required_temp_from_device'
+  state_topic: 'home/first-floor/kitchen_workroom_living_and_diving_room/required-temperature-from-device'
+  unit_of_measurement: '°C'
+# Thomas bedroom
+- platform: mqtt
+  name: 'thomas_bedroom_temp'
+  state_topic: 'home/first-floor/thomas_bedroom/temperature'
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: 'thomas_bedroom_required_temp_from_device'
+  state_topic: 'home/first-floor/thomas_bedroom/required-temperature-from-device'
+  unit_of_measurement: '°C'
+# North room
+- platform: mqtt
+  name: 'north_room_temp'
+  state_topic: 'home/first-floor/north_room/temperature'
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: 'north_room_required_temp_from_device'
+  state_topic: 'home/first-floor/north_room/required-temperature-from-device'
+  unit_of_measurement: '°C'
+# Middle room
+- platform: mqtt
+  name: 'middle_room_temp'
+  state_topic: 'home/first-floor/middle_room/temperature'
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: 'middle_room_required_temp_from_device'
+  state_topic: 'home/first-floor/middle_room/required-temperature-from-device'
+  unit_of_measurement: '°C'
+# Corner room
+- platform: mqtt
+  name: 'corner_room_temp'
+  state_topic: 'home/first-floor/corner_room/temperature'
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: 'corner_room_required_temp_from_device'
+  state_topic: 'home/first-floor/corner_room/required-temperature-from-device'
+  unit_of_measurement: '°C'
+# Corridor and toilet
+- platform: mqtt
+  name: 'corridor_and_toilet_temp'
+  state_topic: 'home/first-floor/corridor_and_toilet/temperature'
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: 'corridor_and_toilet_required_temp_from_device'
+  state_topic: 'home/first-floor/corridor_and_toilet/required-temperature-from-device'
+  unit_of_measurement: '°C'
+# Parents bedroom
 - platform: mqtt
   name: 'parents_bedroom_temp'
   state_topic: 'home/first-floor/parents-bedroom/temperature'

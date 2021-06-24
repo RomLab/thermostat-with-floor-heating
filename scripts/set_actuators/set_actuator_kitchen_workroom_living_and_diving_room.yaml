@@ -1,0 +1,31 @@
+turn_on_actuator_kitchen_workroom_living_and_diving_room:
+  alias: 'Turn on actuators for a kitchen, workroom, living/diving room'
+  description: 'Turn on actuators a for kitchen, workroom, living/diving room'
+  sequence:
+    - condition: template
+      value_template: "{{ is_state_attr('climate.kitchen_workroom_living_and_diving_room', 'hvac_action', 'heating') }}"
+    - service: input_number.set_value
+      data:
+        entity_id: 
+          - input_number.thermo_actuator_living_and_diving_room
+          - input_number.thermo_actuator_workroom
+          - input_number.thermo_actuator_kitchen
+        value: '100'
+    - service: script.turn_on
+      entity_id: script.turn_on_pump_corridor_second_floor
+
+turn_off_actuator_kitchen_workroom_living_and_diving_room:
+  alias: 'Turn off actuators for a kitchen, workroom, living/diving room'
+  description: 'Turn off actuators for a kitchen, workroom, living/diving room'
+  sequence:
+    - condition: template
+      value_template: "{{ is_state_attr('climate.kitchen_workroom_living_and_diving_room', 'hvac_action', 'idle') or  is_state_attr('climate.kitchen_workroom_living_and_diving_room', 'hvac_action', 'off')}}"
+    - service: input_number.set_value
+      data:
+        entity_id: 
+          - input_number.thermo_actuator_living_and_diving_room
+          - input_number.thermo_actuator_workroom
+          - input_number.thermo_actuator_kitchen
+        value: '0'
+    - service: script.turn_on
+      entity_id: script.turn_off_pump_corridor_second_floor
