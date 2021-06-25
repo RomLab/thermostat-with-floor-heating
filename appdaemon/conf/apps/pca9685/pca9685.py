@@ -75,11 +75,11 @@ class PCA9685(object):
         self.set_all_pwm(0, 0)
         self._device.write8(MODE2, OUTDRV)
         self._device.write8(MODE1, ALLCALL)
-        time.sleep(0.005)  # wait for oscillator
+        time.sleep(1)  # wait for oscillator
         mode1 = self._device.readU8(MODE1)
         mode1 = mode1 & ~SLEEP  # wake up (reset sleep)
         self._device.write8(MODE1, mode1)
-        time.sleep(0.005)  # wait for oscillator
+        time.sleep(1)  # wait for oscillator
 
     def set_pwm_freq(self, freq_hz):
         """Set the PWM frequency to the provided value in hertz."""
@@ -96,7 +96,7 @@ class PCA9685(object):
         self._device.write8(MODE1, newmode)  # go to sleep
         self._device.write8(PRESCALE, prescale)
         self._device.write8(MODE1, oldmode)
-        time.sleep(0.005)
+        time.sleep(1)
         self._device.write8(MODE1, oldmode | 0x80)
 
     def set_pwm(self, channel, on, off):
