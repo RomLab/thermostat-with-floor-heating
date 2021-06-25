@@ -1,0 +1,10 @@
+pump_second_floor_zones:
+  alias: 'Zone control of a pump in a second floor for floor heating'
+  description: 'Zone control according to request from a zone control module on a second floor'
+  sequence:
+    - service_template: >
+        {%- if is_state_attr('climate.bathroom', 'hvac_action', 'heating') or is_state_attr('climate.corner_room', 'hvac_action', 'heating') or is_state_attr('climate.corridor_and_toilet', 'hvac_action', 'heating') or  is_state_attr('climate.kitchen_workroom_living_and_diving_room', 'hvac_action', 'heating') or is_state_attr('climate.middle_room', 'hvac_action', 'heating') or is_state_attr('climate.north_room', 'hvac_action', 'heating') or is_state_attr('climate.parents_bedroom', 'hvac_action', 'heating') or is_state_attr('climate.thomas_bedroom', 'hvac_action', 'heating') -%}
+           script.turn_on_pump_corridor_second_floor
+        {%- else -%}
+            script.turn_off_pump_corridor_second_floor
+        {%- endif -%}

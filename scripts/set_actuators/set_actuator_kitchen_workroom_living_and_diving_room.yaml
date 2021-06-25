@@ -11,8 +11,6 @@ turn_on_actuator_kitchen_workroom_living_and_diving_room:
           - input_number.thermo_actuator_workroom
           - input_number.thermo_actuator_kitchen
         value: '100'
-    - service: script.turn_on
-      entity_id: script.turn_on_pump_corridor_second_floor
 
 turn_off_actuator_kitchen_workroom_living_and_diving_room:
   alias: 'Turn off actuators for a kitchen, workroom, living/diving room'
@@ -27,5 +25,3 @@ turn_off_actuator_kitchen_workroom_living_and_diving_room:
           - input_number.thermo_actuator_workroom
           - input_number.thermo_actuator_kitchen
         value: '0'
-    - service: script.turn_on
-      entity_id: script.turn_off_pump_corridor_second_floor

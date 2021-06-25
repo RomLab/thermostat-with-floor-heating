@@ -9,8 +9,6 @@ turn_on_actuator_thomas_bedroom:
         entity_id: 
           - input_number.thermo_actuator_thomas_bedroom
         value: '100'
-    - service: script.turn_on
-      entity_id: script.turn_on_pump_corridor_second_floor
 
 turn_off_actuator_thomas_bedroom:
   alias: 'Turn off actuators for a Thomas bedroom'
@@ -23,5 +21,3 @@ turn_off_actuator_thomas_bedroom:
         entity_id: 
           - input_number.thermo_actuator_thomas_bedroom
         value: '0'
-    - service: script.turn_on
-      entity_id: script.turn_off_pump_corridor_second_floor

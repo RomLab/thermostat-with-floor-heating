@@ -10,8 +10,6 @@ turn_on_actuator_parents_bedroom:
           - input_number.thermo_actuator_parents_bedroom_window
           - input_number.thermo_actuator_parents_bedroom_door
         value: '100'
-    - service: script.turn_on
-      entity_id: script.turn_on_pump_corridor_second_floor
 
 turn_off_actuator_parents_bedroom:
   alias: 'Turn off actuators for a parents bedroom'
@@ -25,5 +23,3 @@ turn_off_actuator_parents_bedroom:
           - input_number.thermo_actuator_parents_bedroom_window
           - input_number.thermo_actuator_parents_bedroom_door
         value: '0'
-    - service: script.turn_on
-      entity_id: script.turn_off_pump_corridor_second_floor

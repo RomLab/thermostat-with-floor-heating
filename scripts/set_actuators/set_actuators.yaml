@@ -42,3 +42,6 @@ set_actuators:
       entity_id: script.turn_on_actuator_parents_bedroom
     - service: script.turn_on
       entity_id: script.turn_off_actuator_parents_bedroom
+    # Control second pump from zones
+    - service: script.turn_on
+      entity_id: script.pump_second_floor_zones
