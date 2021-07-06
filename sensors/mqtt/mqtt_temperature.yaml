@@ -39,10 +39,12 @@
   name: 'middle_room_temp'
   state_topic: 'home/first-floor/middle-room/temperature'
   unit_of_measurement: '°C'
+  qos: 2
 - platform: mqtt
   name: 'middle_room_required_temp_from_device'
   state_topic: 'home/first-floor/middle-room/required-temperature-from-device'
   unit_of_measurement: '°C'
+  qos: 2
 # Corner room
 - platform: mqtt
   name: 'corner_room_temp'

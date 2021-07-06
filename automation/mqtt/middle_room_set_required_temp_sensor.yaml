@@ -16,7 +16,7 @@
       data:
         topic: 'home/first-floor/middle-room/required-temperature-from-system'
         payload_template: "{{ state_attr('climate.middle_room','temperature') | float }}"
-        qos: 1
+        qos: 2
 - alias: 'Sets required temperature for a middle room from device'
   initial_state: 'on'
   trigger:
