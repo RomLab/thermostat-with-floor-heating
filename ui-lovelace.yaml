@@ -1,7 +1,44 @@
-views:
+views:   
+  - title: 'Přehled'
+    path: prehled
+    cards:
+      - type: vertical-stack
+        title: 'Teploty'
+        cards:
+          - type: history-graph
+            title: 'Porovnání teploty'
+            entities:
+              - entity: sensor.hot_water_tank_top
+              - entity: sensor.hot_water_tank_middle
+              - entity: sensor.hot_water_tank_bottom
+              - entity: sensor.fireplace_cellar
+              - entity: sensor.fireplace_first_floor
+              - entity: sensor.fireplace_second_floor
+              - entity: sensor.outdoor
+          - type: entities
+            title: 'Jednotlivé sensory'
+            show_header_toggle: false
+            entities:
+              - entity: sensor.hot_water_tank_top
+              - entity: sensor.hot_water_tank_middle
+              - entity: sensor.hot_water_tank_bottom
+              - entity: sensor.fireplace_cellar
+              - entity: sensor.fireplace_first_floor
+              - entity: sensor.fireplace_second_floor
+              - entity: sensor.outdoor   
+
+
   - title: 'Nastavení'
     path: nastaveni
     cards:
+      - type: entities
+        title: 'Řízení teploty'
+        show_header_toggle: false
+        entities:
+          - input_boolean.manual_control_corridor_thermostat
+          - input_boolean.manual_control_room_thermostat
+          - input_boolean.control_according_to_plans
+          - input_boolean.control_according_to_plans_with_temperature_prediction
       - type: horizontal-stack
         title: 'Módy řízení'
         cards:
@@ -11,12 +48,6 @@ views:
             entity: input_boolean.manual_winter_mode
           - type: entity-button
             entity: input_boolean.control_mode_from_outdoor_temp_sensor
-      - type: entities
-        title: 'Řízení podle snímaní teploty'
-        show_header_toggle: false
-        entities:
-          - input_boolean.manual_control_corridor_thermostat
-          - input_boolean.manual_control_room_thermostat
       - type: horizontal-stack
         title: 'Spínání plynového kotle'
         cards:
@@ -46,31 +77,7 @@ views:
         title: 'Ostatní nastavení'
         entities:
           - input_number.gas_boiler_temp_hysteresis
-          - input_number.min_temp_summer_mode
-      - type: vertical-stack
-        title: 'Teploty'
-        cards:
-          - type: history-graph
-            title: 'Porovnání teploty'
-            entities:
-              - entity: sensor.hot_water_tank_top
-              - entity: sensor.hot_water_tank_middle
-              - entity: sensor.hot_water_tank_bottom
-              - entity: sensor.fireplace_cellar
-              - entity: sensor.fireplace_first_floor
-              - entity: sensor.fireplace_second_floor
-              - entity: sensor.outdoor
-          - type: entities
-            title: 'Jednotlivé sensory'
-            show_header_toggle: false
-            entities:
-              - entity: sensor.hot_water_tank_top
-              - entity: sensor.hot_water_tank_middle
-              - entity: sensor.hot_water_tank_bottom
-              - entity: sensor.fireplace_cellar
-              - entity: sensor.fireplace_first_floor
-              - entity: sensor.fireplace_second_floor
-              - entity: sensor.outdoor     
+          - input_number.min_temp_summer_mode     
   - title: 'Zařízení'
     path: zarizeni
     cards:
@@ -94,56 +101,47 @@ views:
           - sensor.thermostat_first_floor_display
           - sensor.thermostat_second_floor_display
       - type: entities
-        title: 'Ovládání čerpadel – vodní kámen'
-        entities: 
-          - input_boolean.pumps_auto_start_cleaning
-          - input_select.pumps_start_cleaning
-          - input_datetime.pumps_start_cleaning
-          - input_number.pumps_lenght_of_run
-      - type: entities
-        title: 'Nastavení pohonů okruhů podla. vytápění'
+        title: 'Přízemí – otopné okruhy (ventily)'
         show_header_toggle: false
         entities:
-          - input_number.thermo_actuator_bathroom
-          - input_number.thermo_actuator_bathroom_ladder
-          - input_number.thermo_actuator_living_and_diving_room
-          - input_number.thermo_actuator_workroom
-          - input_number.thermo_actuator_kitchen
-          - input_number.thermo_actuator_corridor_and_toilet
-          - input_number.thermo_actuator_north_room
-          - input_number.thermo_actuator_parents_bedroom_window
-          - input_number.thermo_actuator_parents_bedroom_door
-          - input_number.thermo_actuator_middle_room
-          - input_number.thermo_actuator_corner_room
-          - input_number.thermo_actuator_thomas_bedroom
-     
-  - title: 'Termostaty'
-    path: termostaty
+          - sensor.thermo_actuator_first_floor_office
+          - sensor.thermo_actuator_first_floor_corridor_and_toiler
+          - sensor.thermo_actuator_first_floor_bathroom_ladder
+          - sensor.thermo_actuator_first_floor_bathroom
+          - sensor.thermo_actuator_first_floor_kitchen_door
+          - sensor.thermo_actuator_first_floor_living_room_1
+          - sensor.thermo_actuator_first_floor_living_room_2
+          - sensor.thermo_actuator_first_floor_living_room_3
+          - sensor.thermo_actuator_first_floor_kitchen_windows
+          - sensor.thermo_actuator_first_floor_cellar_ladder
+          - sensor.thermo_actuator_first_floor_garage_1
+          - sensor.thermo_actuator_first_floor_garage_2
+      - type: entities
+        title: 'Patro – otopné okruhy (ventily)'
+        show_header_toggle: false
+        entities:
+          - sensor.thermo_actuator_second_floor_bathroom
+          - sensor.thermo_actuator_second_floor_bathroom_ladder
+          - sensor.thermo_actuator_second_floor_living_and_diving_room
+          - sensor.thermo_actuator_second_floor_workroom
+          - sensor.thermo_actuator_second_floor_kitchen
+          - sensor.thermo_actuator_second_floor_corridor_and_toilet
+          - sensor.thermo_actuator_second_floor_north_room
+          - sensor.thermo_actuator_second_floor_parents_bedroom_window
+          - sensor.thermo_actuator_second_floor_parents_bedroom_door
+          - sensor.thermo_actuator_second_floor_middle_room
+          - sensor.thermo_actuator_second_floor_corner_room
+          - sensor.thermo_actuator_second_floor_thomas_bedroom 
+  - title: 'Ostatní'
+    path: ostatni
     cards:
-      - type: thermostat
-        entity: climate.bathroom
-        name: 'Koupelna'
-      - type: thermostat
-        entity: climate.kitchen_workroom_living_and_diving_room
-        name: 'Kuchyň, pracovna, obývací/jidelní pokoj'
-      - type: thermostat
-        entity: climate.thomas_bedroom
-        name: 'Tomáš ložnice'
-      - type: thermostat
-        entity: climate.north_room
-        name: 'Severní pokoj'
-      - type: thermostat
-        entity: climate.middle_room
-        name: 'Střední pokoj'
-      - type: thermostat
-        entity: climate.corner_room
-        name: 'Rohový pokoj'
-      - type: thermostat
-        entity: climate.corridor_and_toilet
-        name: 'Chodba a toaleta'
-      - type: thermostat
-        entity: climate.parents_bedroom
-        name: 'Ložnice rodičů'
+    - type: entities
+      title: 'Ovládání čerpadel – vodní kámen'
+      entities: 
+        - input_boolean.pumps_auto_start_cleaning
+        - input_select.pumps_start_cleaning
+        - input_datetime.pumps_start_cleaning
+        - input_number.pumps_lenght_of_run
   - title: 'Ovládání RPi'
     path: ovladani-rpi
     cards:
@@ -153,4 +151,5 @@ views:
       entities:
         - script.shutdown_rpi
         - script.restart_rpi
+          
     

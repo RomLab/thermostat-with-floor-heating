@@ -1,0 +1,118 @@
+views:
+  - title: 'Přízemí – Teplotní plány'
+    path: prizemi-teplotni-plany
+    cards:
+      - type: 'custom:scheduler-card'
+        title: 'Kancelář'
+        discover_existing: false
+        display_options:
+          primary_info:
+            - "{name}"
+            - "{relative-time}: {action}"
+          secondary_info: time
+        include:
+          - climate.first_floor_office 
+          - input_boolean.control_according_to_plans
+        exclude:
+          - climate.first_floor_corridor_and_toilet 
+        customize:
+          climate.first_floor_office:
+            name: 'Kancelář'
+          input_boolean.control_according_to_plans:
+            states : ['on']
+      - type: 'custom:scheduler-card'
+        title: 'Chodba/toaleta'
+        discover_existing: false
+        display_options:
+          primary_info:
+            - "{name}"
+            - "{relative-time}: {action}"
+          secondary_info: time
+        include:
+          - climate.first_floor_corridor_and_toilet 
+          - input_boolean.control_according_to_plans
+        customize:
+          climate.first_floor_corridor_and_toilet:
+            name: 'Chodba/toaleta'
+          input_boolean.control_according_to_plans:
+            states : ['on']
+      - type: 'custom:scheduler-card'
+        title: 'Koupelna'
+        discover_existing: false
+        display_options:
+          primary_info:
+            - "{name}"
+            - "{relative-time}: {action}"
+          secondary_info: time
+        include:
+          - climate.first_floor_bathroom 
+          - input_boolean.control_according_to_plans
+        customize:
+          climate.first_floor_bathroom:
+            name: 'Koupelna'
+          input_boolean.control_according_to_plans:
+            states : ['on']
+      - type: 'custom:scheduler-card'
+        title: 'Kuchyň'
+        discover_existing: false
+        display_options:
+          primary_info:
+            - "{name}"
+            - "{relative-time}: {action}"
+          secondary_info: time
+        include:
+          - climate.first_floor_kitchen 
+          - input_boolean.control_according_to_plans
+        customize:
+          climate.first_floor_kitchen:
+            name: 'Kuchyň'
+          input_boolean.control_according_to_plans:
+            states : ['on']
+      - type: 'custom:scheduler-card'
+        title: 'Obývací pokoj'
+        discover_existing: false
+        display_options:
+          primary_info:
+            - "{name}"
+            - "{relative-time}: {action}"
+          secondary_info: time
+        include:
+          - climate.first_floor_living_room 
+          - input_boolean.control_according_to_plans
+        customize:
+          climate.first_floor_living_room:
+            name: 'Obývací pokoj'
+          input_boolean.control_according_to_plans:
+            states : ['on']
+      - type: 'custom:scheduler-card'
+        title: 'Sklep'
+        discover_existing: false
+        display_options:
+          primary_info:
+            - "{name}"
+            - "{relative-time}: {action}"
+          secondary_info: time
+        include:
+          - climate.first_floor_cellar 
+          - input_boolean.control_according_to_plans
+        customize:
+          climate.first_floor_cellar:
+            name: 'Sklep'
+          input_boolean.control_according_to_plans:
+            states : ['on']
+      - type: 'custom:scheduler-card'
+        title: 'Garáž'
+        discover_existing: false
+        display_options:
+          primary_info:
+            - "{name}"
+            - "{relative-time}: {action}"
+          secondary_info: time
+        include:
+          - climate.first_floor_garage 
+          - input_boolean.control_according_to_plans
+        customize:
+          climate.first_floor_garage:
+            name: 'Garáž'
+          input_boolean.control_according_to_plans:
+            states : ['on']

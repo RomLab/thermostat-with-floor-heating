@@ -1,0 +1,62 @@
+# Office
+- platform: mqtt
+  name: 'first_floor_office_temp'
+  state_topic: 'home/first-floor/office/temperature'
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: 'first_floor_office_required_temp_from_device'
+  state_topic: 'home/first-floor/office/required-temperature-from-device'
+  unit_of_measurement: '°C'
+# Corridor and toilet
+- platform: mqtt
+  name: 'first_floor_corridor_and_toilet_temp'
+  state_topic: 'home/first-floor/corridor_and_toilet/temperature'
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: 'first_floor_corridor_and_toilet_required_temp_from_device'
+  state_topic: 'home/first-floor/corridor_and_toilet/required-temperature-from-device'
+  unit_of_measurement: '°C'
+# Bathroom
+- platform: mqtt
+  name: 'first_floor_bathroom_temp'
+  state_topic: 'home/first-floor/bathroom/temperature'
+  unit_of_measurement: '°C'
+  qos: 2
+- platform: mqtt
+  name: 'bathroom_required_temp_from_device'
+  state_topic: 'home/first-floor/bathroom/required-temperature-from-device'
+  unit_of_measurement: '°C'
+  qos: 2
+# Living room
+- platform: mqtt
+  name: 'living_room_temp'
+  state_topic: 'home/first-floor/living_room/temperature'
+  unit_of_measurement: '°C'
+  qos: 2
+- platform: mqtt
+  name: 'first_floor_living_room_required_temp_from_device'
+  state_topic: 'home/first-floor/living_room/required-temperature-from-device'
+  unit_of_measurement: '°C'
+  qos: 2
+# Cellar
+- platform: mqtt
+  name: 'first_floor_cellar_temp'
+  state_topic: 'home/first-floor/cellar/temperature'
+  unit_of_measurement: '°C'
+  qos: 2
+- platform: mqtt
+  name: 'first_floor_cellar_required_temp_from_device'
+  state_topic: 'home/first-floor/cellar/required-temperature-from-device'
+  unit_of_measurement: '°C'
+  qos: 2
+# Garage
+- platform: mqtt
+  name: 'first_floor_garage_temp'
+  state_topic: 'home/first-floor/garage/temperature'
+  unit_of_measurement: '°C'
+  qos: 2
+- platform: mqtt
+  name: 'first_floor_garage_required_temp_from_device'
+  state_topic: 'home/first-floor/garage/required-temperature-from-device'
+  unit_of_measurement: '°C'
+  qos: 2

@@ -1,0 +1,108 @@
+thermo_actuator_second_floor_bathroom:
+  name: 'Koupelna'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '%'
+  icon: mdi:valve
+thermo_actuator_second_floor_bathroom_ladder:
+  name: 'Koupelna – žebřík'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '%'
+  icon: mdi:valve
+thermo_actuator_second_floor_living_and_diving_room:
+  name: 'Obývák/jídelna'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '%'
+  icon: mdi:valve
+thermo_actuator_second_floor_workroom:
+  name: 'Pracovna'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '%'
+  icon: mdi:valve
+thermo_actuator_second_floor_kitchen:
+  name: 'Kuchyně'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '%'
+  icon: mdi:valve
+thermo_actuator_second_floor_thomas_bedroom:
+  name: 'Ložnice Tomáše'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '%'
+  icon: mdi:valve
+thermo_actuator_second_floor_north_room:
+  name: 'Severní pokoj'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '%'
+  icon: mdi:valve
+thermo_actuator_second_floor_middle_room:
+  name: 'Střední pokoj'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '%'
+  icon: mdi:valve
+thermo_actuator_second_floor_corner_room:
+  name: 'Rohový pokoj'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '%'
+  icon: mdi:valve
+thermo_actuator_second_floor_parents_bedroom_window:
+  name: 'Ložnice rodičů – okno'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '%'
+  icon: mdi:valve
+thermo_actuator_second_floor_parents_bedroom_door:
+  name: 'Ložnice rodičů – dveře'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '%'
+  icon: mdi:valve
+thermo_actuator_second_floor_corridor_and_toilet:
+  name: 'Chodba/toaleta'
+  min: 0
+  max: 100
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '%'
+  icon: mdi:valve

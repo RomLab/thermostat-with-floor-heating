@@ -1,0 +1,25 @@
+views:
+  - title: 'Přízemí – Termostaty'
+    path: termostaty-prizemi
+    cards:
+      - type: thermostat
+        entity: climate.first_floor_office
+        name: 'Kancelář'
+      - type: thermostat
+        entity: climate.first_floor_corridor_and_toilet
+        name: 'Chodba/toaleta'
+      - type: thermostat
+        entity: climate.first_floor_bathroom
+        name: 'Koupelna'
+      - type: thermostat
+        entity: climate.first_floor_kitchen
+        name: 'Kuchyň'
+      - type: thermostat
+        entity: climate.first_floor_living_room
+        name: 'Obývací pokoj'
+      - type: thermostat
+        entity: climate.first_floor_cellar
+        name: 'Sklep'
+      - type: thermostat
+        entity: climate.first_floor_garage
+        name: 'Garáž'  

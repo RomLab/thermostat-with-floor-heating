@@ -24,4 +24,8 @@ pump_fireplace_second_floor_indication:
 manual_control_corridor_thermostat:
   name: 'Řízení teploty z chodbových termostatů'
 manual_control_room_thermostat:
-  name: 'Řízení teploty z lokálních nástěnných snímčů teploty'
+  name: 'Manuální řízení teploty z lokálních nástěnných snímčů teploty'
+control_according_to_plans:
+  name: 'Automatické řízení podle teplotních plánů'
+control_according_to_plans_with_temperature_prediction:
+  name: 'Automatické řízení podle teplotních plánů s teplotní predikcí'

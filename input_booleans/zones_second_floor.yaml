@@ -1,0 +1,16 @@
+zone_second_floor_bathroom:
+  name: 'Vytápění koupelna'
+zone_second_floor_kitchen_workroom_living_and_diving_room:
+  name: 'Vytápění kuchyň, pracovna, obývák/jídelna'
+zone_second_floor_thomas_bedroom:
+  name: 'Vytápění ložnice Tomáše'
+zone_second_floor_north_room:
+  name: 'Vytápění severní pokoj'
+zone_second_floor_middle_room:
+  name: 'Vytápění střední pokoj'
+zone_second_floor_corner_room:
+  name: 'Vytápění rohový pokoj'
+zone_second_floor_corridor_and_toilet:
+  name: 'Vytápění chodba/toaleta'
+zone_second_floor_parents_bedroom:
+  name: 'Vytápění ložnice rodičů'

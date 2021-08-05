@@ -1,0 +1,28 @@
+views:
+  - title: 'Patro – Termostaty'
+    path: patro-termostaty
+    cards:
+      - type: thermostat
+        entity: climate.second_floor_bathroom
+        name: 'Koupelna'
+      - type: thermostat
+        entity: climate.second_floor_kitchen_workroom_living_and_diving_room
+        name: 'Kuchyň, pracovna, obývací/jidelní pokoj'
+      - type: thermostat
+        entity: climate.second_floor_thomas_bedroom
+        name: 'Tomáš ložnice'
+      - type: thermostat
+        entity: climate.second_floor_north_room
+        name: 'Severní pokoj'
+      - type: thermostat
+        entity: climate.second_floor_middle_room
+        name: 'Střední pokoj'
+      - type: thermostat
+        entity: climate.second_floor_corner_room
+        name: 'Rohový pokoj'
+      - type: thermostat
+        entity: climate.second_floor_corridor_and_toilet
+        name: 'Chodba a toaleta'
+      - type: thermostat
+        entity: climate.second_floor_parents_bedroom
+        name: 'Ložnice rodičů'
