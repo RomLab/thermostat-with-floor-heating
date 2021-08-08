@@ -1,25 +1,95 @@
 views:
   - title: 'Přízemí – Termostaty'
-    path: termostaty-prizemi
+    path: prizemi-termostaty
     cards:
-      - type: thermostat
-        entity: climate.first_floor_office
-        name: 'Kancelář'
-      - type: thermostat
-        entity: climate.first_floor_corridor_and_toilet
-        name: 'Chodba/toaleta'
-      - type: thermostat
-        entity: climate.first_floor_bathroom
-        name: 'Koupelna'
-      - type: thermostat
-        entity: climate.first_floor_kitchen
-        name: 'Kuchyň'
-      - type: thermostat
-        entity: climate.first_floor_living_room
-        name: 'Obývací pokoj'
-      - type: thermostat
-        entity: climate.first_floor_cellar
-        name: 'Sklep'
-      - type: thermostat
-        entity: climate.first_floor_garage
-        name: 'Garáž'  
+      - type: vertical-stack
+        title: 'Kancelář'
+        cards:
+          - type: thermostat
+            entity: climate.first_floor_office
+            name: 'Termostat'
+          - type: vertical-stack
+            cards:
+              - type: entities
+                state_color: true
+                entities:
+                  - binary_sensor.first_floor_ping_thermostat_office
+                  - binary_sensor.first_floor_detection_of_open_window_office
+      - type: vertical-stack
+        title: 'Chodba/toaleta'
+        cards:
+          - type: thermostat
+            entity: climate.first_floor_corridor_and_toilet
+            name: 'Termostat'
+          - type: vertical-stack
+            cards:
+              - type: entities
+                state_color: true
+                entities:
+                  - binary_sensor.first_floor_ping_thermostat_corridor_and_toilet
+                  - binary_sensor.first_floor_detection_of_open_window_corridor_and_toilet
+      - type: vertical-stack
+        title: 'Koupelna'
+        cards:
+          - type: thermostat
+            entity: climate.first_floor_bathroom
+            name: 'Termostat'
+          - type: vertical-stack
+            cards:
+              - type: entities
+                state_color: true
+                entities:
+                  - binary_sensor.first_floor_ping_thermostat_bathroom
+                  - binary_sensor.first_floor_detection_of_open_window_bedroom
+      - type: vertical-stack
+        title: 'Kuchyň'
+        cards:
+          - type: thermostat
+            entity: climate.first_floor_kitchen
+            name: 'Termostat'
+          - type: vertical-stack
+            cards:
+              - type: entities
+                state_color: true
+                entities:
+                  - binary_sensor.first_floor_ping_thermostat_kitchen
+                  - binary_sensor.first_floor_detection_of_open_window_kitchen
+      - type: vertical-stack
+        title: 'Obývací pokoj'
+        cards:
+          - type: thermostat
+            entity: climate.first_floor_living_room
+            name: 'Termostat'
+          - type: vertical-stack
+            cards:
+              - type: entities
+                state_color: true
+                entities:
+                  - binary_sensor.first_floor_ping_thermostat_living_room
+                  - binary_sensor.first_floor_detection_of_open_window_living_room
+      - type: vertical-stack
+        title: 'Sklep'
+        cards:
+          - type: thermostat
+            entity: climate.first_floor_cellar
+            name: 'Termostat'
+          - type: vertical-stack
+            cards:
+              - type: entities
+                state_color: true
+                entities:
+                  - binary_sensor.first_floor_ping_thermostat_cellar
+                  - binary_sensor.first_floor_detection_of_open_window_cellar
+      - type: vertical-stack
+        title: 'Garáž'
+        cards:
+          - type: thermostat
+            entity: climate.first_floor_garage
+            name: 'Termostat'
+          - type: vertical-stack
+            cards:
+              - type: entities
+                state_color: true
+                entities:
+                  - binary_sensor.first_floor_ping_thermostat_garage
+                  - binary_sensor.first_floor_detection_of_open_window_garage

@@ -50,3 +50,49 @@ binary_sensor.temp_first_floor:
 binary_sensor.temp_second_floor:
   friendly_name: 'Patro'
   icon: mdi:home-floor-2
+
+binary_sensor.first_floor_ping_thermostat_office:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection
+binary_sensor.first_floor_ping_thermostat_corridor_and_toilet:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection
+binary_sensor.first_floor_ping_thermostat_bathroom:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection
+binary_sensor.first_floor_ping_thermostat_kitchen:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection
+binary_sensor.first_floor_ping_thermostat_living_room:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection
+binary_sensor.first_floor_ping_thermostat_cellar:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection
+binary_sensor.first_floor_ping_thermostat_garage:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection
+binary_sensor.second_floor_ping_thermostat_bathroom:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection
+binary_sensor.second_floor_ping_thermostat_kitchen_workroom_living_and_diving_room:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection
+binary_sensor.second_floor_ping_thermostat_thomas_bedroom:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection
+binary_sensor.second_floor_ping_thermostat_north_room:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection
+binary_sensor.second_floor_ping_thermostat_middle_room:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection
+binary_sensor.second_floor_ping_thermostat_corner_room:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection
+binary_sensor.second_floor_ping_thermostat_corridor_and_toilet:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection
+binary_sensor.second_floor_ping_thermostat_parents_bedroom:
+  friendly_name: 'Stav připojení'
+  icon: mdi:connection

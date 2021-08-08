@@ -51,6 +51,7 @@ tts:
 
 
 
+
 recorder:
   db_url: postgresql://@/homeassistant
   purge_keep_days: 7
@@ -198,13 +199,13 @@ logbook:
       - input_number.thermo_actuator_second_floor_corridor_and_toilet
 
 mqtt:
-  broker: 192.168.11.247
+  broker: 172.16.108.22
   username: homeassistant
   password: VelmiSilneHesloProHomeassistant
 
 
 
-
+binary_sensor: !include_dir_merge_list binary_sensors/
 input_number: !include_dir_merge_named input_numbers/
 input_boolean: !include_dir_merge_named input_booleans/
 input_datetime: !include_dir_merge_named input_datetimes/
