@@ -1,0 +1,16 @@
+second_floor_state_of_connection_bathroom:
+  name: 'Stav připojení lokálního termostatu – koupelna'
+second_floor_state_of_connection_kitchen_workroom_living_and_diving_room:
+  name: 'Stav připojení lokálního termostatu – kuchyň, pracovna, obývák/jídelna'
+second_floor_state_of_connection_thomas_bedroom:
+  name: 'Stav připojení lokálního termostatu – ložnice Tomáše'
+second_floor_state_of_connection_north_room:
+  name: 'Stav připojení lokálního termostatu – severní pokoj'
+second_floor_state_of_connection_middle_room:
+  name: 'Stav připojení lokálního termostatu – střední pokoj'
+second_floor_state_of_connection_corner_room:
+  name: 'Stav připojení lokálního termostatu – rohový pokoj'
+second_floor_state_of_connection_corridor_and_toilet:
+  name: 'Stav připojení lokálního termostatu – chodba/toaleta'
+second_floor_state_of_connection_parents_bedroom:
+  name: 'Stav připojení lokálního termostatu – ložnice rodičů'

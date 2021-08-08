@@ -1,0 +1,14 @@
+first_floor_state_of_connection_office:
+  name: 'Stav připojení lokálního termostatu – kancelář'
+first_floor_state_of_connection_corridor_and_toilet:
+  name: 'Stav připojení lokálního termostatu – chodba, toaleta'
+first_floor_state_of_connection_bathroom:
+  name: 'Stav připojení lokálního termostatu – kouplena'
+first_floor_state_of_connection_kitchen:
+  name: 'Stav připojení lokálního termostatu – kuchyně'
+first_floor_state_of_connection_living_room:
+  name: 'Stav připojení lokálního termostatu – obývací pokoj'
+first_floor_state_of_connection_cellar:
+  name: 'Stav připojení lokálního termostatu – sklep'
+first_floor_state_of_connection_garage:
+  name: 'Stav připojení lokálního termostatu – garáž'

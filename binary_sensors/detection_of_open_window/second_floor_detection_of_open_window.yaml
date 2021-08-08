@@ -1,0 +1,83 @@
+# Detection of state open window for second floor
+- platform: template
+  sensors:
+    second_floor_detection_of_open_window_bathroom:
+      friendly_name: 'Detekce otevřeného okna'
+      device_class: opening
+      value_template: "{{ states('input_boolean.second_floor_detection_of_open_window_bathroom') }}"
+      icon_template: >-
+        {%- if is_state('input_boolean.second_floor_detection_of_open_window_bathroom', 'on') -%}
+          mdi:window-open
+        {%- else -%}
+          mdi:window-closed
+        {%- endif -%}
+    second_floor_detection_of_open_window_kitchen_workroom_living_and_diving_room:
+      friendly_name: 'Detekce otevřeného okna'
+      device_class: opening
+      value_template: "{{ states('input_boolean.second_floor_detection_of_open_window_kitchen_workroom_living_and_diving_room') }}"
+      icon_template: >-
+        {%- if is_state('input_boolean.second_floor_detection_of_open_window_kitchen_workroom_living_and_diving_room', 'on') -%}
+          mdi:window-open
+        {%- else -%}
+          mdi:window-closed
+        {%- endif -%}
+    second_floor_detection_of_open_window_thomas_bedroom:
+      friendly_name: 'Detekce otevřeného okna'
+      device_class: opening
+      value_template: "{{ states('input_boolean.second_floor_detection_of_open_window_thomas_bedroom') }}"
+      icon_template: >-
+        {%- if is_state('input_boolean.second_floor_detection_of_open_window_thomas_bedroom', 'on') -%}
+          mdi:window-open
+        {%- else -%}
+          mdi:window-closed
+        {%- endif -%}
+    second_floor_detection_of_open_window_north_room:
+      friendly_name: 'Detekce otevřeného okna'
+      device_class: opening
+      value_template: "{{ states('input_boolean.second_floor_detection_of_open_window_north_room') }}" 
+      icon_template: >-
+        {%- if is_state('input_boolean.second_floor_detection_of_open_window_north_room', 'on') -%}
+          mdi:window-open
+        {%- else -%}
+          mdi:window-closed
+        {%- endif -%}
+    second_floor_detection_of_open_window_middle_room:
+      friendly_name: 'Detekce otevřeného okna'
+      device_class: opening
+      value_template: "{{ states('input_boolean.second_floor_detection_of_open_window_middle_room') }}" 
+      icon_template: >-
+        {%- if is_state('input_boolean.second_floor_detection_of_open_window_middle_room', 'on') -%}
+          mdi:window-open
+        {%- else -%}
+          mdi:window-closed
+        {%- endif -%}
+    second_floor_detection_of_open_window_corner_room:
+      friendly_name: 'Detekce otevřeného okna'
+      device_class: opening
+      value_template: "{{ states('input_boolean.second_floor_detection_of_open_window_corner_room') }}" 
+      icon_template: >-
+        {%- if is_state('input_boolean.second_floor_detection_of_open_window_corner_room', 'on') -%}
+          mdi:window-open
+        {%- else -%}
+          mdi:window-closed
+        {%- endif -%}
+    second_floor_detection_of_open_window_corridor_and_toilet:
+      friendly_name: 'Detekce otevřeného okna'
+      device_class: opening
+      value_template: "{{ states('input_boolean.second_floor_detection_of_open_window_corridor_and_toilet') }}" 
+      icon_template: >-
+        {%- if is_state('input_boolean.second_floor_detection_of_open_window_corridor_and_toilet', 'on') -%}
+          mdi:window-open
+        {%- else -%}
+          mdi:window-closed
+        {%- endif -%}
+    second_floor_detection_of_open_window_parents_bedroom:
+      friendly_name: 'Detekce otevřeného okna'
+      device_class: opening
+      value_template: "{{ states('input_boolean.second_floor_detection_of_open_window_parents_bedroom') }}"  
+      icon_template: >-
+        {%- if is_state('input_boolean.second_floor_detection_of_open_window_parents_bedroom', 'on') -%}
+          mdi:window-open
+        {%- else -%}
+          mdi:window-closed
+        {%- endif -%}
