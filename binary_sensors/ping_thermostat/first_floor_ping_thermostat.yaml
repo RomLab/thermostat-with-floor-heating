@@ -1,21 +1,28 @@
 - platform: ping
-  host: 192.168.11.11
+  host: 172.16.108.32
   name: 'first_floor_ping_thermostat_office'
+  scan_interval: 30
 - platform: ping
-  host: 192.168.11.12
+  host: 172.16.108.14
   name: 'first_floor_ping_thermostat_corridor_and_toilet'
+  scan_interval: 30
 - platform: ping
-  host: 192.168.11.13
+  host: 172.16.108.15
   name: 'first_floor_ping_thermostat_bathroom'
+  scan_interval: 30
 - platform: ping
-  host: 192.168.11.14
+  host: 172.16.108.16
   name: 'first_floor_ping_thermostat_kitchen'
+  scan_interval: 30
 - platform: ping
-  host: 192.168.11.15
+  host: 172.16.108.17
   name: 'first_floor_ping_thermostat_living_room'
+  scan_interval: 30
 - platform: ping
-  host: 192.168.11.16
+  host: 172.16.108.18
   name: 'first_floor_ping_thermostat_cellar'
+  scan_interval: 30
 - platform: ping
-  host: 192.168.11.17
+  host: 172.16.108.19
   name: 'first_floor_ping_thermostat_garage'
+  scan_interval: 30
