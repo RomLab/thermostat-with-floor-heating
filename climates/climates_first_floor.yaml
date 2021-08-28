@@ -6,7 +6,6 @@
   min_temp: 0
   max_temp: 30
   ac_mode: false
-  target_temp: 20
   cold_tolerance: 0.5
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
@@ -20,7 +19,6 @@
   min_temp: 0
   max_temp: 30
   ac_mode: false
-  target_temp: 20
   cold_tolerance: 0.5
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
@@ -34,7 +32,6 @@
   min_temp: 0
   max_temp: 30
   ac_mode: false
-  target_temp: 20
   cold_tolerance: 0.5
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
@@ -48,7 +45,6 @@
   min_temp: 0
   max_temp: 30
   ac_mode: false
-  target_temp: 20
   cold_tolerance: 0.5
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
@@ -62,7 +58,6 @@
   min_temp: 0
   max_temp: 30
   ac_mode: false
-  target_temp: 20
   cold_tolerance: 0.5
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
@@ -76,7 +71,6 @@
   min_temp: 0
   max_temp: 30
   ac_mode: false
-  target_temp: 20
   cold_tolerance: 0.5
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
@@ -90,7 +84,6 @@
   min_temp: 0
   max_temp: 30
   ac_mode: false
-  target_temp: 20
   cold_tolerance: 0.5
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
