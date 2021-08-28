@@ -1,0 +1,105 @@
+# Restore target temperature after restat local thermostat
+- alias: 'Restores target temperature after restat local thermostat – bathroom'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.second_floor_ping_thermostat_bathroom
+      from: 'off'
+      to: 'on'
+  action:
+    - service: mqtt.publish
+      data:
+        topic: 'home/second-floor/bathroom/required-temperature-from-system'
+        payload_template: "{{ state_attr('climate.second_floor_bathroom','temperature') | float }}"
+        qos: 1
+- alias: 'Restores target temperature after restat local thermostat – kitchen, workroom, living and divingroom'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.second_floor_ping_thermostat_kitchen_workroom_living_and_diving_room
+      from: 'off'
+      to: 'on'
+  action:
+    - service: mqtt.publish
+      data:
+        topic: 'home/second-floor/kitchen-workroom-living-and-diving-room/required-temperature-from-system'
+        payload_template: "{{ state_attr('climate.second_kitchen_workroom_living_and_diving_room','temperature') | float }}"
+        qos: 1
+- alias: 'Restores target temperature after restat local thermostat – thomas bedroom'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.second_floor_ping_thermostat_thomas_bedroom
+      from: 'off'
+      to: 'on'
+  action:
+    - service: mqtt.publish
+      data:
+        topic: 'home/second-floor/thomas-bedroom/required-temperature-from-system'
+        payload_template: "{{ state_attr('climate.second_thomas_bedroom','temperature') | float }}"
+        qos: 1
+- alias: 'Restores target temperature after restat local thermostat – north room'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.second_floor_ping_thermostat_north_room
+      from: 'off'
+      to: 'on'
+  action:
+    - service: mqtt.publish
+      data:
+        topic: 'home/second-floor/north-room/required-temperature-from-system'
+        payload_template: "{{ state_attr('climate.second_floor_north_room','temperature') | float }}"
+        qos: 1
+- alias: 'Restores target temperature after restat local thermostat – middle room'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.second_floor_ping_thermostat_middle_room
+      from: 'off'
+      to: 'on'
+  action:
+    - service: mqtt.publish
+      data:
+        topic: 'home/second-floor/middle-room/required-temperature-from-system'
+        payload_template: "{{ state_attr('climate.second_floor_middle_room','temperature') | float }}"
+        qos: 1
+- alias: 'Restores target temperature after restat local thermostat – corner room'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.second_floor_ping_thermostat_corner_room
+      from: 'off'
+      to: 'on'
+  action:
+    - service: mqtt.publish
+      data:
+        topic: 'home/second-floor/corner-room/required-temperature-from-system'
+        payload_template: "{{ state_attr('climate.second_floor_corner_room','temperature') | float }}"
+        qos: 1
+- alias: 'Restores target temperature after restat local thermostat – corridor and toilet'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.second_floor_ping_thermostat_corridor_and_toilet
+      from: 'off'
+      to: 'on'
+  action:
+    - service: mqtt.publish
+      data:
+        topic: 'home/second-floor/corridor-and-toilet/required-temperature-from-system'
+        payload_template: "{{ state_attr('climate.second_floor_corridor_and_toilet','temperature') | float }}"
+        qos: 1
+- alias: 'Restores target temperature after restat local thermostat – parents bedroom'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.second_floor_ping_thermostat_parents_bedroom
+      from: 'off'
+      to: 'on'
+  action:
+    - service: mqtt.publish
+      data:
+        topic: 'home/second-floor/parents-bedroom/required-temperature-from-system'
+        payload_template: "{{ state_attr('climate.second_floor_parents_bedroom','temperature') | float }}"
+        qos: 1
