@@ -1,5 +1,5 @@
-# Restore target temperature after restat local thermostat
-- alias: 'Restores target temperature after restat local thermostat – office'
+# Restore a target temperature after restart local thermostat
+- alias: 'Restores a target temperature after restart local thermostat (first floor) – office'
   initial_state: 'on'
   trigger:
     - platform: state
@@ -12,7 +12,7 @@
         topic: 'home/first-floor/office/required-temperature-from-system'
         payload_template: "{{ state_attr('climate.first_floor_office','temperature') | float }}"
         qos: 1
-- alias: 'Restores target temperature after restat local thermostat – corridor and toilet'
+- alias: 'Restores a target temperature after restart local thermostat (first floor) – corridor and toilet'
   initial_state: 'on'
   trigger:
     - platform: state
@@ -25,7 +25,7 @@
         topic: 'home/first-floor/corridor-and-toilet/required-temperature-from-system'
         payload_template: "{{ state_attr('climate.first_floor_corridor_and_toilet','temperature') | float }}"
         qos: 1
-- alias: 'Restores target temperature after restat local thermostat – bathroom'
+- alias: 'Restores a target temperature after restart local thermostat (first floor)– bathroom'
   initial_state: 'on'
   trigger:
     - platform: state
@@ -38,7 +38,7 @@
         topic: 'home/first-floor/bathroom/required-temperature-from-system'
         payload_template: "{{ state_attr('climate.first_floor_bathroom','temperature') | float }}"
         qos: 1
-- alias: 'Restores target temperature after restat local thermostat – kitchen'
+- alias: 'Restores a target temperature after restart local thermostat (first floor) – kitchen'
   initial_state: 'on'
   trigger:
     - platform: state
@@ -51,7 +51,7 @@
         topic: 'home/first-floor/kitchen/required-temperature-from-system'
         payload_template: "{{ state_attr('climate.first_floor_kitchen','temperature') | float }}"
         qos: 1
-- alias: 'Restores target temperature after restat local thermostat – living room'
+- alias: 'Restores a target temperature after restart local thermostat (first floor) – living room'
   initial_state: 'on'
   trigger:
     - platform: state
@@ -64,7 +64,7 @@
         topic: 'home/first-floor/living-room/required-temperature-from-system'
         payload_template: "{{ state_attr('climate.first_floor_living_room','temperature') | float }}"
         qos: 1
-- alias: 'Restores target temperature after restat local thermostat – cellar'
+- alias: 'Restores a target temperature after restart local thermostat (first floor) – cellar'
   initial_state: 'on'
   trigger:
     - platform: state
@@ -77,7 +77,7 @@
         topic: 'home/first-floor/cellar/required-temperature-from-system'
         payload_template: "{{ state_attr('climate.first_floor_cellar','temperature') | float }}"
         qos: 1
-- alias: 'Restores target temperature after restat local thermostat – garage'
+- alias: 'Restores a target temperature after restart local thermostat (first floor) – garage'
   initial_state: 'on'
   trigger:
     - platform: state

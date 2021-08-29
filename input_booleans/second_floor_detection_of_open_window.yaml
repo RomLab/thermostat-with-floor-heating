@@ -1,16 +1,24 @@
+# Bathroom
 second_floor_detection_of_open_window_bathroom:
   name: 'Detekce otevřeného okna – koupelna'
+# Kitchen, workroom, living and diving room
 second_floor_detection_of_open_window_kitchen_workroom_living_and_diving_room:
   name: 'Detekce otevřeného okna – kuchyň, pracovna, obývák/jídelna'
+# Thomas bedroom
 second_floor_detection_of_open_window_thomas_bedroom:
   name: 'Detekce otevřeného okna – ložnice Tomáše'
+# North room
 second_floor_detection_of_open_window_north_room:
   name: 'Detekce otevřeného okna – severní pokoj'
+# Middle room
 second_floor_detection_of_open_window_middle_room:
   name: 'Detekce otevřeného okna – střední pokoj'
+# Corner room
 second_floor_detection_of_open_window_corner_room:
   name: 'Detekce otevřeného okna – rohový pokoj'
+# Corridor and toilet
 second_floor_detection_of_open_window_corridor_and_toilet:
   name: 'Detekce otevřeného okna – chodba/toaleta'
+# Parents bedroom
 second_floor_detection_of_open_window_parents_bedroom:
   name: 'Detekce otevřeného okna – ložnice rodičů'

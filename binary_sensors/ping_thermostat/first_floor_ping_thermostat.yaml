@@ -1,3 +1,4 @@
+# Checks of connection local thermostat on a first floor
 - platform: ping
   host: 172.16.108.32
   name: 'first_floor_ping_thermostat_office'
