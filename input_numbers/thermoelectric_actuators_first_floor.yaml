@@ -7,7 +7,7 @@ thermo_actuator_first_floor_office:
   initial: 0
   unit_of_measurement: '%'
   icon: mdi:valve
-thermo_actuator_first_floor_corridor_and_toiler:
+thermo_actuator_first_floor_corridor_and_toilet:
   name: 'Chodba/toaleta'
   min: 0
   max: 100

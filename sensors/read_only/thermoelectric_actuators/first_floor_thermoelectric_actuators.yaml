@@ -6,10 +6,10 @@
       unit_of_measurement: '%'
       value_template: "{{ states('input_number.thermo_actuator_first_floor_office') }}"
       icon_template: mdi:valve
-    thermo_actuator_first_floor_corridor_and_toiler:
+    thermo_actuator_first_floor_corridor_and_toilet:
       friendly_name: 'Chodba/toaleta'
       unit_of_measurement: '%'
-      value_template: "{{ states('input_number.thermo_actuator_first_floor_corridor_and_toiler') }}"
+      value_template: "{{ states('input_number.thermo_actuator_first_floor_corridor_and_toilet') }}"
       icon_template: mdi:valve
     thermo_actuator_first_floor_bathroom_ladder:
       friendly_name: 'Koupelna – žebřík'
