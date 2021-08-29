@@ -1,0 +1,25 @@
+turn_on_actuator_second_floor_bathroom:
+  alias: 'Turn on actuators for a bathroom in a second floor'
+  description: 'Turn on actuators for a bathroom in a second floor'
+  sequence:
+    - condition: template
+      value_template: "{{ is_state_attr('climate.second_floor_bathroom', 'hvac_action', 'heating') }}"
+    - service: input_number.set_value
+      data:
+        entity_id: 
+          - input_number.thermo_actuator_second_floor_bathroom
+          - input_number.thermo_actuator_second_floor_bathroom_ladder
+        value: '100'
+
+turn_off_actuator_second_floor_bathroom:
+  alias: 'Turn off actuators for a bathroom in a second floor'
+  description: 'Turn off actuators for a bathroom in a second floor'
+  sequence:
+    - condition: template
+      value_template: "{{ is_state_attr('climate.second_floor_bathroom', 'hvac_action', 'idle') or  is_state_attr('climate.second_floor_bathroom', 'hvac_action', 'off')}}"
+    - service: input_number.set_value
+      data:
+        entity_id: 
+          - input_number.thermo_actuator_second_floor_bathroom
+          - input_number.thermo_actuator_second_floor_bathroom_ladder
+        value: '0'

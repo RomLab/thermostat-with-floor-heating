@@ -1,0 +1,42 @@
+set_actuators_first_floor:
+  alias: 'Set actuators for rooms in a first floor'
+  description: 'Set actuators for rooms in a first floor'
+  sequence:
+    # Office
+    - service: script.turn_on
+      entity_id: script.turn_on_actuator_first_floor_office
+    - service: script.turn_on
+      entity_id: script.turn_off_actuator_first_floor_office
+    # Corridor and toilet
+    - service: script.turn_on
+      entity_id: script.turn_on_actuator_first_floor_corridor_and_toilet
+    - service: script.turn_on
+      entity_id: script.turn_off_actuator_first_floor_corridor_and_toilet
+    # Thomas bathroom
+    - service: script.turn_on
+      entity_id: script.turn_on_actuator_first_floor_bathroom
+    - service: script.turn_on
+      entity_id: script.turn_off_actuator_first_floor_bathroom
+    # Kitchen
+    - service: script.turn_on
+      entity_id: script.turn_on_actuator_first_floor_kitchen
+    - service: script.turn_on
+      entity_id: script.turn_off_actuator_first_floor_kitchen
+    # Living room
+    - service: script.turn_on
+      entity_id: script.turn_on_actuator_first_floor_living_room
+    - service: script.turn_on
+      entity_id: script.turn_off_actuator_first_floor_living_room
+    # Cellar
+    - service: script.turn_on
+      entity_id: script.turn_on_actuator_first_floor_cellar
+    - service: script.turn_on
+      entity_id: script.turn_off_actuator_first_floor_cellar
+    # Garage
+    - service: script.turn_on
+      entity_id: script.turn_on_actuator_first_floor_garage
+    - service: script.turn_on
+      entity_id: script.turn_off_actuator_first_floor_garage
+    # Control second pump from zones
+    - service: script.turn_on
+      entity_id: script.pump_first_floor_zones
