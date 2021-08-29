@@ -8,75 +8,75 @@ class ThermoelectricActuatorsFirstFloor(hass.Hass):
     pwm = None
     def initialize(self):
         # Initialise the PCA9685 using the default address (0x40).
-        PCA9685_ADDRESS_FIRST_FLOOR = 0x40
+        PCA9685_ADDRESS_FIRST_FLOOR = 0x41
         self.pwm = pca9685.PCA9685(PCA9685_ADDRESS_FIRST_FLOOR)
         # Frequency in Hertz
         PWM_FREQUENCY = 100 
         self.pwm.set_pwm_freq(PWM_FREQUENCY)
-        self.listen_state(self.trigger, "input_number.thermo_actuator_bathroom")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_bathroom_ladder")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_living_and_diving_room")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_workroom")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_kitchen")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_corridor_and_toilet")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_north_room")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_parents_bedroom_window")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_parents_bedroom_door")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_middle_room")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_corner_room")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_thomas_bedroom")
+        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_office")
+        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_corridor_and_toilet")
+        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_bathroom_ladder")
+        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_bathroom")
+        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_kitchen_door")
+        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_living_room_1")
+        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_living_room_2")
+        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_living_room_3")
+        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_kitchen_windows")
+        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_cellar_ladder")
+        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_garage_1")
+        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_garage_2")
 
     def trigger(self, entity, attribute, old, new, kwargs):    
        
         pwm_pulse = self.get_pwm_pulse(self.get_state(entity))
         channel = None
         error = False
-        if(entity == "input_number.thermo_actuator_thomas_bedroom"): 
+        if(entity == "input_number.thermo_actuator_first_floor_office"): 
             channel = 0          
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_corner_room"):
+        elif(entity == "input_number.thermo_actuator_first_floor_corridor_and_toilet"):
             channel = 1
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_middle_room"):
+        elif(entity == "input_number.thermo_actuator_first_floor_bathroom_ladder"):
             channel = 2
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_parents_bedroom_door"):
+        elif(entity == "input_number.thermo_actuator_first_floor_bathroom"):
             channel = 3
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_parents_bedroom_window"):
+        elif(entity == "input_number.thermo_actuator_first_floor_kitchen_door"):
             channel = 4
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_north_room"):
+        elif(entity == "input_number.thermo_actuator_first_floor_living_room_1"):
             channel = 5
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_corridor_and_toilet"):
+        elif(entity == "input_number.thermo_actuator_first_floor_living_room_2"):
             channel = 6
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_kitchen"):
+        elif(entity == "input_number.thermo_actuator_first_floor_living_room_3"):
             channel = 7
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_workroom"):
+        elif(entity == "input_number.thermo_actuator_first_floor_kitchen_windows"):
             channel = 8
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_living_and_diving_room"):
+        elif(entity == "input_number.thermo_actuator_first_floor_cellar_ladder"):
             channel = 9
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_bathroom_ladder"):
+        elif(entity == "input_number.thermo_actuator_first_floor_garage_1"):
             channel = 10
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_bathroom"):
+        elif(entity == "input_number.thermo_actuator_first_floor_garage_2"):
             channel = 11
             self.pwm.set_pwm(channel, 0, pwm_pulse)
         else:
             error = True
         
         if(error == True): 
-            self.log("ERROR: Problem with bad selected channel for PWM.")
+            self.log("ERROR: First floor – Problem with bad selected channel for PWM.")
         else:
             # Checks currect settings (pwm pulse), otherwise sets again          
             while pwm_pulse != self.pwm.get_pwm(channel):
                 self.pwm.set_pwm(channel, 0, pwm_pulse)
-                self.log("WARNING: Repetition of setting channel: " + str(channel) + " PWM: " + str(pwm_pulse))
+                self.log("WARNING: First floor – Repetition of setting channel: " + str(channel) + " PWM: " + str(pwm_pulse))
 
     def get_pwm_pulse(self, pwm_percent):
         # Convert to float number

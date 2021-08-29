@@ -13,3 +13,6 @@ read_thermostat:
 thermoelectric_actuators_first_floor:
   module: thermoelectric_actuators_first_floor
   class: ThermoelectricActuatorsFirstFloor
+thermoelectric_actuators_second_floor:
+  module: thermoelectric_actuators_second_floor
+  class: ThermoelectricActuatorsSecondFloor
