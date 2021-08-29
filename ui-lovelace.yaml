@@ -105,7 +105,7 @@ views:
         show_header_toggle: false
         entities:
           - sensor.thermo_actuator_first_floor_office
-          - sensor.thermo_actuator_first_floor_corridor_and_toiler
+          - sensor.thermo_actuator_first_floor_corridor_and_toilet
           - sensor.thermo_actuator_first_floor_bathroom_ladder
           - sensor.thermo_actuator_first_floor_bathroom
           - sensor.thermo_actuator_first_floor_kitchen_door
