@@ -10,7 +10,7 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.1
+  precision: 0.5
 # Corridor and toilet
 - platform: generic_thermostat
   name: first_floor_corridor_and_toilet
@@ -23,7 +23,7 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.1
+  precision: 0.5
 # Bathroom
 - platform: generic_thermostat
   name: first_floor_bathroom
@@ -36,7 +36,7 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.1
+  precision: 0.5
 # Kitchen
 - platform: generic_thermostat
   name: first_floor_kitchen
@@ -49,7 +49,7 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.1
+  precision: 0.5
 # Living room
 - platform: generic_thermostat
   name: first_floor_living_room
@@ -62,7 +62,7 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.1
+  precision: 0.5
 # Cellar
 - platform: generic_thermostat
   name: first_floor_cellar
@@ -75,7 +75,7 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.1
+  precision: 0.5
 # Garage
 - platform: generic_thermostat
   name: first_floor_garage
@@ -88,4 +88,4 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.1
+  precision: 0.5
