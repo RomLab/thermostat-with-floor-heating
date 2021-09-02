@@ -51,6 +51,7 @@ binary_sensor.temp_second_floor:
   friendly_name: 'Patro'
   icon: mdi:home-floor-2
 
+# Ping sensors
 binary_sensor.first_floor_ping_thermostat_office:
   friendly_name: 'Stav připojení'
   icon: mdi:connection
@@ -96,3 +97,49 @@ binary_sensor.second_floor_ping_thermostat_corridor_and_toilet:
 binary_sensor.second_floor_ping_thermostat_parents_bedroom:
   friendly_name: 'Stav připojení'
   icon: mdi:connection
+
+# MQTT sensors
+# MQTT sensor – first floor
+sensor.first_floor_office_temp:
+  friendly_name: 'MQTT – kancelář (první patro)'
+  icond: mdi:thermometer
+sensor.first_floor_corridor_and_toilet_temp:
+  friendly_name: 'MQTT – chodba/toaleta (první patro)'
+  icond: mdi:thermometer
+sensor.first_floor_bathroom_temp:
+  friendly_name: 'MQTT – koupelna (první patro)'
+  icond: mdi:thermometer
+sensor.living_room_temp:
+  friendly_name: 'MQTT – obývací pokoj (první patro)'
+  icond: mdi:thermometer
+sensor.first_floor_cellar_temp:
+  friendly_name: 'MQTT – sklep (první patro)'
+  icond: mdi:thermometer
+sensor.first_floor_garage_temp:
+  friendly_name: 'MQTT – garáž (první patro)'
+  icond: mdi:thermometer
+# MQTT sensor – second floor
+sensor.second_floor_bathroom_temp:
+  friendly_name: 'MQTT – koupelna (druhé patro)'
+  icond: mdi:thermometer
+sensor.second_floor_kitchen_workroom_living_and_diving_room_temp:
+  friendly_name: 'MQTT – kuchyň, pracovna, obývací a jídelní pokoj (druhé patro)'
+  icond: mdi:thermometer
+sensor.second_floor_thomas_bedroom_temp:
+  friendly_name: 'MQTT – tomáš ložnice (druhé patro)'
+  icond: mdi:thermometer
+sensor.second_floor_north_room_temp:
+  friendly_name: 'MQTT – severní pokoj (druhé patro)'
+  icond: mdi:thermometer
+sensor.second_floor_middle_room_temp:
+  friendly_name: 'MQTT – střední pokoj (druhé patro)'
+  icond: mdi:thermometer
+sensor.second_floor_corner_room_temp:
+  friendly_name: 'MQTT – rohový pokoj (druhé patro)'
+  icond: mdi:thermometer
+sensor.second_floor_corridor_and_toilet_temp:
+  friendly_name: 'MQTT – chodba/toaleta (druhé patro)'
+  icond: mdi:thermometer
+sensor.second_floor_parents_bedroom_temp:
+  friendly_name: 'MQTT – ložnice rodičů (druhé patro)'
+  icond: mdi:thermometer
