@@ -3,24 +3,6 @@ views:
     path: prizemi-teplotni-plany
     cards:
       - type: 'custom:scheduler-card'
-        title: 'Kancelář'
-        discover_existing: false
-        display_options:
-          primary_info:
-            - "{name}"
-            - "{relative-time}: {action}"
-          secondary_info: time
-        include:
-          - climate.first_floor_office 
-          - input_boolean.control_according_to_plans
-        exclude:
-          - climate.first_floor_corridor_and_toilet 
-        customize:
-          climate.first_floor_office:
-            name: 'Kancelář'
-          input_boolean.control_according_to_plans:
-            states : ['on']
-      - type: 'custom:scheduler-card'
         title: 'Chodba/toaleta'
         discover_existing: false
         display_options:
@@ -53,7 +35,7 @@ views:
           input_boolean.control_according_to_plans:
             states : ['on']
       - type: 'custom:scheduler-card'
-        title: 'Kuchyň'
+        title: 'Obývací pokoj/kuchyň'
         discover_existing: false
         display_options:
           primary_info:
@@ -61,27 +43,11 @@ views:
             - "{relative-time}: {action}"
           secondary_info: time
         include:
-          - climate.first_floor_kitchen 
+          - climate.first_floor_living_room_and_kitchen 
           - input_boolean.control_according_to_plans
         customize:
-          climate.first_floor_kitchen:
-            name: 'Kuchyň'
-          input_boolean.control_according_to_plans:
-            states : ['on']
-      - type: 'custom:scheduler-card'
-        title: 'Obývací pokoj'
-        discover_existing: false
-        display_options:
-          primary_info:
-            - "{name}"
-            - "{relative-time}: {action}"
-          secondary_info: time
-        include:
-          - climate.first_floor_living_room 
-          - input_boolean.control_according_to_plans
-        customize:
-          climate.first_floor_living_room:
-            name: 'Obývací pokoj'
+          climate.first_floor_living_room_and_kitchen:
+            name: 'Obývací pokoj/kuchyň'
           input_boolean.control_according_to_plans:
             states : ['on']
       - type: 'custom:scheduler-card'

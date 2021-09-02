@@ -1,5 +1,4 @@
 sensor.hot_water_tank_top:
-  friendly_name: 'Zásobník vody horní čidlo'
   icon:  mdi:format-vertical-align-top
 sensor.hot_water_tank_middle:
   icon: mdi:format-align-middle
@@ -52,19 +51,13 @@ binary_sensor.temp_second_floor:
   icon: mdi:home-floor-2
 
 # Ping sensors
-binary_sensor.first_floor_ping_thermostat_office:
-  friendly_name: 'Stav připojení'
-  icon: mdi:connection
 binary_sensor.first_floor_ping_thermostat_corridor_and_toilet:
   friendly_name: 'Stav připojení'
   icon: mdi:connection
 binary_sensor.first_floor_ping_thermostat_bathroom:
   friendly_name: 'Stav připojení'
   icon: mdi:connection
-binary_sensor.first_floor_ping_thermostat_kitchen:
-  friendly_name: 'Stav připojení'
-  icon: mdi:connection
-binary_sensor.first_floor_ping_thermostat_living_room:
+binary_sensor.first_floor_ping_thermostat_living_room_and_kitchen:
   friendly_name: 'Stav připojení'
   icon: mdi:connection
 binary_sensor.first_floor_ping_thermostat_cellar:
@@ -100,17 +93,14 @@ binary_sensor.second_floor_ping_thermostat_parents_bedroom:
 
 # MQTT sensors
 # MQTT sensor – first floor
-sensor.first_floor_office_temp:
-  friendly_name: 'MQTT – kancelář (první patro)'
-  icond: mdi:thermometer
 sensor.first_floor_corridor_and_toilet_temp:
   friendly_name: 'MQTT – chodba/toaleta (první patro)'
   icond: mdi:thermometer
 sensor.first_floor_bathroom_temp:
   friendly_name: 'MQTT – koupelna (první patro)'
   icond: mdi:thermometer
-sensor.living_room_temp:
-  friendly_name: 'MQTT – obývací pokoj (první patro)'
+sensor.living_room_and_kitchen_temp:
+  friendly_name: 'MQTT – obývací pokoj/kuchyň (první patro)'
   icond: mdi:thermometer
 sensor.first_floor_cellar_temp:
   friendly_name: 'MQTT – sklep (první patro)'

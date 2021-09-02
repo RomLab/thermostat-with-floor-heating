@@ -3,7 +3,7 @@ pump_first_floor_zones:
   description: 'Zone control according to request from a zone control module on a first floor'
   sequence:
     - service_template: >
-        {%- if is_state_attr('climate.first_floor_office', 'hvac_action', 'heating') or is_state_attr('climate.first_floor_corridor_and_toilet', 'hvac_action', 'heating') or is_state_attr('climate.first_floor_bathroom', 'hvac_action', 'heating') or  is_state_attr('climate.first_floor_kitchen', 'hvac_action', 'heating') or is_state_attr('climate.first_floor_living_room', 'hvac_action', 'heating') or is_state_attr('climate.first_floor_cellar', 'hvac_action', 'heating') or is_state_attr('climate.first_floor_garage', 'hvac_action', 'heating') -%}
+        {%- if is_state_attr('climate.first_floor_corridor_and_toilet', 'hvac_action', 'heating') or is_state_attr('climate.first_floor_bathroom', 'hvac_action', 'heating') or  is_state_attr('climate.first_floor_living_room_and_kitchen', 'hvac_action', 'heating') or is_state_attr('climate.first_floor_cellar', 'hvac_action', 'heating') or is_state_attr('climate.first_floor_garage', 'hvac_action', 'heating') -%}
            script.turn_on_pump_corridor_first_floor
         {%- else -%}
             script.turn_off_pump_corridor_first_floor

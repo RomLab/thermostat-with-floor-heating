@@ -1,18 +1,12 @@
-# Office
-zone_first_floor_office:
-  name: 'Vytápění kancelář'
 # Corridor and toilet
 zone_first_floor_corridor_and_toiler:
-  name: 'Vytápění chodba, toaleta'
+  name: 'Vytápění chodba/toaleta'
 # Bathroom
 zone_first_floor_bathroom:
-  name: 'Vytápění kouplena'
-# Kitchen
-zone_first_floor_kitchen:
-  name: 'Vytápění kuchyně'
-# Living room
-zone_first_floor_living_room:
-  name: 'Vytápění obývací pokoj'
+  name: 'Vytápění koupelna'
+# Living room and kitchen
+zone_first_floor_living_room_and_kitchen:
+  name: 'Vytápění obývací pokoj/kuchyň'
 # Cellar
 zone_first_floor_cellar:
   name: 'Vytápění sklep'

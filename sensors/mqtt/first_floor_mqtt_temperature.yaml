@@ -1,20 +1,11 @@
-# Office
-- platform: mqtt
-  name: 'first_floor_office_temp'
-  state_topic: 'home/first-floor/office/temperature'
-  unit_of_measurement: '°C'
-- platform: mqtt
-  name: 'first_floor_office_required_temp_from_device'
-  state_topic: 'home/first-floor/office/required-temperature-from-device'
-  unit_of_measurement: '°C'
 # Corridor and toilet
 - platform: mqtt
   name: 'first_floor_corridor_and_toilet_temp'
-  state_topic: 'home/first-floor/corridor_and_toilet/temperature'
+  state_topic: 'home/first-floor/corridor-and-toilet/temperature'
   unit_of_measurement: '°C'
 - platform: mqtt
   name: 'first_floor_corridor_and_toilet_required_temp_from_device'
-  state_topic: 'home/first-floor/corridor_and_toilet/required-temperature-from-device'
+  state_topic: 'home/first-floor/corridor-and-toilet/required-temperature-from-device'
   unit_of_measurement: '°C'
 # Bathroom
 - platform: mqtt
@@ -27,15 +18,15 @@
   state_topic: 'home/first-floor/bathroom/required-temperature-from-device'
   unit_of_measurement: '°C'
   qos: 2
-# Living room
+# Living room and kitchen
 - platform: mqtt
   name: 'living_room_temp'
-  state_topic: 'home/first-floor/living_room/temperature'
+  state_topic: 'home/first-floor/living-room-and-kitchen/temperature'
   unit_of_measurement: '°C'
   qos: 2
 - platform: mqtt
-  name: 'first_floor_living_room_required_temp_from_device'
-  state_topic: 'home/first-floor/living_room/required-temperature-from-device'
+  name: 'first_floor_living_room_and_kitchen_required_temp_from_device'
+  state_topic: 'home/first-floor/kitchen-and-living-room/required-temperature-from-device'
   unit_of_measurement: '°C'
   qos: 2
 # Cellar

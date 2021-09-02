@@ -1,16 +1,6 @@
 # Detection of state open window for first floor
 - platform: template
   sensors:
-    first_floor_detection_of_open_window_office:
-      friendly_name: 'Detekce otevřeného okna'
-      device_class: opening
-      value_template: "{{ states('input_boolean.first_floor_detection_of_open_window_office') }}"
-      icon_template: >-
-        {%- if is_state('input_boolean.first_floor_detection_of_open_window_office', 'on') -%}
-          mdi:window-open
-        {%- else -%}
-          mdi:window-closed
-        {%- endif -%}
     first_floor_detection_of_open_window_corridor_and_toilet:
       friendly_name: 'Detekce otevřeného okna'
       device_class: opening
@@ -31,22 +21,12 @@
         {%- else -%}
           mdi:window-closed
         {%- endif -%}
-    first_floor_detection_of_open_window_kitchen:
+    first_floor_detection_of_open_window_living_room_and_kitchen:
       friendly_name: 'Detekce otevřeného okna'
       device_class: opening
-      value_template: "{{ states('input_boolean.first_floor_detection_of_open_window_kitchen') }}"  
+      value_template: "{{ states('input_boolean.first_floor_detection_of_open_window_living_room_and_kitchen') }}"   
       icon_template: >-
-        {%- if is_state('input_boolean.first_floor_detection_of_open_window_kitchen', 'on') -%}
-          mdi:window-open
-        {%- else -%}
-          mdi:window-closed
-        {%- endif -%}
-    first_floor_detection_of_open_window_living_room:
-      friendly_name: 'Detekce otevřeného okna'
-      device_class: opening
-      value_template: "{{ states('input_boolean.first_floor_detection_of_open_window_living_room') }}"   
-      icon_template: >-
-        {%- if is_state('input_boolean.first_floor_detection_of_open_window_living_room', 'on') -%}
+        {%- if is_state('input_boolean.first_floor_detection_of_open_window_living_room_and_kitchen', 'on') -%}
           mdi:window-open
         {%- else -%}
           mdi:window-closed

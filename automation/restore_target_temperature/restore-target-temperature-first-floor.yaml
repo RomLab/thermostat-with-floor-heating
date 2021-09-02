@@ -1,17 +1,4 @@
 # Restore a target temperature after restart local thermostat
-- alias: 'Restores a target temperature after restart local thermostat (first floor) – office'
-  initial_state: 'on'
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.first_floor_ping_thermostat_office
-      from: 'off'
-      to: 'on'
-  action:
-    - service: mqtt.publish
-      data:
-        topic: 'home/first-floor/office/required-temperature-from-system'
-        payload_template: "{{ state_attr('climate.first_floor_office','temperature') | float }}"
-        qos: 1
 - alias: 'Restores a target temperature after restart local thermostat (first floor) – corridor and toilet'
   initial_state: 'on'
   trigger:
@@ -25,7 +12,7 @@
         topic: 'home/first-floor/corridor-and-toilet/required-temperature-from-system'
         payload_template: "{{ state_attr('climate.first_floor_corridor_and_toilet','temperature') | float }}"
         qos: 1
-- alias: 'Restores a target temperature after restart local thermostat (first floor)– bathroom'
+- alias: 'Restores a target temperature after restart local thermostat (first floor) – bathroom'
   initial_state: 'on'
   trigger:
     - platform: state
@@ -38,31 +25,18 @@
         topic: 'home/first-floor/bathroom/required-temperature-from-system'
         payload_template: "{{ state_attr('climate.first_floor_bathroom','temperature') | float }}"
         qos: 1
-- alias: 'Restores a target temperature after restart local thermostat (first floor) – kitchen'
+- alias: 'Restores a target temperature after restart local thermostat (first floor) – living room and kitchen'
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.first_floor_ping_thermostat_kitchen
+      entity_id: binary_sensor.first_floor_ping_thermostat_living_room_and_kitchen
       from: 'off'
       to: 'on'
   action:
     - service: mqtt.publish
       data:
-        topic: 'home/first-floor/kitchen/required-temperature-from-system'
-        payload_template: "{{ state_attr('climate.first_floor_kitchen','temperature') | float }}"
-        qos: 1
-- alias: 'Restores a target temperature after restart local thermostat (first floor) – living room'
-  initial_state: 'on'
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.first_floor_ping_thermostat_living_room
-      from: 'off'
-      to: 'on'
-  action:
-    - service: mqtt.publish
-      data:
-        topic: 'home/first-floor/living-room/required-temperature-from-system'
-        payload_template: "{{ state_attr('climate.first_floor_living_room','temperature') | float }}"
+        topic: 'home/first-floor/living-room-and-kitchen/required-temperature-from-system'
+        payload_template: "{{ state_attr('climate.first_floor_living_room_and_kitchen','temperature') | float }}"
         qos: 1
 - alias: 'Restores a target temperature after restart local thermostat (first floor) – cellar'
   initial_state: 'on'

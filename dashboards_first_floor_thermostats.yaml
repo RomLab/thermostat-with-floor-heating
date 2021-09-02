@@ -3,19 +3,6 @@ views:
     path: prizemi-termostaty
     cards:
       - type: vertical-stack
-        title: 'Kancelář'
-        cards:
-          - type: thermostat
-            entity: climate.first_floor_office
-            name: 'Termostat'
-          - type: vertical-stack
-            cards:
-              - type: entities
-                state_color: true
-                entities:
-                  - binary_sensor.first_floor_ping_thermostat_office
-                  - binary_sensor.first_floor_detection_of_open_window_office
-      - type: vertical-stack
         title: 'Chodba/toaleta'
         cards:
           - type: thermostat
@@ -42,31 +29,18 @@ views:
                   - binary_sensor.first_floor_ping_thermostat_bathroom
                   - binary_sensor.first_floor_detection_of_open_window_bedroom
       - type: vertical-stack
-        title: 'Kuchyň'
+        title: 'Obývací pokoj/kuchyně'
         cards:
           - type: thermostat
-            entity: climate.first_floor_kitchen
+            entity: climate.first_floor_living_room_and_kitchen
             name: 'Termostat'
           - type: vertical-stack
             cards:
               - type: entities
                 state_color: true
                 entities:
-                  - binary_sensor.first_floor_ping_thermostat_kitchen
-                  - binary_sensor.first_floor_detection_of_open_window_kitchen
-      - type: vertical-stack
-        title: 'Obývací pokoj'
-        cards:
-          - type: thermostat
-            entity: climate.first_floor_living_room
-            name: 'Termostat'
-          - type: vertical-stack
-            cards:
-              - type: entities
-                state_color: true
-                entities:
-                  - binary_sensor.first_floor_ping_thermostat_living_room
-                  - binary_sensor.first_floor_detection_of_open_window_living_room
+                  - binary_sensor.first_floor_ping_thermostat_living_room_and_kitchen
+                  - binary_sensor.first_floor_detection_of_open_window_living_room_and_kitchen
       - type: vertical-stack
         title: 'Sklep'
         cards:

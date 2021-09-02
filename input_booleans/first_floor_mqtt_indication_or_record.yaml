@@ -7,12 +7,9 @@ first_floor_mqtt_req_temp_record_from_corridor_and_toilet:
 # Bathroom
 first_floor_mqtt_req_temp_record_from_bathroom:
   name: 'Indikace přenosu (MQTT) požadované teploty z koupelny'
-# Kitchen
-first_floor_mqtt_req_temp_record_from_kitchen:
-  name: 'Indikace přenosu (MQTT) požadované teploty z kuchyně'
-# Living room
-first_floor_mqtt_req_temp_record_from_living_room:
-  name: 'Indikace přenosu (MQTT) požadované teploty z obývacího pokoje'
+# Living room and kitchen
+first_floor_mqtt_req_temp_record_from_living_room_and_kitchen:
+  name: 'Indikace přenosu (MQTT) požadované teploty z obývacího pokoje/kuchyň'
 # Cellar
 first_floor_mqtt_req_temp_record_from_cellar:
   name: 'Indikace přenosu (MQTT) požadované teploty ze sklepa'

@@ -1,16 +1,3 @@
-# Office
-- platform: generic_thermostat
-  name: first_floor_office
-  heater: input_boolean.zone_first_floor_office
-  target_sensor: sensor.first_floor_office_temp
-  min_temp: 0
-  max_temp: 30
-  ac_mode: false
-  cold_tolerance: 0.5
-  hot_tolerance: 0
-  initial_hvac_mode: 'heat'
-  away_temp: 16
-  precision: 0.5
 # Corridor and toilet
 - platform: generic_thermostat
   name: first_floor_corridor_and_toilet
@@ -37,24 +24,11 @@
   initial_hvac_mode: 'heat'
   away_temp: 16
   precision: 0.5
-# Kitchen
+# Living room and kitchen
 - platform: generic_thermostat
-  name: first_floor_kitchen
-  heater: input_boolean.zone_first_floor_kitchen
-  target_sensor: sensor.first_floor_kitchen_temp
-  min_temp: 0
-  max_temp: 30
-  ac_mode: false
-  cold_tolerance: 0.5
-  hot_tolerance: 0
-  initial_hvac_mode: 'heat'
-  away_temp: 16
-  precision: 0.5
-# Living room
-- platform: generic_thermostat
-  name: first_floor_living_room
-  heater: input_boolean.zone_first_floor_living_room
-  target_sensor: sensor.first_floor_living_room_temp
+  name: first_floor_living_room_and_kitchen
+  heater: input_boolean.zone_first_floor_living_room_and_kitchen
+  target_sensor: sensor.first_floor_living_room_and_kitchen_temp
   min_temp: 0
   max_temp: 30
   ac_mode: false

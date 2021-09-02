@@ -1,9 +1,5 @@
 # Checks of connection local thermostat on a first floor
 - platform: ping
-  host: 172.16.108.32
-  name: 'first_floor_ping_thermostat_office'
-  scan_interval: 30
-- platform: ping
   host: 172.16.108.14
   name: 'first_floor_ping_thermostat_corridor_and_toilet'
   scan_interval: 30
@@ -12,12 +8,8 @@
   name: 'first_floor_ping_thermostat_bathroom'
   scan_interval: 30
 - platform: ping
-  host: 172.16.108.16
-  name: 'first_floor_ping_thermostat_kitchen'
-  scan_interval: 30
-- platform: ping
   host: 172.16.108.17
-  name: 'first_floor_ping_thermostat_living_room'
+  name: 'first_floor_ping_thermostat_living_room_and_kitchen'
   scan_interval: 30
 - platform: ping
   host: 172.16.108.18

@@ -1,18 +1,12 @@
-# Office
-first_floor_detection_of_open_window_office:
-  name: 'Detekce otevřeného okna – kancelář'
 # corridor and toilet
 first_floor_detection_of_open_window_corridor_and_toilet:
   name: 'Detekce otevřeného okna – chodba/toaleta'
 # Bathroom
 first_floor_detection_of_open_window_bathroom:
   name: 'Detekce otevřeného okna – koupelna'
-# Kitchen
-first_floor_detection_of_open_window_kitchen:
-  name: 'Detekce otevřeného okna – kuchyně'
-# Living room
-first_floor_detection_of_open_window_living_room:
-  name: 'Detekce otevřeného okna – obývací pokoj'
+# Living room and kitchen
+first_floor_detection_of_open_window_living_room_and_kitchen:
+  name: 'Detekce otevřeného okna – obývací pokoj/kuchyň'
 # Cellar
 first_floor_detection_of_open_window_cellar:
   name: 'Detekce otevřeného okna – sklep'
