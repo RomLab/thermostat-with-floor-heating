@@ -51,7 +51,6 @@ tts:
 
 
 
-
 recorder:
   db_url: postgresql://@/homeassistant
   purge_keep_days: 7
@@ -59,15 +58,34 @@ recorder:
     domains:
       - climate
     entities:
+      # Heating water tank
       - sensor.hot_water_tank_top
       - sensor.hot_water_tank_middle
       - sensor.hot_water_tank_bottom
+      # Outdoor
       - sensor.outdoor
+      # Fireplaces
       - sensor.fireplace_cellar
       - sensor.fireplace_first_floor
       - sensor.fireplace_second_floor
-      - binary_sensor.temp_first_floor
-      - binary_sensor.temp_second_floor
+      # MQTT
+        # First floor
+      - sensor.first_floor_office_temp
+      - sensor.first_floor_corridor_and_toilet_temp
+      - sensor.first_floor_bathroom_temp
+      - sensor.living_room_temp
+      - sensor.first_floor_cellar_temp
+      - sensor.first_floor_garage_temp
+        # Second floor
+      - sensor.second_floor_bathroom_temp
+      - sensor.second_floor_kitchen_workroom_living_and_diving_room_temp
+      - sensor.second_floor_thomas_bedroom_temp
+      - sensor.second_floor_north_room_temp
+      - sensor.second_floor_middle_room_temp
+      - sensor.second_floor_corner_room_temp
+      - sensor.second_floor_corridor_and_toilet_temp
+      - sensor.second_floor_parents_bedroom_temp
+      # Ending of devices
       - switch.gas_boiler
       - switch.pump_fireplace_cellar
       - switch.pump_fireplace_first_floor
@@ -77,6 +95,7 @@ recorder:
       - switch.red_led
       - switch.orange_led
       - switch.blue_led
+      # Thermo actuators
       - input_number.thermo_actuator_first_floor_office
       - input_number.thermo_actuator_first_floor_corridor_and_toiler
       - input_number.thermo_actuator_first_floor_bathroom_ladder
@@ -107,15 +126,34 @@ history:
     domains:
       - climate
     entities:
+      # Heating water tank
       - sensor.hot_water_tank_top
       - sensor.hot_water_tank_middle
       - sensor.hot_water_tank_bottom
+      # Outdoor
       - sensor.outdoor
+      # Fireplaces
       - sensor.fireplace_cellar
       - sensor.fireplace_first_floor
       - sensor.fireplace_second_floor
-      - binary_sensor.temp_first_floor
-      - binary_sensor.temp_second_floor
+      # MQTT
+        # First floor
+      - sensor.first_floor_office_temp
+      - sensor.first_floor_corridor_and_toilet_temp
+      - sensor.first_floor_bathroom_temp
+      - sensor.living_room_temp
+      - sensor.first_floor_cellar_temp
+      - sensor.first_floor_garage_temp
+        # Second floor
+      - sensor.second_floor_bathroom_temp
+      - sensor.second_floor_kitchen_workroom_living_and_diving_room_temp
+      - sensor.second_floor_thomas_bedroom_temp
+      - sensor.second_floor_north_room_temp
+      - sensor.second_floor_middle_room_temp
+      - sensor.second_floor_corner_room_temp
+      - sensor.second_floor_corridor_and_toilet_temp
+      - sensor.second_floor_parents_bedroom_temp
+      # Ending of devices
       - switch.gas_boiler
       - switch.pump_fireplace_cellar
       - switch.pump_fireplace_first_floor
@@ -125,6 +163,7 @@ history:
       - switch.red_led
       - switch.orange_led
       - switch.blue_led
+      # Thermo actuators
       - input_number.thermo_actuator_first_floor_office
       - input_number.thermo_actuator_first_floor_corridor_and_toiler
       - input_number.thermo_actuator_first_floor_bathroom_ladder
@@ -155,15 +194,34 @@ logbook:
     domains:
       - climate
     entities:
+      # Heating water tank
       - sensor.hot_water_tank_top
       - sensor.hot_water_tank_middle
       - sensor.hot_water_tank_bottom
+      # Outdoor
       - sensor.outdoor
+      # Fireplaces
       - sensor.fireplace_cellar
       - sensor.fireplace_first_floor
       - sensor.fireplace_second_floor
-      - binary_sensor.temp_first_floor
-      - binary_sensor.temp_second_floor
+      # MQTT
+        # First floor
+      - sensor.first_floor_office_temp
+      - sensor.first_floor_corridor_and_toilet_temp
+      - sensor.first_floor_bathroom_temp
+      - sensor.living_room_temp
+      - sensor.first_floor_cellar_temp
+      - sensor.first_floor_garage_temp
+        # Second floor
+      - sensor.second_floor_bathroom_temp
+      - sensor.second_floor_kitchen_workroom_living_and_diving_room_temp
+      - sensor.second_floor_thomas_bedroom_temp
+      - sensor.second_floor_north_room_temp
+      - sensor.second_floor_middle_room_temp
+      - sensor.second_floor_corner_room_temp
+      - sensor.second_floor_corridor_and_toilet_temp
+      - sensor.second_floor_parents_bedroom_temp
+      # Ending of devices
       - switch.gas_boiler
       - switch.pump_fireplace_cellar
       - switch.pump_fireplace_first_floor
@@ -173,6 +231,7 @@ logbook:
       - switch.red_led
       - switch.orange_led
       - switch.blue_led
+      # Thermo actuators
       - input_number.thermo_actuator_first_floor_office
       - input_number.thermo_actuator_first_floor_corridor_and_toiler
       - input_number.thermo_actuator_first_floor_bathroom_ladder
@@ -202,6 +261,7 @@ mqtt:
   broker: 172.16.108.22
   username: homeassistant
   password: VelmiSilneHesloProHomeassistant
+
 
 
 
