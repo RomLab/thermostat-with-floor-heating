@@ -4,18 +4,18 @@
   name: 'first_floor_ping_thermostat_corridor_and_toilet'
   scan_interval: 30
 - platform: ping
-  host: 172.16.108.15
+  host: 172.16.108.13
   name: 'first_floor_ping_thermostat_bathroom'
   scan_interval: 30
 - platform: ping
-  host: 172.16.108.17
+  host: 172.16.108.12
   name: 'first_floor_ping_thermostat_living_room_and_kitchen'
   scan_interval: 30
 - platform: ping
-  host: 172.16.108.18
+  host: 172.16.108.15
   name: 'first_floor_ping_thermostat_cellar'
   scan_interval: 30
 - platform: ping
-  host: 172.16.108.19
+  host: 172.16.108.11
   name: 'first_floor_ping_thermostat_garage'
   scan_interval: 30
