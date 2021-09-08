@@ -13,8 +13,8 @@ class ThermoelectricActuatorsSecondFloor(hass.Hass):
         # Frequency in Hertz
         PWM_FREQUENCY = 100 
         self.pwm.set_pwm_freq(PWM_FREQUENCY)
-        self.listen_state(self.trigger, "input_number.thermo_actuator_second_floor_second_floor_bathroom")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_second_floor_second_floor_bathroom_ladder")
+        self.listen_state(self.trigger, "input_number.thermo_actuator_second_floor_bathroom")
+        self.listen_state(self.trigger, "input_number.thermo_actuator_second_floor_bathroom_ladder")
         self.listen_state(self.trigger, "input_number.thermo_actuator_second_floor_living_and_diving_room")
         self.listen_state(self.trigger, "input_number.thermo_actuator_second_floor_workroom")
         self.listen_state(self.trigger, "input_number.thermo_actuator_second_floor_kitchen")

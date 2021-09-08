@@ -10,7 +10,7 @@ appdaemon:
     HASS:
       type: hass
       ha_url: http://192.168.11.247:8123
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhNDA3YjVjOTUyNDY0NzU0YmQ0YmNkYjcxYzViYWRlYSIsImlhdCI6MTU4Njk4MDM3OSwiZXhwIjoxOTAyMzQwMzc5fQ.9Mqk44pl2HHvapAS6wQuc5CyT7kytlRJ7CdTq48Hly0
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI3ZWVhMWVhODIzNjI0Mjc3YjI1MDg3MDA0MzkxZTQyYiIsImlhdCI6MTYzMTExMDM2NywiZXhwIjoxOTQ2NDcwMzY3fQ.YFwSCX7fRAPuYx7sE2A1SlQh_h1b3-1qriwI-xey9O4
 
 http:
   url: http://192.168.11.247:5050
