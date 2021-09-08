@@ -33,7 +33,7 @@
     - service: input_boolean.turn_on
       entity_id: input_boolean.second_floor_mqtt_req_temp_record_from_corner_room
     - service: climate.set_temperature
-      entity_id: climate.corner_room
+      entity_id: climate.second_floor_corner_room
       data_template:
         temperature: '{{ states("sensor.second_floor_corner_room_required_temp_from_device") }}'
     - delay: 

@@ -37,6 +37,6 @@
       data_template:
         temperature: '{{ states("sensor.first_floor_corridor_and_toilet_required_temp_from_device") }}'
     - delay: 
-        millifirsts: 5
+        milliseconds: 5
     - service: input_boolean.turn_off
       entity_id: input_boolean.first_floor_mqtt_req_temp_record_from_corridor_and_toilet
