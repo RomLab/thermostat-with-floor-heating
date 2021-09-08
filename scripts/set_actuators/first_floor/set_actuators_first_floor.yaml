@@ -12,21 +12,16 @@ set_actuators_first_floor:
       entity_id: script.turn_on_actuator_first_floor_corridor_and_toilet
     - service: script.turn_on
       entity_id: script.turn_off_actuator_first_floor_corridor_and_toilet
-    # Thomas bathroom
+    # Bathroom
     - service: script.turn_on
       entity_id: script.turn_on_actuator_first_floor_bathroom
     - service: script.turn_on
       entity_id: script.turn_off_actuator_first_floor_bathroom
-    # Kitchen
+    # Living room and kitchen
     - service: script.turn_on
-      entity_id: script.turn_on_actuator_first_floor_kitchen
+      entity_id: script.turn_on_actuator_first_floor_living_room_and_kitchen
     - service: script.turn_on
-      entity_id: script.turn_off_actuator_first_floor_kitchen
-    # Living room
-    - service: script.turn_on
-      entity_id: script.turn_on_actuator_first_floor_living_room
-    - service: script.turn_on
-      entity_id: script.turn_off_actuator_first_floor_living_room
+      entity_id: script.turn_off_actuator_first_floor_living_room_and_kitchen
     # Cellar
     - service: script.turn_on
       entity_id: script.turn_on_actuator_first_floor_cellar

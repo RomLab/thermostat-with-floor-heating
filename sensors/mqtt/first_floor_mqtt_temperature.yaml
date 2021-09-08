@@ -14,13 +14,13 @@
   unit_of_measurement: '°C'
   qos: 2
 - platform: mqtt
-  name: 'bathroom_required_temp_from_device'
+  name: 'first_floor_bathroom_required_temp_from_device'
   state_topic: 'home/first-floor/bathroom/required-temperature-from-device'
   unit_of_measurement: '°C'
   qos: 2
 # Living room and kitchen
 - platform: mqtt
-  name: 'living_room_temp'
+  name: 'first_floor_living_room_and_kitchen_temp'
   state_topic: 'home/first-floor/living-room-and-kitchen/temperature'
   unit_of_measurement: '°C'
   qos: 2
