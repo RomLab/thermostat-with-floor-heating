@@ -70,10 +70,9 @@ recorder:
       - sensor.fireplace_second_floor
       # MQTT
         # First floor
-      - sensor.first_floor_office_temp
       - sensor.first_floor_corridor_and_toilet_temp
       - sensor.first_floor_bathroom_temp
-      - sensor.living_room_temp
+      - sensor.living_room_and_kitchen_temp
       - sensor.first_floor_cellar_temp
       - sensor.first_floor_garage_temp
         # Second floor
@@ -138,10 +137,9 @@ history:
       - sensor.fireplace_second_floor
       # MQTT
         # First floor
-      - sensor.first_floor_office_temp
       - sensor.first_floor_corridor_and_toilet_temp
       - sensor.first_floor_bathroom_temp
-      - sensor.living_room_temp
+      - sensor.first_floor_living_room_and_kitchen_temp
       - sensor.first_floor_cellar_temp
       - sensor.first_floor_garage_temp
         # Second floor
@@ -206,10 +204,9 @@ logbook:
       - sensor.fireplace_second_floor
       # MQTT
         # First floor
-      - sensor.first_floor_office_temp
       - sensor.first_floor_corridor_and_toilet_temp
       - sensor.first_floor_bathroom_temp
-      - sensor.living_room_temp
+      - sensor.first_floor_living_room_and_kitchen_temp
       - sensor.first_floor_cellar_temp
       - sensor.first_floor_garage_temp
         # Second floor
