@@ -26,7 +26,7 @@
   qos: 2
 - platform: mqtt
   name: 'first_floor_living_room_and_kitchen_required_temp_from_device'
-  state_topic: 'home/first-floor/kitchen-and-living-room/required-temperature-from-device'
+  state_topic: 'home/first-floor/living-room-and-kitchen/required-temperature-from-device'
   unit_of_measurement: '°C'
   qos: 2
 # Cellar

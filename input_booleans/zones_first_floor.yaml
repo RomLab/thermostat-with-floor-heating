@@ -1,5 +1,5 @@
 # Corridor and toilet
-zone_first_floor_corridor_and_toiler:
+zone_first_floor_corridor_and_toilet:
   name: 'Vytápění chodba/toaleta'
 # Bathroom
 zone_first_floor_bathroom:
