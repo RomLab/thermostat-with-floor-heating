@@ -29,7 +29,7 @@ views:
                   - binary_sensor.first_floor_ping_thermostat_bathroom
                   - binary_sensor.first_floor_detection_of_open_window_bedroom
       - type: vertical-stack
-        title: 'Obývací pokoj/kuchyně'
+        title: 'Obývací pokoj/kuchyň'
         cards:
           - type: thermostat
             entity: climate.first_floor_living_room_and_kitchen

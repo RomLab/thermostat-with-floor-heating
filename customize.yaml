@@ -133,3 +133,34 @@ sensor.second_floor_corridor_and_toilet_temp:
 sensor.second_floor_parents_bedroom_temp:
   friendly_name: 'MQTT – ložnice rodičů (druhé patro)'
   icond: mdi:thermometer
+
+# Climates
+# First floor
+climate.first_floor_corridor_and_toilet:
+  friendly_name: 'Termostat přízemí – chodba/toaleta'
+climate.first_floor_bathroom:
+  friendly_name: 'Termostat přízemí – koupelna'
+climate.first_floor_living_room_and_kitchen:
+  friendly_name: 'Termostat přízemí – obývací pokoj/kuchyň'
+climate.first_floor_cellar:
+  friendly_name: 'Termostat přízemí – sklep'
+climate.first_floor_garage:
+  friendly_name: 'Termostat přízemí – garáž'
+
+# Second floor
+climate.second_floor_bathroom:
+  friendly_name: 'Termostat patro – koupelna'
+climate.second_floor_kitchen_workroom_living_and_diving_room:
+  friendly_name: 'Termostat patro – kuchyň, pracovna, obývací a jídelní pokoj'
+climate.second_floor_thomas_bedroom:
+  friendly_name: 'Termostat patro – Tomáš ložnice'
+climate.second_floor_north_room:
+  friendly_name: 'Termostat patro – severní pokoj'
+climate.second_floor_middle_room:
+  friendly_name: 'Termostat patro – střední pokoj'
+climate.second_floor_corner_room:
+  friendly_name: 'Termostat patro – rohový pokoj'
+climate.second_floor_corridor_and_toilet:
+  friendly_name: 'Termostat patro – chobba/toaleta'
+climate.second_floor_parents_bedroom:
+  friendly_name: 'Termostat patro – ložnice rodičů'
