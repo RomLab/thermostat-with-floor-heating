@@ -9,9 +9,7 @@ class I2CLCD(hass.Hass):
     self.listen_state(self.trigger, "switch.blue_led")
 
   def trigger(self, entity, attribute, old, new, kwargs): 
-    state_switch = None
-    if(entity == "switch.blue_led"):
-      state_switch = self.get_state("switch.blue_led")
+    state_switch = self.get_state("switch.blue_led")
 
     degree = [      
           [ 0b00111,
