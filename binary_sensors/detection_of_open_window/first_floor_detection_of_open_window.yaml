@@ -1,53 +1,38 @@
 # Detection of state open window for first floor
-- platform: template
+- platform: trend
   sensors:
     first_floor_detection_of_open_window_corridor_and_toilet:
       friendly_name: 'Detekce otevřeného okna'
-      device_class: opening
-      value_template: "{{ states('input_boolean.first_floor_detection_of_open_window_corridor_and_toilet') }}"
-      icon_template: >-
-        {%- if is_state('input_boolean.first_floor_detection_of_open_window_corridor_and_toilet', 'on') -%}
-          mdi:window-open
-        {%- else -%}
-          mdi:window-closed
-        {%- endif -%}
+      entity_id: sensor.first_floor_corridor_and_toilet_temp
+      sample_duration: 7200
+      min_gradient: -0.001
+      max_samples: 240
+      device_class: window
     first_floor_detection_of_open_window_bedroom:
       friendly_name: 'Detekce otevřeného okna'
-      device_class: opening
-      value_template: "{{ states('input_boolean.first_floor_detection_of_open_window_bedroom') }}" 
-      icon_template: >-
-        {%- if is_state('input_boolean.first_floor_detection_of_open_window_bedroom', 'on') -%}
-          mdi:window-open
-        {%- else -%}
-          mdi:window-closed
-        {%- endif -%}
+      entity_id: sensor.first_floor_bathroom_temp
+      sample_duration: 7200
+      min_gradient: -0.001
+      max_samples: 240
+      device_class: window
     first_floor_detection_of_open_window_living_room_and_kitchen:
       friendly_name: 'Detekce otevřeného okna'
-      device_class: opening
-      value_template: "{{ states('input_boolean.first_floor_detection_of_open_window_living_room_and_kitchen') }}"   
-      icon_template: >-
-        {%- if is_state('input_boolean.first_floor_detection_of_open_window_living_room_and_kitchen', 'on') -%}
-          mdi:window-open
-        {%- else -%}
-          mdi:window-closed
-        {%- endif -%}
+      entity_id: sensor.first_floor_living_room_and_kitchen_temp
+      sample_duration: 7200
+      min_gradient: -0.001
+      max_samples: 240
+      device_class: window
     first_floor_detection_of_open_window_cellar:
       friendly_name: 'Detekce otevřeného okna'
-      device_class: opening
-      value_template: "{{ states('input_boolean.first_floor_detection_of_open_window_cellar') }}"   
-      icon_template: >-
-        {%- if is_state('input_boolean.first_floor_detection_of_open_window_cellar', 'on') -%}
-          mdi:window-open
-        {%- else -%}
-          mdi:window-closed
-        {%- endif -%}
+      entity_id: sensor.first_floor_cellar_temp
+      sample_duration: 7200
+      min_gradient: -0.001
+      max_samples: 240
+      device_class: window
     first_floor_detection_of_open_window_garage:
       friendly_name: 'Detekce otevřeného okna'
-      device_class: opening
-      value_template: "{{ states('input_boolean.first_floor_detection_of_open_window_garage') }}"   
-      icon_template: >-
-        {%- if is_state('input_boolean.first_floor_detection_of_open_window_garage', 'on') -%}
-          mdi:window-open
-        {%- else -%}
-          mdi:window-closed
-        {%- endif -%}
+      entity_id: sensor.first_floor_garage_temp
+      sample_duration: 7200
+      min_gradient: -0.001
+      max_samples: 240
+      device_class: window
