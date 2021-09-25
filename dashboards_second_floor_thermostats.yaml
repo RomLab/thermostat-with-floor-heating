@@ -13,7 +13,7 @@ views:
               - type: entities
                 state_color: true
                 entities:
-                  - binary_sensor.second_floor_ping_thermostat_bathroom
+                  - binary_sensor.second_floor_connection_of_thermostat_bathroom
                   - binary_sensor.second_floor_detection_of_open_window_bathroom
       - type: vertical-stack
         title: 'Kuchyň, pracovna, obývací/jidelní pokoj'
@@ -26,7 +26,7 @@ views:
               - type: entities
                 state_color: true
                 entities:
-                  - binary_sensor.second_floor_ping_thermostat_kitchen_workroom_living_and_diving_room
+                  - binary_sensor.second_floor_connection_of_thermostat_kitchen_workroom_living_and_diving_room
                   - binary_sensor.second_floor_detection_of_open_window_kitchen_workroom_living_and_diving_room
       - type: vertical-stack
         title: 'Tomáš ložnice'
@@ -39,7 +39,7 @@ views:
               - type: entities
                 state_color: true
                 entities:
-                  - binary_sensor.second_floor_ping_thermostat_thomas_bedroom
+                  - binary_sensor.second_floor_connection_of_thermostat_thomas_bedroom
                   - binary_sensor.second_floor_detection_of_open_window_thomas_bedroom
       - type: vertical-stack
         title: 'Severní pokoj'
@@ -52,7 +52,7 @@ views:
               - type: entities
                 state_color: true
                 entities:
-                  - binary_sensor.second_floor_ping_thermostat_north_room
+                  - binary_sensor.second_floor_connection_of_thermostat_north_room
                   - binary_sensor.second_floor_detection_of_open_window_north_room
       - type: vertical-stack
         title: 'Střední pokoj'
@@ -65,7 +65,7 @@ views:
               - type: entities
                 state_color: true
                 entities:
-                  - binary_sensor.second_floor_ping_thermostat_middle_room
+                  - binary_sensor.second_floor_connection_of_thermostat_middle_room
                   - binary_sensor.second_floor_detection_of_open_window_middle_room
       - type: vertical-stack
         title: 'Rohový pokoj'
@@ -78,7 +78,7 @@ views:
               - type: entities
                 state_color: true
                 entities:
-                  - binary_sensor.second_floor_ping_thermostat_corner_room
+                  - binary_sensor.second_floor_connection_of_thermostat_corner_room
                   - binary_sensor.second_floor_detection_of_open_window_corner_room
       - type: vertical-stack
         title: 'Chodba a toaleta'
@@ -91,7 +91,7 @@ views:
               - type: entities
                 state_color: true
                 entities:
-                  - binary_sensor.second_floor_ping_thermostat_corridor_and_toilet
+                  - binary_sensor.second_floor_connection_of_thermostat_corridor_and_toilet
                   - binary_sensor.second_floor_detection_of_open_window_corridor_and_toilet
       - type: vertical-stack
         title: 'Ložnice rodičů'
@@ -104,5 +104,5 @@ views:
               - type: entities
                 state_color: true
                 entities:
-                  - binary_sensor.second_floor_ping_thermostat_parents_bedroom
+                  - binary_sensor.second_floor_connection_of_thermostat_parents_bedroom
                   - binary_sensor.second_floor_detection_of_open_window_parents_bedroom
