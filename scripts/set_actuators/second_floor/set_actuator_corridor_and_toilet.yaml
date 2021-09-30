@@ -4,11 +4,10 @@ turn_on_actuator_second_floor_corridor_and_toilet:
   sequence:
     - condition: template
       value_template: "{{ is_state_attr('climate.second_floor_corridor_and_toilet', 'hvac_action', 'heating') }}"
-    - service: input_number.set_value
+    - service: input_boolean.trun_on
       data:
         entity_id: 
-          - input_number.thermo_actuator_second_floor_corridor_and_toilet
-        value: '100'
+          - input_boolean.thermo_actuator_second_floor_corridor_and_toilet
 
 turn_off_actuator_second_floor_corridor_and_toilet:
   alias: 'Turn off actuators for a corridor and toilet in a second floor'
@@ -16,8 +15,7 @@ turn_off_actuator_second_floor_corridor_and_toilet:
   sequence:
     - condition: template
       value_template: "{{ is_state_attr('climate.second_floor_corridor_and_toilet', 'hvac_action', 'idle') or  is_state_attr('climate.second_floor_corridor_and_toilet', 'hvac_action', 'off')}}"
-    - service: input_number.set_value
+    - service: input_boolean.turn_off
       data:
         entity_id: 
-          - input_number.thermo_actuator_second_floor_corridor_and_toilet
-        value: '0'
+          - input_boolean.thermo_actuator_second_floor_corridor_and_toilet

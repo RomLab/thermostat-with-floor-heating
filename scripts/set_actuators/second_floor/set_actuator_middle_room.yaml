@@ -4,11 +4,10 @@ turn_on_actuator_second_floor_middle_room:
   sequence:
     - condition: template
       value_template: "{{ is_state_attr('climate.second_floor_middle_room', 'hvac_action', 'heating') }}"
-    - service: input_number.set_value
+    - service: input_boolean.turn_on
       data:
         entity_id: 
-          - input_number.thermo_actuator_second_floor_middle_room
-        value: '100'
+          - input_boolean.thermo_actuator_second_floor_middle_room
 
 turn_off_actuator_second_floor_middle_room:
   alias: 'Turn off actuators for a middle room in a second floor'
@@ -16,8 +15,7 @@ turn_off_actuator_second_floor_middle_room:
   sequence:
     - condition: template
       value_template: "{{ is_state_attr('climate.second_floor_middle_room', 'hvac_action', 'idle') or  is_state_attr('climate.second_floor_middle_room', 'hvac_action', 'off')}}"
-    - service: input_number.set_value
+    - service: input_boolean.turn_off
       data:
         entity_id: 
-          - input_number.thermo_actuator_second_floor_middle_room
-        value: '0'
+          - input_boolean.thermo_actuator_second_floor_middle_room

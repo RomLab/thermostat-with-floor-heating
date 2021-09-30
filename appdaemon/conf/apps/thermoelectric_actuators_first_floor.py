@@ -13,58 +13,63 @@ class ThermoelectricActuatorsFirstFloor(hass.Hass):
         # Frequency in Hertz
         PWM_FREQUENCY = 100 
         self.pwm.set_pwm_freq(PWM_FREQUENCY)
-        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_office")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_corridor_and_toilet")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_bathroom_ladder")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_bathroom")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_kitchen_door")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_living_room_1")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_living_room_2")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_living_room_3")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_kitchen_windows")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_cellar_ladder")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_garage_1")
-        self.listen_state(self.trigger, "input_number.thermo_actuator_first_floor_garage_2")
+        self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_office")
+        self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_corridor_and_toilet")
+        self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_bathroom_ladder")
+        self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_bathroom")
+        self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_kitchen_door")
+        self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_living_room_1")
+        self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_living_room_2")
+        self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_living_room_3")
+        self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_kitchen_windows")
+        self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_cellar_ladder")
+        self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_garage_1")
+        self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_garage_2")
 
     def trigger(self, entity, attribute, old, new, kwargs):    
        
-        pwm_pulse = self.get_pwm_pulse(self.get_state(entity))
+        state = self.get_state(entity)
         channel = None
+
+        pwm_pulse = 0
+        if(state == "on"):
+            pwm_pulse = 100
+            
         error = False
-        if(entity == "input_number.thermo_actuator_first_floor_office"): 
+        if(entity == "input_boolean.thermo_actuator_first_floor_office"): 
             channel = 0          
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_first_floor_corridor_and_toilet"):
+        elif(entity == "input_boolean.thermo_actuator_first_floor_corridor_and_toilet"):
             channel = 1
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_first_floor_bathroom_ladder"):
+        elif(entity == "input_boolean.thermo_actuator_first_floor_bathroom_ladder"):
             channel = 2
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_first_floor_bathroom"):
+        elif(entity == "input_boolean.thermo_actuator_first_floor_bathroom"):
             channel = 3
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_first_floor_kitchen_door"):
+        elif(entity == "input_boolean.thermo_actuator_first_floor_kitchen_door"):
             channel = 4
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_first_floor_living_room_1"):
+        elif(entity == "input_boolean.thermo_actuator_first_floor_living_room_1"):
             channel = 5
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_first_floor_living_room_2"):
+        elif(entity == "input_boolean.thermo_actuator_first_floor_living_room_2"):
             channel = 6
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_first_floor_living_room_3"):
+        elif(entity == "input_boolean.thermo_actuator_first_floor_living_room_3"):
             channel = 7
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_first_floor_kitchen_windows"):
+        elif(entity == "input_boolean.thermo_actuator_first_floor_kitchen_windows"):
             channel = 8
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_first_floor_cellar_ladder"):
+        elif(entity == "input_boolean.thermo_actuator_first_floor_cellar_ladder"):
             channel = 9
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_first_floor_garage_1"):
+        elif(entity == "input_boolean.thermo_actuator_first_floor_garage_1"):
             channel = 10
             self.pwm.set_pwm(channel, 0, pwm_pulse)
-        elif(entity == "input_number.thermo_actuator_first_floor_garage_2"):
+        elif(entity == "input_boolean.thermo_actuator_first_floor_garage_2"):
             channel = 11
             self.pwm.set_pwm(channel, 0, pwm_pulse)
         else:

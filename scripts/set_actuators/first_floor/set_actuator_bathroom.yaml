@@ -4,12 +4,11 @@ turn_on_actuator_first_floor_bathroom:
   sequence:
     - condition: template
       value_template: "{{ is_state_attr('climate.first_floor_bathroom', 'hvac_action', 'heating') }}"
-    - service: input_number.set_value
+    - service: input_boolean.turn_on
       data:
         entity_id: 
-          - input_number.thermo_actuator_first_floor_bathroom
-          - input_number.thermo_actuator_first_floor_bathroom_ladder
-        value: '100'
+          - input_boolean.thermo_actuator_first_floor_bathroom
+          - input_boolean.thermo_actuator_first_floor_bathroom_ladder
 
 turn_off_actuator_first_floor_bathroom:
   alias: 'Turn off actuators for a bathroom in a first floor'
@@ -17,9 +16,8 @@ turn_off_actuator_first_floor_bathroom:
   sequence:
     - condition: template
       value_template: "{{ is_state_attr('climate.first_floor_bathroom', 'hvac_action', 'idle') or  is_state_attr('climate.first_floor_bathroom', 'hvac_action', 'off')}}"
-    - service: input_number.set_value
+    - service: input_boolean.turn_off
       data:
         entity_id: 
-          - input_number.thermo_actuator_first_floor_bathroom
-          - input_number.thermo_actuator_first_floor_bathroom_ladder
-        value: '0'
+          - input_boolean.thermo_actuator_first_floor_bathroom
+          - input_boolean.thermo_actuator_first_floor_bathroom_ladder

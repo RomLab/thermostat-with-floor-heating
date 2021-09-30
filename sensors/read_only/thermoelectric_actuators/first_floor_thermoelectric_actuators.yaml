@@ -3,61 +3,49 @@
   sensors:
     thermo_actuator_first_floor_office:
       friendly_name: 'Kancelář'
-      unit_of_measurement: '%'
-      value_template: "{{ states('input_number.thermo_actuator_first_floor_office') }}"
+      value_template: "{{ states('input_boolean.thermo_actuator_first_floor_office') }}"
       icon_template: mdi:valve
     thermo_actuator_first_floor_corridor_and_toilet:
       friendly_name: 'Chodba/toaleta'
-      unit_of_measurement: '%'
-      value_template: "{{ states('input_number.thermo_actuator_first_floor_corridor_and_toilet') }}"
+      value_template: "{{ states('input_boolean.thermo_actuator_first_floor_corridor_and_toilet') }}"
       icon_template: mdi:valve
     thermo_actuator_first_floor_bathroom_ladder:
       friendly_name: 'Koupelna – žebřík'
-      unit_of_measurement: '%'
-      value_template: "{{ states('input_number.thermo_actuator_first_floor_bathroom_ladder') }}"
+      value_template: "{{ states('input_boolean.thermo_actuator_first_floor_bathroom_ladder') }}"
       icon_template: mdi:valve
     thermo_actuator_first_floor_bathroom:
       friendly_name: 'Koupelna'
-      unit_of_measurement: '%'
-      value_template: "{{ states('input_number.thermo_actuator_first_floor_bathroom') }}"
+      value_template: "{{ states('input_boolean.thermo_actuator_first_floor_bathroom') }}"
       icon_template: mdi:valve
     thermo_actuator_first_floor_kitchen_door:
       friendly_name: 'Kuchyně – dveře'
-      unit_of_measurement: '%'
-      value_template: "{{ states('input_number.thermo_actuator_first_floor_kitchen_door') }}"
+      value_template: "{{ states('input_boolean.thermo_actuator_first_floor_kitchen_door') }}"
       icon_template: mdi:valve
     thermo_actuator_first_floor_living_room_1:
       friendly_name: 'Obývací pokoj – okruh 1'
-      unit_of_measurement: '%'
-      value_template: "{{ states('input_number.thermo_actuator_first_floor_living_room_1') }}"
+      value_template: "{{ states('input_boolean.thermo_actuator_first_floor_living_room_1') }}"
       icon_template: mdi:valve
     thermo_actuator_first_floor_living_room_2:
       friendly_name: 'Obývací pokoj – okruh 2'
-      unit_of_measurement: '%'
-      value_template: "{{ states('input_number.thermo_actuator_first_floor_living_room_2') }}"
+      value_template: "{{ states('input_boolean.thermo_actuator_first_floor_living_room_2') }}"
       icon_template: mdi:valve
     thermo_actuator_first_floor_living_room_3:
       friendly_name: 'Obývací pokoj – okruh 3'
-      unit_of_measurement: '%'
-      value_template: "{{ states('input_number.thermo_actuator_first_floor_living_room_3') }}"
+      value_template: "{{ states('input_boolean.thermo_actuator_first_floor_living_room_3') }}"
       icon_template: mdi:valve
     thermo_actuator_first_floor_kitchen_windows:
       friendly_name: 'Kuchyně – okna'
-      unit_of_measurement: '%'
-      value_template: "{{ states('input_number.thermo_actuator_first_floor_kitchen_windows') }}"
+      value_template: "{{ states('input_boolean.thermo_actuator_first_floor_kitchen_windows') }}"
       icon_template: mdi:valve
     thermo_actuator_first_floor_cellar_ladder:
       friendly_name: 'Sklep – žebřík'
-      unit_of_measurement: '%'
-      value_template: "{{ states('input_number.thermo_actuator_first_floor_cellar_ladder') }}"
+      value_template: "{{ states('input_boolean.thermo_actuator_first_floor_cellar_ladder') }}"
       icon_template: mdi:valve
     thermo_actuator_first_floor_garage_1:
       friendly_name: 'Garáž – okruh 1'
-      unit_of_measurement: '%'
-      value_template: "{{ states('input_number.thermo_actuator_first_floor_garage_1') }}"
+      value_template: "{{ states('input_boolean.thermo_actuator_first_floor_garage_1') }}"
       icon_template: mdi:valve
     thermo_actuator_first_floor_garage_2:
       friendly_name: 'Garáž – okruh 2'
-      unit_of_measurement: '%'
-      value_template: "{{ states('input_number.thermo_actuator_first_floor_garage_2') }}"
+      value_template: "{{ states('input_boolean.thermo_actuator_first_floor_garage_2') }}"
       icon_template: mdi:valve

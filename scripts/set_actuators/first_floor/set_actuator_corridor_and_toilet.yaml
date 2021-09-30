@@ -2,22 +2,24 @@ turn_on_actuator_first_floor_corridor_and_toilet:
   alias: 'Turn on actuators for a corridor and toilet in a first floor'
   description: 'Turn on actuators for a corridor and toilet in a first floor'
   sequence:
-    - condition: template
-      value_template: "{{ is_state_attr('climate.first_floor_corridor_and_toilet', 'hvac_action', 'heating') }}"
-    - service: input_number.set_value
+    - condition: or
+      conditions:
+        - condition: template
+          value_template: "{{ is_state_attr('climate.first_floor_corridor_and_toilet', 'hvac_action', 'heating') }}"
+        - condition: template
+          value_template: "{{ (is_state_attr('climate.first_floor_corridor_and_toilet', 'hvac_action', 'idle') or is_state_attr('climate.first_floor_corridor_and_toilet', 'hvac_action', 'off')) and is_state('binary_sensor.first_floor_corridor_and_toilet_forecast', 'on') }}"
+    - service: input_boolean.turn_on
       data:
         entity_id: 
-          - input_number.thermo_actuator_first_floor_corridor_and_toilet
-        value: '100'
+          - input_boolean.thermo_actuator_first_floor_corridor_and_toilet
 
 turn_off_actuator_first_floor_corridor_and_toilet:
   alias: 'Turn off actuators for a corridor and toilet in a first floor'
   description: 'Turn off actuators for a corridor and toilet in a first floor'
   sequence:
     - condition: template
-      value_template: "{{ is_state_attr('climate.first_floor_corridor_and_toilet', 'hvac_action', 'idle') or  is_state_attr('climate.first_floor_corridor_and_toilet', 'hvac_action', 'off')}}"
-    - service: input_number.set_value
+      value_template: "{{ (is_state_attr('climate.first_floor_corridor_and_toilet', 'hvac_action', 'idle') or is_state_attr('climate.first_floor_corridor_and_toilet', 'hvac_action', 'off')) and is_state('binary_sensor.first_floor_corridor_and_toilet_forecast', 'off') }}"
+    - service: input_boolean.turn_off
       data:
         entity_id: 
-          - input_number.thermo_actuator_first_floor_corridor_and_toilet
-        value: '0'
+          - input_boolean.thermo_actuator_first_floor_corridor_and_toilet

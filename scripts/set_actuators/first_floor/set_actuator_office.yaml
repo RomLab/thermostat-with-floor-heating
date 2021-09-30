@@ -4,11 +4,10 @@ turn_on_actuator_first_floor_office:
   sequence:
     - condition: template
       value_template: "{{ is_state_attr('climate.first_floor_office', 'hvac_action', 'heating') }}"
-    - service: input_number.set_value
+    - service: input_boolean.turn_on
       data:
         entity_id: 
-          - input_number.thermo_actuator_first_floor_office
-        value: '100'
+          - input_boolean.thermo_actuator_first_floor_office
 
 turn_off_actuator_first_floor_office:
   alias: 'Turn off actuators for a office in a first floor'
@@ -16,8 +15,7 @@ turn_off_actuator_first_floor_office:
   sequence:
     - condition: template
       value_template: "{{ is_state_attr('climate.first_floor_office', 'hvac_action', 'idle') or  is_state_attr('climate.first_floor_office', 'hvac_action', 'off')}}"
-    - service: input_number.set_value
+    - service: input_boolean.turn_off
       data:
         entity_id: 
-          - input_number.thermo_actuator_first_floor_office
-        value: '0'
+          - input_boolean.thermo_actuator_first_floor_office

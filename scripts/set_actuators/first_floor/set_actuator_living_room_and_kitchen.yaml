@@ -4,15 +4,14 @@ turn_on_actuator_first_floor_living_room_and_kitchen:
   sequence:
     - condition: template
       value_template: "{{ is_state_attr('climate.first_floor_living_room_and_kitchen', 'hvac_action', 'heating') }}"
-    - service: input_number.set_value
+    - service: input_boolean.turn_on
       data:
         entity_id: 
-          - input_number.thermo_actuator_first_floor_living_room_1
-          - input_number.thermo_actuator_first_floor_living_room_2
-          - input_number.thermo_actuator_first_floor_living_room_3
-          - input_number.thermo_actuator_first_floor_kitchen_windows
-          - input_number.thermo_actuator_first_floor_kitchen_door
-        value: '100'
+          - input_boolean.thermo_actuator_first_floor_living_room_1
+          - input_boolean.thermo_actuator_first_floor_living_room_2
+          - input_boolean.thermo_actuator_first_floor_living_room_3
+          - input_boolean.thermo_actuator_first_floor_kitchen_windows
+          - input_boolean.thermo_actuator_first_floor_kitchen_door
 
 turn_off_actuator_first_floor_living_room_and_kitchen:
   alias: 'Turn off actuators for a living room and kitchen in a first floor'
@@ -20,12 +19,11 @@ turn_off_actuator_first_floor_living_room_and_kitchen:
   sequence:
     - condition: template
       value_template: "{{ is_state_attr('climate.first_floor_living_room_and_kitchen', 'hvac_action', 'idle') or  is_state_attr('climate.first_floor_living_room', 'hvac_action', 'off')}}"
-    - service: input_number.set_value
+    - service: input_boolean.turn_off
       data:
         entity_id: 
-          - input_number.thermo_actuator_first_floor_living_room_1
-          - input_number.thermo_actuator_first_floor_living_room_2
-          - input_number.thermo_actuator_first_floor_living_room_3
-          - input_number.thermo_actuator_first_floor_kitchen_windows
-          - input_number.thermo_actuator_first_floor_kitchen_door
-        value: '0'
+          - input_boolean.thermo_actuator_first_floor_living_room_1
+          - input_boolean.thermo_actuator_first_floor_living_room_2
+          - input_boolean.thermo_actuator_first_floor_living_room_3
+          - input_boolean.thermo_actuator_first_floor_kitchen_windows
+          - input_boolean.thermo_actuator_first_floor_kitchen_door
