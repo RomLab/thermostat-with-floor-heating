@@ -1,0 +1,32 @@
+- platform: template
+  sensors:
+    first_floor_garage_forecast:
+      value_template: >
+        {%- set roomTemperature = states('sensor.first_floor_garage_temp') | float -%}
+        {%- set requiredTemperature = state_attr('climate.first_floor_garage', 'temperature') | float -%}
+        {%- set startTimeSlotMinutes = states('input_number.first_floor_garage_start') | int -%}
+        {%- set currentMinutes = (now().hour * 60 + now().minute) | int -%}
+        {%- set hourForForecast = (startTimeSlotMinutes/60) | int -%}
+        {%- set forecastTemperature = state_attr('weather.home_hourly', 'forecast')[hourForForecast].temperature | float -%}
+        {%- set slope = states('input_number.first_floor_garage_slope') | float -%}
+        {%- set intercept = states('input_number.first_floor_garage_intercept') | float -%}
+        {%- set linearApproximation = ((roomTemperature - forecastTemperature) * slope - intercept) | int -%}
+        {%- set diffTime = (startTimeSlotMinutes - currentMinutes) | int -%} 
+        {%- if is_state('input_boolean.control_according_to_plans_with_temperature_prediction','on') -%} 
+          {%- if linearApproximation >= 0 -%}  
+            {%- if diffTime >= 0 and diffTime < linearApproximation-%}
+              heating
+            {%- else -%}
+              off
+            {%- endif -%}
+          {%- else -%}
+            {%- if currentMinutes > startTimeSlotMinutes and currentMinutes < startTimeSlotMinutes * (-1 * linearApproximation) -%}
+              not_heating
+            {%- else -%}
+              off
+            {%- endif -%}
+          {%- endif -%}
+        {%- else -%}
+          off
+        {%- endif -%}
+

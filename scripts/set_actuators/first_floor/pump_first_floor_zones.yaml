@@ -3,8 +3,23 @@ pump_first_floor_zones:
   description: 'Zone control according to request from a zone control module on a first floor'
   sequence:
     - service_template: >
-        {%- if is_state_attr('climate.first_floor_corridor_and_toilet', 'hvac_action', 'heating') or is_state_attr('climate.first_floor_bathroom', 'hvac_action', 'heating') or  is_state_attr('climate.first_floor_living_room_and_kitchen', 'hvac_action', 'heating') or is_state_attr('climate.first_floor_cellar', 'hvac_action', 'heating') or is_state_attr('climate.first_floor_garage', 'hvac_action', 'heating') -%}
-           script.turn_on_pump_corridor_first_floor
+        {%- 
+        if is_state('input_boolean.thermo_actuator_first_floor_corridor_and_toilet', 'on') or 
+
+        is_state('input_boolean.thermo_actuator_first_floor_bathroom', 'on') or 
+        is_state('input_boolean.thermo_actuator_first_floor_bathroom_ladder', 'on') or 
+
+        is_state('input_boolean.thermo_actuator_first_floor_cellar_ladder', 'on') or 
+
+        is_state('input_boolean.thermo_actuator_first_floor_garage_1', 'on') or 
+        is_state('input_boolean.thermo_actuator_first_floor_garage_2', 'on') or 
+
+        is_state('input_boolean.thermo_actuator_first_floor_living_room_1', 'on') or 
+        is_state('input_boolean.thermo_actuator_first_floor_living_room_2', 'on') or 
+        is_state('input_boolean.thermo_actuator_first_floor_living_room_3', 'on') or 
+        is_state('input_boolean.thermo_actuator_first_floor_kitchen_windows', 'on') or 
+        is_state('input_boolean.thermo_actuator_first_floor_kitchen_door', 'on') -%}
+          script.turn_on_pump_corridor_first_floor
         {%- else -%}
-            script.turn_off_pump_corridor_first_floor
+          script.turn_off_pump_corridor_first_floor
         {%- endif -%}

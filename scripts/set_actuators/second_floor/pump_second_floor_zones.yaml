@@ -3,7 +3,26 @@ pump_second_floor_zones:
   description: 'Zone control according to request from a zone control module on a second floor'
   sequence:
     - service_template: >
-        {%- if is_state_attr('climate.second_floor_bathroom', 'hvac_action', 'heating') or is_state_attr('climate.second_floor_corner_room', 'hvac_action', 'heating') or is_state_attr('climate.second_floor_corridor_and_toilet', 'hvac_action', 'heating') or  is_state_attr('climate.second_floor_kitchen_workroom_living_and_diving_room', 'hvac_action', 'heating') or is_state_attr('climate.second_floor_middle_room', 'hvac_action', 'heating') or is_state_attr('climate.second_floor_north_room', 'hvac_action', 'heating') or is_state_attr('climate.second_floor_parents_bedroom', 'hvac_action', 'heating') or is_state_attr('climate.second_floor_thomas_bedroom', 'hvac_action', 'heating') -%}
+        {%- if  
+          is_state('input_boolean.thermo_actuator_second_floor_bathroom', 'on') or
+          is_state('input_boolean.thermo_actuator_second_floor_bathroom_ladder', 'on') or
+        
+          is_state('input_boolean.thermo_actuator_second_floor_corner_room', 'on') or
+
+          is_state('input_boolean.thermo_actuator_second_floor_corridor_and_toilet', 'on') or
+
+          is_state('input_boolean.thermo_actuator_second_floor_living_and_diving_room', 'on') or
+          is_state('input_boolean.thermo_actuator_second_floor_workroom', 'on') or
+          is_state('input_boolean.thermo_actuator_second_floor_kitchen', 'on') or
+
+          is_state('input_boolean.thermo_actuator_second_floor_middle_room', 'on') or
+
+          is_state('input_boolean.thermo_actuator_second_floor_north_room', 'on') or
+
+          is_state('input_boolean.thermo_actuator_second_floor_parents_bedroom_window', 'on') or
+          is_state('input_boolean.thermo_actuator_second_floor_parents_bedroom_door', 'on') or
+
+          is_state('input_boolean.thermo_actuator_second_floor_thomas_bedroom', 'on') -%}
            script.turn_on_pump_corridor_second_floor
         {%- else -%}
             script.turn_off_pump_corridor_second_floor

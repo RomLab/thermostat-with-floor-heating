@@ -1,10 +1,6 @@
 # Sensors for only read thermoelectric actuators for first floor
 - platform: template
   sensors:
-    thermo_actuator_first_floor_office:
-      friendly_name: 'Kancelář'
-      value_template: "{{ states('input_boolean.thermo_actuator_first_floor_office') }}"
-      icon_template: mdi:valve
     thermo_actuator_first_floor_corridor_and_toilet:
       friendly_name: 'Chodba/toaleta'
       value_template: "{{ states('input_boolean.thermo_actuator_first_floor_corridor_and_toilet') }}"

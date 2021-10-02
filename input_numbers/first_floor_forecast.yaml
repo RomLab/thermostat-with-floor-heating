@@ -1,0 +1,161 @@
+# Corridor and toilet
+first_floor_corridor_and_toilet_start:
+  name: 'Predikce start'
+  min: 0
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: 'min'
+first_floor_corridor_and_toilet_stop:
+  name: 'Predikce stop'
+  min: 0
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: 'min'
+first_floor_corridor_and_toilet_slope:
+  name: 'Predikce sklon'
+  min: -1000
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '-'
+first_floor_corridor_and_toilet_intercept:
+  name: 'Predikce průsečík'
+  min: -1000
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '-'
+# Bathroom
+first_floor_bathroom_start:
+  name: 'Predikce start'
+  min: 0
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: 'min'
+first_floor_bathroom_stop:
+  name: 'Predikce stop'
+  min: 0
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: 'min'
+first_floor_bathroom_slope:
+  name: 'Predikce sklon'
+  min: -1000
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '-'
+first_floor_bathroom_intercept:
+  name: 'Predikce průsečík'
+  min: -1000
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+# Living room and kitchen
+first_floor_living_room_and_kitchen_start:
+  name: 'Predikce start'
+  min: 0
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: 'min'
+first_floor_living_room_and_kitchen_stop:
+  name: 'Predikce stop'
+  min: 0
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: 'min'
+first_floor_living_room_and_kitchen_slope:
+  name: 'Predikce sklon'
+  min: -1000
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '-'
+first_floor_living_room_and_kitchen_intercept:
+  name: 'Predikce průsečík'
+  min: -1000
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+# Cellar
+first_floor_cellar_start:
+  name: 'Predikce start'
+  min: 0
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: 'min'
+first_floor_cellar_stop:
+  name: 'Predikce stop'
+  min: 0
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: 'min'
+first_floor_cellar_slope:
+  name: 'Predikce sklon'
+  min: -1000
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '-'
+first_floor_cellar_intercept:
+  name: 'Predikce průsečík'
+  min: -1000
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+# Garage
+first_floor_garage_start:
+  name: 'Predikce start'
+  min: 0
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: 'min'
+first_floor_garage_stop:
+  name: 'Predikce stop'
+  min: 0
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: 'min'
+first_floor_garage_slope:
+  name: 'Predikce sklon'
+  min: -1000
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0
+  unit_of_measurement: '-'
+first_floor_garage_intercept:
+  name: 'Predikce průsečík'
+  min: -1000
+  max: 1000
+  mode: box
+  step: 1
+  initial: 0

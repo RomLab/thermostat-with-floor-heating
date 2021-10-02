@@ -1,6 +1,3 @@
-thermo_actuator_first_floor_office:
-  name: 'Kancelář'
-  icon: mdi:valve
 thermo_actuator_first_floor_corridor_and_toilet:
   name: 'Chodba/toaleta'
   icon: mdi:valve

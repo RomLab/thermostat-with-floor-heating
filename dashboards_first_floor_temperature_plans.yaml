@@ -12,12 +12,9 @@ views:
           secondary_info: time
         include:
           - climate.first_floor_corridor_and_toilet 
-          - input_boolean.control_according_to_plans
         customize:
           climate.first_floor_corridor_and_toilet:
             name: 'Chodba/toaleta'
-          input_boolean.control_according_to_plans:
-            states : ['on']
       - type: 'custom:scheduler-card'
         title: 'Koupelna'
         discover_existing: false
@@ -28,12 +25,9 @@ views:
           secondary_info: time
         include:
           - climate.first_floor_bathroom 
-          - input_boolean.control_according_to_plans
         customize:
           climate.first_floor_bathroom:
             name: 'Koupelna'
-          input_boolean.control_according_to_plans:
-            states : ['on']
       - type: 'custom:scheduler-card'
         title: 'Obývací pokoj/kuchyň'
         discover_existing: false
@@ -44,12 +38,9 @@ views:
           secondary_info: time
         include:
           - climate.first_floor_living_room_and_kitchen 
-          - input_boolean.control_according_to_plans
         customize:
           climate.first_floor_living_room_and_kitchen:
             name: 'Obývací pokoj/kuchyň'
-          input_boolean.control_according_to_plans:
-            states : ['on']
       - type: 'custom:scheduler-card'
         title: 'Sklep'
         discover_existing: false
@@ -60,12 +51,9 @@ views:
           secondary_info: time
         include:
           - climate.first_floor_cellar 
-          - input_boolean.control_according_to_plans
         customize:
           climate.first_floor_cellar:
             name: 'Sklep'
-          input_boolean.control_according_to_plans:
-            states : ['on']
       - type: 'custom:scheduler-card'
         title: 'Garáž'
         discover_existing: false
@@ -76,9 +64,6 @@ views:
           secondary_info: time
         include:
           - climate.first_floor_garage 
-          - input_boolean.control_according_to_plans
         customize:
           climate.first_floor_garage:
             name: 'Garáž'
-          input_boolean.control_according_to_plans:
-            states : ['on']
