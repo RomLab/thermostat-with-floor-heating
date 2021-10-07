@@ -119,6 +119,23 @@ recorder:
       - input_number.thermo_actuator_second_floor_parents_bedroom_window
       - input_number.thermo_actuator_second_floor_parents_bedroom_door
       - input_number.thermo_actuator_second_floor_corridor_and_toilet
+      #
+      - input_boolean.zone_first_floor_corridor_and_toilet
+      - input_boolean.zone_first_floor_bathroom
+      - input_boolean.zone_first_floor_living_room_and_kitchen
+      - input_boolean.zone_first_floor_cellar
+      - input_boolean.zone_first_floor_garage
+      #
+      - input_boolean.zone_second_floor_bathroom
+      - input_boolean.zone_second_floor_kitchen_workroom_living_and_diving_room
+      - input_boolean.zone_second_floor_thomas_bedroom
+      - input_boolean.zone_second_floor_north_room
+      - input_boolean.zone_second_floor_middle_room
+      - input_boolean.zone_second_floor_corner_room
+      - input_boolean.zone_second_floor_corridor_and_toilet
+      - input_boolean.zone_second_floor_parents_bedroom
+
+
 
 history:
   include:
@@ -186,6 +203,21 @@ history:
       - input_number.thermo_actuator_second_floor_parents_bedroom_window
       - input_number.thermo_actuator_second_floor_parents_bedroom_door
       - input_number.thermo_actuator_second_floor_corridor_and_toilet
+      #
+      - input_boolean.zone_first_floor_corridor_and_toilet
+      - input_boolean.zone_first_floor_bathroom
+      - input_boolean.zone_first_floor_living_room_and_kitchen
+      - input_boolean.zone_first_floor_cellar
+      - input_boolean.zone_first_floor_garage
+      #
+      - input_boolean.zone_second_floor_bathroom
+      - input_boolean.zone_second_floor_kitchen_workroom_living_and_diving_room
+      - input_boolean.zone_second_floor_thomas_bedroom
+      - input_boolean.zone_second_floor_north_room
+      - input_boolean.zone_second_floor_middle_room
+      - input_boolean.zone_second_floor_corner_room
+      - input_boolean.zone_second_floor_corridor_and_toilet
+      - input_boolean.zone_second_floor_parents_bedroom
 
 logbook:
   include:
@@ -253,6 +285,21 @@ logbook:
       - input_number.thermo_actuator_second_floor_parents_bedroom_window
       - input_number.thermo_actuator_second_floor_parents_bedroom_door
       - input_number.thermo_actuator_second_floor_corridor_and_toilet
+      #
+      - input_boolean.zone_first_floor_corridor_and_toilet
+      - input_boolean.zone_first_floor_bathroom
+      - input_boolean.zone_first_floor_living_room_and_kitchen
+      - input_boolean.zone_first_floor_cellar
+      - input_boolean.zone_first_floor_garage
+      #
+      - input_boolean.zone_second_floor_bathroom
+      - input_boolean.zone_second_floor_kitchen_workroom_living_and_diving_room
+      - input_boolean.zone_second_floor_thomas_bedroom
+      - input_boolean.zone_second_floor_north_room
+      - input_boolean.zone_second_floor_middle_room
+      - input_boolean.zone_second_floor_corner_room
+      - input_boolean.zone_second_floor_corridor_and_toilet
+      - input_boolean.zone_second_floor_parents_bedroom
 
 mqtt:
   broker: 192.168.11.247

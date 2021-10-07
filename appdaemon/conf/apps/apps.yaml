@@ -16,3 +16,9 @@ thermoelectric_actuators_first_floor:
 thermoelectric_actuators_second_floor:
   module: thermoelectric_actuators_second_floor
   class: ThermoelectricActuatorsSecondFloor
+database:
+  module: database
+  class: DATABASE
+timeslot:
+  module: timeslot
+  class: TIMESLOT

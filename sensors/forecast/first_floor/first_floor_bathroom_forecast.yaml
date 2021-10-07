@@ -1,0 +1,36 @@
+- platform: template
+  sensors:
+    first_floor_bathroom_forecast:
+      value_template: >
+        {%- set roomTemperature = states('sensor.first_floor_bathroom_temp') | float -%}
+        {%- set requiredTemperature = state_attr('climate.first_floor_bathroom', 'temperature') | float -%}
+        {%- set nextStartTimeSlotMinutes = states('input_number.first_floor_bathroom_next_start') | int -%}
+        {%- set currentStartTimeSlotMinutes = states('input_number.first_floor_bathroom_current_start') | int -%}
+        {%- set currentMinutes = (now().hour * 60 + now().minute) | int -%}
+        {%- set hourForForecast = (nextStartTimeSlotMinutes/60) | int -%}
+        {%- set forecastTemperature = state_attr('weather.home_hourly', 'forecast')[hourForForecast].temperature | float -%}
+        {%- set outdoorTemperature = states('sensor.outdoor') | float -%}
+        {%- set slope = states('input_number.first_floor_bathroom_slope') | float -%}
+        {%- set intercept = states('input_number.first_floor_bathroom_intercept') | float -%}
+        {%- set nextLinearApproximation = ((roomTemperature - forecastTemperature) * slope - intercept) | int -%}
+        {%- set currentLinearApproximation = ((roomTemperature - outdoorTemperature) * slope - intercept) | int -%}
+        {%- set diffTime = (nextStartTimeSlotMinutes - currentMinutes) | int -%} 
+        {%- if is_state('input_boolean.control_according_to_plans_with_temperature_prediction','on') -%} 
+          {%- if nextLinearApproximation >= 0 -%}  
+            {%- if diffTime >= 0 and diffTime <= nextLinearApproximation -%}
+              heating
+            {%- else -%}
+              off
+            {%- endif -%}
+          {%- elif currentLinearApproximation < 0 -%}
+            {%- if currentMinutes >= currentStartTimeSlotMinutes and currentMinutes <= currentStartTimeSlotMinutes + (-1 * currentLinearApproximation) -%}
+              not_heating
+            {%- else -%}
+              off
+            {%- endif -%}
+          {%- else -%}
+              off
+          {%- endif -%}
+        {%- else -%}
+          off
+        {%- endif -%}

@@ -1,3 +1,8 @@
 - platform: time_date
   display_options:
     - 'time'
+
+- platform: template
+  sensors:
+    current_minutes:
+      value_template: "{{ (now().hour * 60 + now().minute) | int }}"
