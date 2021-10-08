@@ -5,10 +5,9 @@ import datetime
 class TIMESLOT(hass.Hass):
 
     def initialize(self):
+        # Run every minute
         time = datetime.time(0, 0, 0)
         self.run_minutely(self.trigger, time)
-        #self.run_in(self.trigger, 60)
-        #self.listen_state(self.trigger, "input_boolean.control_mode_from_outdoor_temp_sensor")
     
     def trigger(self, kwargs): 
 
@@ -118,9 +117,7 @@ class TIMESLOT(hass.Hass):
             if "schedule" in entity:
                 if floor  in entity.lower():
                     if  currentThermostat in entity.lower():
-                        self.log(entity.lower())
                         timeslots = self.get_state(entity, attribute='times')
-                        #self.log(timeslots)     
                         length = len(timeslots)
                         for index, timeslot in enumerate(timeslots):
                             start = datetime.datetime.strptime(timeslot,'%H:%M:%S')
@@ -136,7 +133,6 @@ class TIMESLOT(hass.Hass):
        
         for key, values in dictionaryStartStop.items():
             if values[0] <= currtenTime and currtenTime <  values[1]:
-                self.log(values)
                 lengthDic = len(dictionaryStartStop)
                 currentSlot = dictionaryStartStop[key]
                 if key + 1 < lengthDic:

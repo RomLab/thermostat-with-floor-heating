@@ -8,31 +8,75 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
+import os.path
+from os import path
+
 class LinearAprroximation():
 
     slope = None
     intercept = None
     def create_line(self, numberFloor, heater, sensor):  
 
-        inside,outside,heater = self.read_data(numberFloor, heater, sensor)
+        insideData,outsideData,heaterData = self.read_data(numberFloor, heater, sensor)
+        
+        durations = []
+        outside_temps = []
+        inside_temps = []
        
-        durations = self.find_heatup_durations(heater)
-        outside_temps = self.find_temperatures_at_times(outside, durations)
-        inside_temps = self.find_temperatures_at_times(inside, durations)
-        #self.log(durations)
-        #self.log(outside_temps)
-        #self.log(inside_temps)
-        # durations nesmi byt prazdne
-        self.analyze_heatups(durations, outside_temps, inside_temps, numberFloor, sensor)
+        if len(heaterData) != 0:
+            durations = self.find_heatup_durations(heaterData)
+
+        if len(outsideData) != 0:
+            outside_temps = self.find_temperatures_at_times(outsideData, durations)
+        
+        if len(insideData) != 0:
+            inside_temps = self.find_temperatures_at_times(insideData, durations)
+        
+        if len(durations) != 0 and len(outside_temps) != 0 and len(inside_temps) != 0:
+            self.analyze_heatups(durations, outside_temps, inside_temps, numberFloor, sensor)
+        
         return self.slope, self.intercept
     
     def read_data(self, numberFloor, heater, sensor):
-        inside = pandas.read_csv('/home/appdaemon/.appdaemon/conf/apps/data/temperature_inside/'+numberFloor+'/'+sensor+'.csv', parse_dates=[0],names=['Time','Temperature'],index_col=0)
-        inside = inside[inside>-1000] # filter crap readings
-        outside = pandas.read_csv('/home/appdaemon/.appdaemon/conf/apps/data/sensor.outdoor.csv', parse_dates=[0],names=['Time','Temperature'],index_col=0)
-        heater = pandas.read_csv('/home/appdaemon/.appdaemon/conf/apps/data/heater/'+numberFloor+'/'+heater+'.csv', parse_dates=[0],names=['Time','Status'],index_col=0)
-        return inside, outside, heater
- 
+        
+        insideData = []
+        outsideData = []
+        heaterData = []
+        
+        pathTemperatureInside = '/home/appdaemon/.appdaemon/conf/apps/data/temperature_inside/'+numberFloor+'/'+sensor+'.csv'
+        if path.exists(pathTemperatureInside):
+            insideDataTemp = pandas.read_csv(pathTemperatureInside, parse_dates=[0],names=['Time','Temperature'],index_col=0)
+            if self.isValideValues(insideDataTemp, "Temperature"):
+                insideData = insideDataTemp
+                insideData = insideData[insideData>-1000] # filter crap readings
+            else:
+                insideData = []
+        
+        pathTemperatureOutside = '/home/appdaemon/.appdaemon/conf/apps/data/sensor.outdoor.csv'
+        if path.exists(pathTemperatureOutside):
+            outsideDataTemp = pandas.read_csv(pathTemperatureOutside, parse_dates=[0],names=['Time','Temperature'],index_col=0)
+            if self.isValideValues(outsideDataTemp, "Temperature"):
+                outsideData = outsideDataTemp
+            else:
+                outsideData = []
+        
+        pathHeater = '/home/appdaemon/.appdaemon/conf/apps/data/heater/'+numberFloor+'/'+heater+'.csv'
+        if path.exists(pathHeater):
+            heaterDatatemp = pandas.read_csv(pathHeater, parse_dates=[0],names=['Time','Status'],index_col=0)
+            if self.isValideValues(heaterDatatemp, "Status"):
+                heaterData = heaterDatatemp
+            else:
+                heaterData = []
+        
+        return insideData, outsideData, heaterData
+    
+    def isValideValues(self, values, header):
+        for time, df in values.iterrows():
+            if df[header]=="unavailable" or  df[header]=="unknown":
+                return False
+        
+        return True
+
     def find_heatup_durations(self, heater, status='off'):
         """Figure out how long the heater was on for each morning."""
         last_time = next(heater.iterrows())[0]
@@ -62,9 +106,7 @@ class LinearAprroximation():
  
         model_temp = np.linspace(min(delta), max(delta), 20)
         model_duration = self.slope * model_temp + self.intercept
-
-       
-    
+   
         plt.figure()
         ax = plt.gca()
         #plt.plot(initial_outside, durations_in_seconds,'o')

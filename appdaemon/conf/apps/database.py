@@ -6,16 +6,12 @@ from linearaprroximation import LinearAprroximation
 
 class DATABASE(hass.Hass):
     def initialize(self):
-        self.log("TEST-database")
-        self.listen_state(self.trigger, "input_boolean.manual_summer_mode")
+        self.listen_state(self.trigger, "sensor.current_weekday", new = "Monday")
+        #self.listen_state(self.trigger, "input_boolean.manual_winter_mode")
 
     def trigger(self, entity, attribute, old, new, kwargs):  
         
         aprroximation = LinearAprroximation()
-        #heaterFristFloor = self.getEntityHeater("zone_first_floor")
-        #heaterSecondFloor = self.getEntityHeater("zone_second_floor")
-        #sensorFirstFloor = self.getSensorFromRoom("first_floor")
-        #sensorSecondFloor = self.getSensorFromRoom("second_floor")
 
         slopeFirstFloor = [
             "input_number.first_floor_corridor_and_toilet_slope", 
@@ -44,14 +40,17 @@ class DATABASE(hass.Hass):
 
         outdoorSensor = "sensor.outdoor"
 
-        #self.getCreateCSVFromDatabese(outdoorSensor, str(outdoorSensor)+".csv")
+        self.getCreateCSVFromDatabese(outdoorSensor, str(outdoorSensor)+".csv")
         
         for index, value in enumerate(slopeFirstFloor):
-            #self.getCreateCSVFromDatabese(heaterFristFloor[index], "heater/first_floor/"+str(heaterFristFloor[index])+".csv")
-            #self.getCreateCSVFromDatabese(sensorFirstFloor[index], "temperature_inside/first_floor/"+str(sensorFirstFloor[index])+".csv")
+            self.getCreateCSVFromDatabese(heaterFristFloor[index], "heater/first_floor/"+str(heaterFristFloor[index])+".csv")
+            self.getCreateCSVFromDatabese(sensorFirstFloor[index], "temperature_inside/first_floor/"+str(sensorFirstFloor[index])+".csv")
             slope, intercept = aprroximation.create_line("first_floor", heaterFristFloor[index], sensorFirstFloor[index])
-            self.set_state(slopeFirstFloor[index],  state = slope)
-            self.set_state(interceptFirstFloor[index],  state = intercept)
+            if(slope != None and intercept != None):
+                self.set_state(slopeFirstFloor[index],  state = slope)
+                self.set_state(interceptFirstFloor[index],  state = intercept)
+            else:
+                self.log("Problem with slope or intercept for first floor.")
 
         slopeSecondFloor = [
         "input_number.second_floor_bathroom_slope", 
@@ -93,12 +92,15 @@ class DATABASE(hass.Hass):
             "sensor.second_floor_corridor_and_toilet_temp",
             "sensor.second_floor_parents_bedroom_temp"]
 
-        #for index, value in enumerate(slopeSecondFloor):
-            #self.getCreateCSVFromDatabese(heaterSecondFloor[index], "heater/second_floor/"+str(heaterSecondFloor[index])+".csv")
-            #self.getCreateCSVFromDatabese(sensorSecondFloor[index], "temperature_inside/second_floor/"+str(sensorSecondFloor[index])+".csv")
-            #slope, intercept = aprroximation.create_line("second_floor", heaterSecondFloor[index], sensorSecondFloor[index])
-            #self.set_state(slopeSecondFloor[index],  state = slope)
-            #self.set_state(interceptSecondFloor[index],  state = intercept)
+        for index, value in enumerate(slopeSecondFloor):
+            self.getCreateCSVFromDatabese(heaterSecondFloor[index], "heater/second_floor/"+str(heaterSecondFloor[index])+".csv")
+            self.getCreateCSVFromDatabese(sensorSecondFloor[index], "temperature_inside/second_floor/"+str(sensorSecondFloor[index])+".csv")
+            slope, intercept = aprroximation.create_line("second_floor", heaterSecondFloor[index], sensorSecondFloor[index])
+            if(slope != None and intercept != None):
+                self.set_state(slopeSecondFloor[index],  state = slope)
+                self.set_state(interceptSecondFloor[index],  state = intercept)
+            else:
+                self.log("Problem with slope or intercept for second floor.")
      
 
         
