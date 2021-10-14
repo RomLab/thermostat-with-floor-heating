@@ -16,7 +16,7 @@ views:
           climate.second_floor_bathroom:
             name: 'Koupelna'
       - type: 'custom:scheduler-card'
-        title: 'Kuchyně, pracovna, obývací/jídelní pokoj'
+        title: 'Kuchyň, pracovna, obývací/jídelní pokoj'
         discover_existing: false
         display_options:
           primary_info:

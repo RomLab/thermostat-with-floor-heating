@@ -3,7 +3,7 @@ views:
     path: prizemi-termostaty
     cards:
       - type: vertical-stack
-        title: 'Chodba/toaleta'
+        title: 'Chodba a toaleta'
         cards:
           - type: thermostat
             entity: climate.first_floor_corridor_and_toilet
@@ -14,7 +14,8 @@ views:
                 state_color: true
                 entities:
                   - binary_sensor.first_floor_connection_of_thermostat_corridor_and_toilet
-                  - binary_sensor.first_floor_detection_of_open_window_corridor_and_toilet
+                  - entity: binary_sensor.first_floor_detection_of_open_window_corridor_and_toilet
+                    name: 'Detekce otevřeného okna'
       - type: vertical-stack
         title: 'Koupelna'
         cards:
@@ -27,9 +28,10 @@ views:
                 state_color: true
                 entities:
                   - binary_sensor.first_floor_connection_of_thermostat_bathroom
-                  - binary_sensor.first_floor_detection_of_open_window_bedroom
+                  - entity: binary_sensor.first_floor_detection_of_open_window_bathroom
+                    name: 'Detekce otevřeného okna'
       - type: vertical-stack
-        title: 'Obývací pokoj/kuchyň'
+        title: 'Obývací pokoj a kuchyň'
         cards:
           - type: thermostat
             entity: climate.first_floor_living_room_and_kitchen
@@ -40,7 +42,8 @@ views:
                 state_color: true
                 entities:
                   - binary_sensor.first_floor_connection_of_thermostat_living_room_and_kitchen
-                  - binary_sensor.first_floor_detection_of_open_window_living_room_and_kitchen
+                  - entity: binary_sensor.first_floor_detection_of_open_window_living_room_and_kitchen
+                    name: 'Detekce otevřeného okna'
       - type: vertical-stack
         title: 'Sklep'
         cards:
@@ -53,7 +56,8 @@ views:
                 state_color: true
                 entities:
                   - binary_sensor.first_floor_connection_of_thermostat_cellar
-                  - binary_sensor.first_floor_detection_of_open_window_cellar
+                  - entity: binary_sensor.first_floor_detection_of_open_window_cellar
+                    name: 'Detekce otevřeného okna'
       - type: vertical-stack
         title: 'Garáž'
         cards:
@@ -66,4 +70,5 @@ views:
                 state_color: true
                 entities:
                   - binary_sensor.first_floor_connection_of_thermostat_garage
-                  - binary_sensor.first_floor_detection_of_open_window_garage
+                  - entity: binary_sensor.first_floor_detection_of_open_window_garage
+                    name: 'Detekce otevřeného okna'

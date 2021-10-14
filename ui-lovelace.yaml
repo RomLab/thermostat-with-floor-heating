@@ -150,5 +150,5 @@ views:
       entities:
         - script.shutdown_rpi
         - script.restart_rpi
-          
-    
+
+

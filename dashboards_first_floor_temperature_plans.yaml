@@ -3,7 +3,7 @@ views:
     path: prizemi-teplotni-plany
     cards:
       - type: 'custom:scheduler-card'
-        title: 'Chodba/toaleta'
+        title: 'Chodba a toaleta'
         discover_existing: false
         display_options:
           primary_info:
@@ -14,7 +14,7 @@ views:
           - climate.first_floor_corridor_and_toilet 
         customize:
           climate.first_floor_corridor_and_toilet:
-            name: 'Chodba/toaleta'
+            name: 'Chodba a toaleta'
       - type: 'custom:scheduler-card'
         title: 'Koupelna'
         discover_existing: false
@@ -29,7 +29,7 @@ views:
           climate.first_floor_bathroom:
             name: 'Koupelna'
       - type: 'custom:scheduler-card'
-        title: 'Obývací pokoj/kuchyň'
+        title: 'Obývací pokoj a kuchyň'
         discover_existing: false
         display_options:
           primary_info:
@@ -40,7 +40,7 @@ views:
           - climate.first_floor_living_room_and_kitchen 
         customize:
           climate.first_floor_living_room_and_kitchen:
-            name: 'Obývací pokoj/kuchyň'
+            name: 'Obývací pokoj a kuchyň'
       - type: 'custom:scheduler-card'
         title: 'Sklep'
         discover_existing: false

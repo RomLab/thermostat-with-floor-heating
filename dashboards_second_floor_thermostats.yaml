@@ -14,7 +14,8 @@ views:
                 state_color: true
                 entities:
                   - binary_sensor.second_floor_connection_of_thermostat_bathroom
-                  - binary_sensor.second_floor_detection_of_open_window_bathroom
+                  - entity: binary_sensor.second_floor_detection_of_open_window_bathroom
+                    name: 'Detekce otevřeného okna'
       - type: vertical-stack
         title: 'Kuchyň, pracovna, obývací/jidelní pokoj'
         cards:
@@ -27,7 +28,8 @@ views:
                 state_color: true
                 entities:
                   - binary_sensor.second_floor_connection_of_thermostat_kitchen_workroom_living_and_diving_room
-                  - binary_sensor.second_floor_detection_of_open_window_kitchen_workroom_living_and_diving_room
+                  - entity: binary_sensor.second_floor_detection_of_open_window_kitchen_workroom_living_and_diving_room
+                    name: 'Detekce otevřeného okna'
       - type: vertical-stack
         title: 'Tomáš ložnice'
         cards:
@@ -40,7 +42,8 @@ views:
                 state_color: true
                 entities:
                   - binary_sensor.second_floor_connection_of_thermostat_thomas_bedroom
-                  - binary_sensor.second_floor_detection_of_open_window_thomas_bedroom
+                  - entity: binary_sensor.second_floor_detection_of_open_window_thomas_bedroom
+                    name: 'Detekce otevřeného okna'
       - type: vertical-stack
         title: 'Severní pokoj'
         cards:
@@ -53,7 +56,8 @@ views:
                 state_color: true
                 entities:
                   - binary_sensor.second_floor_connection_of_thermostat_north_room
-                  - binary_sensor.second_floor_detection_of_open_window_north_room
+                  - entity: binary_sensor.second_floor_detection_of_open_window_north_room
+                    name: 'Detekce otevřeného okna'
       - type: vertical-stack
         title: 'Střední pokoj'
         cards:
@@ -66,7 +70,8 @@ views:
                 state_color: true
                 entities:
                   - binary_sensor.second_floor_connection_of_thermostat_middle_room
-                  - binary_sensor.second_floor_detection_of_open_window_middle_room
+                  - entity: binary_sensor.second_floor_detection_of_open_window_middle_room
+                    name: 'Detekce otevřeného okna'
       - type: vertical-stack
         title: 'Rohový pokoj'
         cards:
@@ -79,7 +84,8 @@ views:
                 state_color: true
                 entities:
                   - binary_sensor.second_floor_connection_of_thermostat_corner_room
-                  - binary_sensor.second_floor_detection_of_open_window_corner_room
+                  - entity: binary_sensor.second_floor_detection_of_open_window_corner_room
+                    name: 'Detekce otevřeného okna'
       - type: vertical-stack
         title: 'Chodba a toaleta'
         cards:
@@ -92,7 +98,8 @@ views:
                 state_color: true
                 entities:
                   - binary_sensor.second_floor_connection_of_thermostat_corridor_and_toilet
-                  - binary_sensor.second_floor_detection_of_open_window_corridor_and_toilet
+                  - entity: binary_sensor.second_floor_detection_of_open_window_corridor_and_toilet
+                    name: 'Detekce otevřeného okna'
       - type: vertical-stack
         title: 'Ložnice rodičů'
         cards:
@@ -105,4 +112,5 @@ views:
                 state_color: true
                 entities:
                   - binary_sensor.second_floor_connection_of_thermostat_parents_bedroom
-                  - binary_sensor.second_floor_detection_of_open_window_parents_bedroom
+                  - entity: binary_sensor.second_floor_detection_of_open_window_parents_bedroom
+                    name: 'Detekce otevřeného okna'

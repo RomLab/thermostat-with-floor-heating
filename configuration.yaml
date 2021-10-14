@@ -11,6 +11,8 @@ lovelace:
   resources:
     - url: /local/scheduler-card/scheduler-card.js?v=0
       type: module
+    - url: /local/floorplan/floorplan.js?
+      type: module
   dashboards:
     lovelace-firstfloorthermostats: # Needs to contain a hyphen (-)
       mode: yaml
@@ -38,6 +40,20 @@ lovelace:
       filename: dashboards_second_floor_temperature_plans.yaml
       title: 'Patro – teplotní plány'
       icon: mdi:calendar-range
+      show_in_sidebar: true
+      require_admin: false
+    lovelace-dashboardsfirstfloorfloorplan:
+      mode: yaml
+      filename: dashboards_first_floor_floorplan.yaml
+      title: 'Přízemí – půdorys'
+      icon: mdi:floor-plan
+      show_in_sidebar: true
+      require_admin: false
+    lovelace-dashboardssecondfloorfloorplan:
+      mode: yaml
+      filename: dashboards_second_floor_floorplan.yaml
+      title: 'Patro – půdorys'
+      icon: mdi:floor-plan
       show_in_sidebar: true
       require_admin: false
       
