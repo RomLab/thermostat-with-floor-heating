@@ -197,3 +197,32 @@ WantedBy=multi-user.target
 ```
 - - Reload systemd: ```sudo systemctl --system daemon-reload```
 - - Spuštění služby: ```sudo systemctl start mosquitto.service``` 
+
+## Teplotní predikce
+- Instalace balíčku **pandas**
+- Přepnutí do virtual environment appdaemon:
+```
+sudo -u appdaemon -H -s
+cd /srv/appdaemon
+source bin/activate
+```
+- Instalovat do virtual environment appdaemon: 
+  - ```pip3 install pandas```
+  - ```pip3 install numpy```
+  - ```pip3 install matplotlib```
+
+- Vytvoření struktury složek:
+  - /home/appdaemon/.appdaemon/conf/apps/data/heater/first_floor
+  - /home/appdaemon/.appdaemon/conf/apps/data/heater/second_floor
+  - /home/appdaemon/.appdaemon/conf/apps/data/temperature_inside/first_floor
+  - /home/appdaemon/.appdaemon/conf/apps/data/temperature_inside/second_floor
+
+
+- Možnost připojení přes uživatel appdaemon do datábaze
+- Editovat ```sudo -e /etc/postgresql/X.Y/main/pg_hba.conf``` (X.Y je verze databáze, aktuálně 11)
+  - Vložit řádek ``` local    homeassistant   appdaemon   md5``` 
+  - Přidání práv pro uživatele do databáze
+    - ```sudo -s -u postgres```
+    - ```createuser appdaemon``` (vytvoření uživatele)
+    - ```psql```
+    - ```ALTER USER appdaemon WITH SUPERUSER; ``` (přidání práv pro čtení dat)
