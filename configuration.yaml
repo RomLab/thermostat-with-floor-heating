@@ -111,30 +111,29 @@ recorder:
       - switch.orange_led
       - switch.blue_led
       # Thermo actuators
-      - input_number.thermo_actuator_first_floor_office
-      - input_number.thermo_actuator_first_floor_corridor_and_toiler
-      - input_number.thermo_actuator_first_floor_bathroom_ladder
-      - input_number.thermo_actuator_first_floor_bathroom
-      - input_number.thermo_actuator_first_floor_kitchen_door
-      - input_number.thermo_actuator_first_floor_living_room_1
-      - input_number.thermo_actuator_first_floor_living_room_2
-      - input_number.thermo_actuator_first_floor_living_room_3
-      - input_number.thermo_actuator_first_floor_kitchen_windows
-      - input_number.thermo_actuator_first_floor_cellar_ladder
-      - input_number.thermo_actuator_first_floor_garage_1
-      - input_number.thermo_actuator_first_floor_garage_2
-      - input_number.thermo_actuator_second_floor_bathroom
-      - input_number.thermo_actuator_second_floor_bathroom_ladder
-      - input_number.thermo_actuator_second_floor_living_and_diving_room
-      - input_number.thermo_actuator_second_floor_workroom
-      - input_number.thermo_actuator_second_floor_kitchen
-      - input_number.thermo_actuator_second_floor_thomas_bedroom
-      - input_number.thermo_actuator_second_floor_north_room
-      - input_number.thermo_actuator_second_floor_middle_room
-      - input_number.thermo_actuator_second_floor_corner_room
-      - input_number.thermo_actuator_second_floor_parents_bedroom_window
-      - input_number.thermo_actuator_second_floor_parents_bedroom_door
-      - input_number.thermo_actuator_second_floor_corridor_and_toilet
+      - input_boolean.thermo_actuator_first_floor_corridor_and_toiler
+      - input_boolean.thermo_actuator_first_floor_bathroom_ladder
+      - input_boolean.thermo_actuator_first_floor_bathroom
+      - input_boolean.thermo_actuator_first_floor_kitchen_door
+      - input_boolean.thermo_actuator_first_floor_living_room_1
+      - input_boolean.thermo_actuator_first_floor_living_room_2
+      - input_boolean.thermo_actuator_first_floor_living_room_3
+      - input_boolean.thermo_actuator_first_floor_kitchen_windows
+      - input_boolean.thermo_actuator_first_floor_cellar_ladder
+      - input_boolean.thermo_actuator_first_floor_garage_1
+      - input_boolean.thermo_actuator_first_floor_garage_2
+      - input_boolean.thermo_actuator_second_floor_bathroom
+      - input_boolean.thermo_actuator_second_floor_bathroom_ladder
+      - input_boolean.thermo_actuator_second_floor_living_and_diving_room
+      - input_boolean.thermo_actuator_second_floor_workroom
+      - input_boolean.thermo_actuator_second_floor_kitchen
+      - input_boolean.thermo_actuator_second_floor_thomas_bedroom
+      - input_boolean.thermo_actuator_second_floor_north_room
+      - input_boolean.thermo_actuator_second_floor_middle_room
+      - input_boolean.thermo_actuator_second_floor_corner_room
+      - input_boolean.thermo_actuator_second_floor_parents_bedroom_window
+      - input_boolean.thermo_actuator_second_floor_parents_bedroom_door
+      - input_boolean.thermo_actuator_second_floor_corridor_and_toilet
       #
       - input_boolean.zone_first_floor_corridor_and_toilet
       - input_boolean.zone_first_floor_bathroom
@@ -195,30 +194,29 @@ history:
       - switch.orange_led
       - switch.blue_led
       # Thermo actuators
-      - input_number.thermo_actuator_first_floor_office
-      - input_number.thermo_actuator_first_floor_corridor_and_toiler
-      - input_number.thermo_actuator_first_floor_bathroom_ladder
-      - input_number.thermo_actuator_first_floor_bathroom
-      - input_number.thermo_actuator_first_floor_kitchen_door
-      - input_number.thermo_actuator_first_floor_living_room_1
-      - input_number.thermo_actuator_first_floor_living_room_2
-      - input_number.thermo_actuator_first_floor_living_room_3
-      - input_number.thermo_actuator_first_floor_kitchen_windows
-      - input_number.thermo_actuator_first_floor_cellar_ladder
-      - input_number.thermo_actuator_first_floor_garage_1
-      - input_number.thermo_actuator_first_floor_garage_2
-      - input_number.thermo_actuator_second_floor_bathroom
-      - input_number.thermo_actuator_second_floor_bathroom_ladder
-      - input_number.thermo_actuator_second_floor_living_and_diving_room
-      - input_number.thermo_actuator_second_floor_workroom
-      - input_number.thermo_actuator_second_floor_kitchen
-      - input_number.thermo_actuator_second_floor_thomas_bedroom
-      - input_number.thermo_actuator_second_floor_north_room
-      - input_number.thermo_actuator_second_floor_middle_room
-      - input_number.thermo_actuator_second_floor_corner_room
-      - input_number.thermo_actuator_second_floor_parents_bedroom_window
-      - input_number.thermo_actuator_second_floor_parents_bedroom_door
-      - input_number.thermo_actuator_second_floor_corridor_and_toilet
+      - input_boolean.thermo_actuator_first_floor_corridor_and_toiler
+      - input_boolean.thermo_actuator_first_floor_bathroom_ladder
+      - input_boolean.thermo_actuator_first_floor_bathroom
+      - input_boolean.thermo_actuator_first_floor_kitchen_door
+      - input_boolean.thermo_actuator_first_floor_living_room_1
+      - input_boolean.thermo_actuator_first_floor_living_room_2
+      - input_boolean.thermo_actuator_first_floor_living_room_3
+      - input_boolean.thermo_actuator_first_floor_kitchen_windows
+      - input_boolean.thermo_actuator_first_floor_cellar_ladder
+      - input_boolean.thermo_actuator_first_floor_garage_1
+      - input_boolean.thermo_actuator_first_floor_garage_2
+      - input_boolean.thermo_actuator_second_floor_bathroom
+      - input_boolean.thermo_actuator_second_floor_bathroom_ladder
+      - input_boolean.thermo_actuator_second_floor_living_and_diving_room
+      - input_boolean.thermo_actuator_second_floor_workroom
+      - input_boolean.thermo_actuator_second_floor_kitchen
+      - input_boolean.thermo_actuator_second_floor_thomas_bedroom
+      - input_boolean.thermo_actuator_second_floor_north_room
+      - input_boolean.thermo_actuator_second_floor_middle_room
+      - input_boolean.thermo_actuator_second_floor_corner_room
+      - input_boolean.thermo_actuator_second_floor_parents_bedroom_window
+      - input_boolean.thermo_actuator_second_floor_parents_bedroom_door
+      - input_boolean.thermo_actuator_second_floor_corridor_and_toilet
       #
       - input_boolean.zone_first_floor_corridor_and_toilet
       - input_boolean.zone_first_floor_bathroom
@@ -277,30 +275,29 @@ logbook:
       - switch.orange_led
       - switch.blue_led
       # Thermo actuators
-      - input_number.thermo_actuator_first_floor_office
-      - input_number.thermo_actuator_first_floor_corridor_and_toiler
-      - input_number.thermo_actuator_first_floor_bathroom_ladder
-      - input_number.thermo_actuator_first_floor_bathroom
-      - input_number.thermo_actuator_first_floor_kitchen_door
-      - input_number.thermo_actuator_first_floor_living_room_1
-      - input_number.thermo_actuator_first_floor_living_room_2
-      - input_number.thermo_actuator_first_floor_living_room_3
-      - input_number.thermo_actuator_first_floor_kitchen_windows
-      - input_number.thermo_actuator_first_floor_cellar_ladder
-      - input_number.thermo_actuator_first_floor_garage_1
-      - input_number.thermo_actuator_first_floor_garage_2
-      - input_number.thermo_actuator_second_floor_bathroom
-      - input_number.thermo_actuator_second_floor_bathroom_ladder
-      - input_number.thermo_actuator_second_floor_living_and_diving_room
-      - input_number.thermo_actuator_second_floor_workroom
-      - input_number.thermo_actuator_second_floor_kitchen
-      - input_number.thermo_actuator_second_floor_thomas_bedroom
-      - input_number.thermo_actuator_second_floor_north_room
-      - input_number.thermo_actuator_second_floor_middle_room
-      - input_number.thermo_actuator_second_floor_corner_room
-      - input_number.thermo_actuator_second_floor_parents_bedroom_window
-      - input_number.thermo_actuator_second_floor_parents_bedroom_door
-      - input_number.thermo_actuator_second_floor_corridor_and_toilet
+      - input_boolean.thermo_actuator_first_floor_corridor_and_toiler
+      - input_boolean.thermo_actuator_first_floor_bathroom_ladder
+      - input_boolean.thermo_actuator_first_floor_bathroom
+      - input_boolean.thermo_actuator_first_floor_kitchen_door
+      - input_boolean.thermo_actuator_first_floor_living_room_1
+      - input_boolean.thermo_actuator_first_floor_living_room_2
+      - input_boolean.thermo_actuator_first_floor_living_room_3
+      - input_boolean.thermo_actuator_first_floor_kitchen_windows
+      - input_boolean.thermo_actuator_first_floor_cellar_ladder
+      - input_boolean.thermo_actuator_first_floor_garage_1
+      - input_boolean.thermo_actuator_first_floor_garage_2
+      - input_boolean.thermo_actuator_second_floor_bathroom
+      - input_boolean.thermo_actuator_second_floor_bathroom_ladder
+      - input_boolean.thermo_actuator_second_floor_living_and_diving_room
+      - input_boolean.thermo_actuator_second_floor_workroom
+      - input_boolean.thermo_actuator_second_floor_kitchen
+      - input_boolean.thermo_actuator_second_floor_thomas_bedroom
+      - input_boolean.thermo_actuator_second_floor_north_room
+      - input_boolean.thermo_actuator_second_floor_middle_room
+      - input_boolean.thermo_actuator_second_floor_corner_room
+      - input_boolean.thermo_actuator_second_floor_parents_bedroom_window
+      - input_boolean.thermo_actuator_second_floor_parents_bedroom_door
+      - input_boolean.thermo_actuator_second_floor_corridor_and_toilet
       #
       - input_boolean.zone_first_floor_corridor_and_toilet
       - input_boolean.zone_first_floor_bathroom

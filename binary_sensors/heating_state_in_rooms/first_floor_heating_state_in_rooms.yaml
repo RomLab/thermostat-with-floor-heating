@@ -6,13 +6,13 @@
       value_template: "{{ is_state('input_boolean.thermo_actuator_first_floor_corridor_and_toilet', 'on') }}"     
     first_floor_heating_state_bathroom:
       friendly_name: 'Stav vytápění – koupelna (první patro)'
-      value_template: >-
-        "{{ is_state('input_boolean.thermo_actuator_first_floor_bathroom_ladder', 'on') or
+      value_template: "{{ 
+            is_state('input_boolean.thermo_actuator_first_floor_bathroom_ladder', 'on') or
             is_state('input_boolean.thermo_actuator_first_floor_bathroom', 'on') }}"    
     first_floor_heating_state_living_room_and_kitchen:
       friendly_name: 'Stav vytápění – obývací pokoj a kuchyň (první patro)'
-      value_template: >-
-        "{{ is_state('input_boolean.thermo_actuator_first_floor_kitchen_door', 'on') or
+      value_template: "{{ 
+            is_state('input_boolean.thermo_actuator_first_floor_kitchen_door', 'on') or
             is_state('input_boolean.thermo_actuator_first_floor_kitchen_windows', 'on') or
             is_state('input_boolean.thermo_actuator_first_floor_living_room_1', 'on') or
             is_state('input_boolean.thermo_actuator_first_floor_living_room_2', 'on') or
@@ -22,7 +22,7 @@
       value_template: "{{ is_state('input_boolean.thermo_actuator_first_floor_cellar_ladder', 'on') }}" 
     first_floor_heating_state_garage:
       friendly_name: 'Stav vytápění – garáž (první patro)'
-      value_template: >-
-        "{{ is_state('input_boolean.thermo_actuator_first_floor_garage_1', 'on') or
+      value_template: "{{ 
+            is_state('input_boolean.thermo_actuator_first_floor_garage_1', 'on') or
             is_state('input_boolean.thermo_actuator_first_floor_garage_2', 'on') }}"
       

@@ -3,13 +3,13 @@
   sensors:
     second_floor_heating_state_bathroom:
       friendly_name: 'Stav vytápění – koupelna (druhé patro)'
-      value_template: >-
-        "{{ is_state('input_boolean.thermo_actuator_second_floor_bathroom', 'on') or
+      value_template: "{{ 
+            is_state('input_boolean.thermo_actuator_second_floor_bathroom', 'on') or
             is_state('input_boolean.thermo_actuator_second_floor_bathroom_ladder', 'on') }}" 
     second_floor_heating_state_kitchen_workroom_living_and_diving_room:
       friendly_name: 'Stav vytápění – kuchyň, pracovna, obývací a jídelní pokoj (druhé patro)'
-      value_template: >-
-        "{{ is_state('input_boolean.thermo_actuator_second_floor_living_and_diving_room', 'on') or
+      value_template: "{{ 
+            is_state('input_boolean.thermo_actuator_second_floor_living_and_diving_room', 'on') or
             is_state('input_boolean.thermo_actuator_second_floor_workroom', 'on') or
             is_state('input_boolean.thermo_actuator_second_floor_kitchen', 'on') }}"    
     second_floor_heating_state_thomas_bedroom:
@@ -26,8 +26,8 @@
       value_template: "{{ is_state('input_boolean.thermo_actuator_second_floor_corner_room', 'on') }}"     
     second_floor_heating_state_parents_bedroom:
       friendly_name: 'Stav vytápění – ložnice rodičů (druhé patro)'
-      value_template: >-
-       "{{ is_state('input_boolean.thermo_actuator_second_floor_parents_bedroom_window', 'on') or
+      value_template: "{{ 
+           is_state('input_boolean.thermo_actuator_second_floor_parents_bedroom_window', 'on') or
            is_state('input_boolean.thermo_actuator_second_floor_parents_bedroom_door', 'on') }}"  
     second_floor_heating_state_corridor_and_toilet:
       friendly_name: 'Stav vytápění – chodba/toaleta (druhé patro)'
