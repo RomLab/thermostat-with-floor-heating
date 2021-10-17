@@ -6,6 +6,7 @@ views:
       - config:
           image: /local/floorplan/patro-pudorys.svg
           stylesheet: /local/floorplan/style.css
+          cache: true 
           #log_level: error
           defaults:
               hover_action: hover-info

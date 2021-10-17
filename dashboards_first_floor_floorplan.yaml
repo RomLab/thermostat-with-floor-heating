@@ -6,6 +6,7 @@ views:
       - config:
           image: /local/floorplan/prizemi-pudorys.svg
           stylesheet: /local/floorplan/style.css
+          cache: true
           #log_level: error
           defaults:
               hover_action: hover-info
@@ -47,7 +48,7 @@ views:
                 - sensor.first_floor_kitchen_required_temp
               state_action:
                 - service: floorplan.text_set
-                  service_data: 'Požadovaná: ${entity.attributes.temperature} °C'
+                  service_data: 'Požadovaná: ${entity.state} °C'
                 - service: floorplan.class_set
                   service_data:
                     class: 'static-required-temp'
