@@ -13,7 +13,6 @@ class ThermoelectricActuatorsFirstFloor(hass.Hass):
         # Frequency in Hertz
         PWM_FREQUENCY = 100 
         self.pwm.set_pwm_freq(PWM_FREQUENCY)
-        self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_office")
         self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_corridor_and_toilet")
         self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_bathroom_ladder")
         self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_bathroom")
@@ -33,7 +32,7 @@ class ThermoelectricActuatorsFirstFloor(hass.Hass):
 
         pwm_pulse = 0
         if(state == "on"):
-            pwm_pulse = 100
+            pwm_pulse = 4095
             
         error = False
         if(entity == "input_boolean.thermo_actuator_first_floor_office"): 
