@@ -206,12 +206,14 @@ sudo -u appdaemon -H -s
 cd /srv/appdaemon
 source bin/activate
 ```
+- Instalace do systému
+  -  ```sudo apt-get install libatlas-base-dev```
 - Instalovat do virtual environment appdaemon: 
   - ```pip3 install pandas```
   - ```pip3.8 install numpy```
   - ```pip3 install psycopg2```
   - ```pip3 install matplotlib```
-- sudo apt-get install libatlas-base-dev
+
 
 - Vytvoření struktury složek:
   - /home/appdaemon/.appdaemon/conf/apps/data/heater/first_floor
@@ -227,5 +229,5 @@ source bin/activate
     - ```sudo -s -u postgres```
     - ```createuser appdaemon``` (vytvoření uživatele)
     - ```psql```
-    - ```ALTER USER appdaemon WITH SUPERUSER; ``` (přidání práv pro čtení dat)```
-    - ```alter user appdaemon with encrypted password 'VelmiSilneHesloProHomeassistant';```
+    - ```ALTER USER appdaemon WITH SUPERUSER;``` (přidání práv pro čtení dat)
+    - ```ALTER USER appdaemon WITH encrypted password '<Heslo>';```
