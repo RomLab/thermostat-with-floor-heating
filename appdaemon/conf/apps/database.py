@@ -108,7 +108,6 @@ class DATABASE(hass.Hass):
     def getCreateCSVFromDatabese(self, entity, path):
         connection = None
         try:
-            # self.log("TESTTEST")
             # Connect to an existing database
             connection = psycopg2.connect(user="appdaemon",
                                           password="VelmiSilneHesloProHomeassistant",
@@ -118,9 +117,8 @@ class DATABASE(hass.Hass):
             # Create a cursor to perform database operations
             cursor = connection.cursor()
              #self.log("TESTTEST222")
-            sql = "COPY (SELECT last_updated, state from states WHERE entity_id="+"'"+str(entity)+"') TO STDOUT WITH CSV DELIMITER ','"
+            sql = "COPY (SELECT last_updated, state from states WHERE entity_id="+"'"+str(entity)+"' ORDER BY last_updated ASC) TO STDOUT WITH CSV DELIMITER ','"
             #outputquery = "COPY ({0}) TO STDOUT WITH CSV HEADER".format("SELECT last_updated, state from states WHERE entity_id='switch.blue_led'")
-           # self.log("home/appdaemon/.appdaemon/conf/apps/data/"+path)
             with open("home/appdaemon/.appdaemon/conf/apps/data/"+str(path), 'w') as f:
                 cursor.copy_expert(sql, f)
             # Print PostgreSQL details
