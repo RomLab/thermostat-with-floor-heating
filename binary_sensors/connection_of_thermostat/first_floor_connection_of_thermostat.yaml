@@ -4,8 +4,11 @@
     first_floor_connection_of_thermostat_corridor_and_toilet:
       friendly_name: 'Stav připojení'
       value_template:  >
+        {%- set currentTime = now() -%}
+        {%- set currentHours = as_timestamp(currentTime) | timestamp_custom('%H') | int -%}
+        {%- set currentMinutes =  as_timestamp(currentTime) | timestamp_custom('%M') | int -%}
         {%- if not is_state('sensor.first_floor_corridor_and_toilet_actual_time', 'unknown') and 
-        (as_timestamp(now()) - 1*60) | timestamp_custom('%H:%M:%S') < strptime(states('sensor.first_floor_corridor_and_toilet_actual_time'), '%H:%M:%S') -%}
+        (currentHours * 60 + currentMinutes - 3)  < states('sensor.first_floor_corridor_and_toilet_actual_time') | int -%}
           on
         {%- else -%}
           off
@@ -14,8 +17,11 @@
     first_floor_connection_of_thermostat_bathroom:
       friendly_name: 'Stav připojení'
       value_template:  >
+        {%- set currentTime = now() -%}
+        {%- set currentHours = as_timestamp(currentTime) | timestamp_custom('%H') | int -%}
+        {%- set currentMinutes =  as_timestamp(currentTime) | timestamp_custom('%M') | int -%}
         {%- if not is_state('sensor.first_floor_bathroom_actual_time', 'unknown') and 
-        (as_timestamp(now()) - 1*60) | timestamp_custom('%H:%M:%S') < strptime(states('sensor.first_floor_bathroom_actual_time'), '%H:%M:%S') -%}
+        (currentHours * 60 + currentMinutes - 3)  < states('sensor.first_floor_bathroom_actual_time') | int -%}
           on
         {%- else -%}
           off
@@ -24,8 +30,11 @@
     first_floor_connection_of_thermostat_living_room_and_kitchen:
       friendly_name: 'Stav připojení'
       value_template:  >
+        {%- set currentTime = now() -%}
+        {%- set currentHours = as_timestamp(currentTime) | timestamp_custom('%H') | int -%}
+        {%- set currentMinutes =  as_timestamp(currentTime) | timestamp_custom('%M') | int -%}
         {%- if not is_state('sensor.first_floor_living_room_and_kitchen_actual_time', 'unknown') and 
-        (as_timestamp(now()) - 1*60) | timestamp_custom('%H:%M:%S') < strptime(states('sensor.first_floor_living_room_and_kitchen_actual_time'), '%H:%M:%S') -%}
+        (currentHours * 60 + currentMinutes - 3)  < states('sensor.first_floor_living_room_and_kitchen_actual_time') | int -%}
           on
         {%- else -%}
           off
@@ -34,8 +43,11 @@
     first_floor_connection_of_thermostat_cellar:
       friendly_name: 'Stav připojení'
       value_template:  >
+        {%- set currentTime = now() -%}
+        {%- set currentHours = as_timestamp(currentTime) | timestamp_custom('%H') | int -%}
+        {%- set currentMinutes =  as_timestamp(currentTime) | timestamp_custom('%M') | int -%}
         {%- if not is_state('sensor.first_floor_cellar_actual_time', 'unknown') and 
-        (as_timestamp(now()) - 1*60) | timestamp_custom('%H:%M:%S') < strptime(states('sensor.first_floor_cellar_actual_time'), '%H:%M:%S') -%}
+        (currentHours * 60 + currentMinutes - 3)  < states('sensor.first_floor_cellar_actual_time') | int -%}
           on
         {%- else -%}
           off
@@ -44,8 +56,11 @@
     first_floor_connection_of_thermostat_garage:
       friendly_name: 'Stav připojení'
       value_template:  >
+        {%- set currentTime = now() -%}
+        {%- set currentHours = as_timestamp(currentTime) | timestamp_custom('%H') | int -%}
+        {%- set currentMinutes =  as_timestamp(currentTime) | timestamp_custom('%M') | int -%}
         {%- if not is_state('sensor.first_floor_garage_actual_time', 'unknown') and 
-        (as_timestamp(now()) - 1*60) | timestamp_custom('%H:%M:%S') < strptime(states('sensor.first_floor_garage_actual_time'), '%H:%M:%S') -%}
+        (currentHours * 60 + currentMinutes - 3)  < states('sensor.first_floor_garage_actual_time') | int -%}
           on
         {%- else -%}
           off
