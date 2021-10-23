@@ -3,7 +3,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.second_floor_ping_thermostat_bathroom
+      entity_id: binary_sensor.second_floor_connection_of_thermostat_bathroom
       from: 'off'
       to: 'on'
   action:
@@ -16,7 +16,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.second_floor_ping_thermostat_kitchen_workroom_living_and_diving_room
+      entity_id: binary_sensor.second_floor_connection_of_thermostat_kitchen_workroom_living_and_diving_room
       from: 'off'
       to: 'on'
   action:
@@ -29,7 +29,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.second_floor_ping_thermostat_thomas_bedroom
+      entity_id: binary_sensor.second_floor_connection_of_thermostat_thomas_bedroom
       from: 'off'
       to: 'on'
   action:
@@ -42,7 +42,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.second_floor_ping_thermostat_north_room
+      entity_id: binary_sensor.second_floor_connection_of_thermostat_north_room
       from: 'off'
       to: 'on'
   action:
@@ -55,7 +55,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.second_floor_ping_thermostat_middle_room
+      entity_id: binary_sensor.second_floor_connection_of_thermostat_middle_room
       from: 'off'
       to: 'on'
   action:
@@ -68,7 +68,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.second_floor_ping_thermostat_corner_room
+      entity_id: binary_sensor.second_floor_connection_of_thermostat_corner_room
       from: 'off'
       to: 'on'
   action:
@@ -81,7 +81,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.second_floor_ping_thermostat_corridor_and_toilet
+      entity_id: binary_sensor.second_floor_connection_of_thermostat_corridor_and_toilet
       from: 'off'
       to: 'on'
   action:
@@ -94,7 +94,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.second_floor_ping_thermostat_parents_bedroom
+      entity_id: binary_sensor.second_floor_connection_of_thermostat_parents_bedroom
       from: 'off'
       to: 'on'
   action:

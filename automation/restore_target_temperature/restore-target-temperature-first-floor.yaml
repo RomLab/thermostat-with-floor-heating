@@ -3,7 +3,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.first_floor_ping_thermostat_corridor_and_toilet
+      entity_id: binary_sensor.first_floor_connection_of_thermostat_corridor_and_toilet
       from: 'off'
       to: 'on'
   action:
@@ -16,7 +16,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.first_floor_ping_thermostat_bathroom
+      entity_id: binary_sensor.first_floor_connection_of_thermostat_bathroom
       from: 'off'
       to: 'on'
   action:
@@ -29,7 +29,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.first_floor_ping_thermostat_living_room_and_kitchen
+      entity_id: binary_sensor.first_floor_connection_of_thermostat_living_room_and_kitchen
       from: 'off'
       to: 'on'
   action:
@@ -42,7 +42,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.first_floor_ping_thermostat_cellar
+      entity_id: binary_sensor.first_floor_connection_of_thermostat_cellar
       from: 'off'
       to: 'on'
   action:
@@ -55,7 +55,7 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.first_floor_ping_thermostat_garage
+      entity_id: binary_sensor.first_floor_connection_of_thermostat_garage
       from: 'off'
       to: 'on'
   action:
