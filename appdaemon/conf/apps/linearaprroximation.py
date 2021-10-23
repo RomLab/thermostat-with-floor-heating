@@ -16,7 +16,6 @@ class LinearAprroximation():
     slope = None
     intercept = None
     def create_line(self, numberFloor, heater, sensor):  
-
         insideData,outsideData,heaterData = self.read_data(numberFloor, heater, sensor)
         
         durations = []
@@ -46,34 +45,53 @@ class LinearAprroximation():
         pathTemperatureInside = '/home/appdaemon/.appdaemon/conf/apps/data/temperature_inside/'+numberFloor+'/'+sensor+'.csv'
         if path.exists(pathTemperatureInside):
             insideDataTemp = pandas.read_csv(pathTemperatureInside, parse_dates=[0],names=['Time','Temperature'],index_col=0)
-            if self.isValideValues(insideDataTemp, "Temperature"):
+            if self.isReplacedNanValue(insideDataTemp, "Temperature"):
                 insideData = insideDataTemp
-                insideData = insideData[insideData>-1000] # filter crap readings
+                #insideData.to_csv('/home/appdaemon/.appdaemon/conf/apps/inside_'+sensor+'.csv', encoding='utf-8')
+                insideData = insideData[insideData.astype(float)>-1000] # filter crap readings
             else:
                 insideData = []
         
         pathTemperatureOutside = '/home/appdaemon/.appdaemon/conf/apps/data/sensor.outdoor.csv'
         if path.exists(pathTemperatureOutside):
             outsideDataTemp = pandas.read_csv(pathTemperatureOutside, parse_dates=[0],names=['Time','Temperature'],index_col=0)
-            if self.isValideValues(outsideDataTemp, "Temperature"):
+            if self.isReplacedNanValue(outsideDataTemp, "Temperature"):
                 outsideData = outsideDataTemp
+                #outsideData.to_csv('/home/appdaemon/.appdaemon/conf/apps/sensor.outdoor.csv', encoding='utf-8')
             else:
                 outsideData = []
         
         pathHeater = '/home/appdaemon/.appdaemon/conf/apps/data/heater/'+numberFloor+'/'+heater+'.csv'
         if path.exists(pathHeater):
             heaterDatatemp = pandas.read_csv(pathHeater, parse_dates=[0],names=['Time','Status'],index_col=0)
-            if self.isValideValues(heaterDatatemp, "Status"):
+            if self.isReplacedNanValue(heaterDatatemp, "Status"):
                 heaterData = heaterDatatemp
+                #heaterData.to_csv('/home/appdaemon/.appdaemon/conf/apps/'+heater+'.csv', encoding='utf-8')
             else:
                 heaterData = []
         
         return insideData, outsideData, heaterData
     
-    def isValideValues(self, values, header):
+    def isReplacedNanValue(self, values, header):
+        maxSameValue = 0
+        
         for time, df in values.iterrows():
-            if df[header]=="unavailable" or  df[header]=="unknown":
+            
+            # Max same bad value in column
+            if maxSameValue==5:
                 return False
+            
+            if df[header]=="unavailable" or df[header]=="unknown" or df[header]=="":
+                maxSameValue +=1
+            else:
+                maxSameValue = 0
+        
+        # Replace bad value to NaN
+        values.replace(["unknown", "unavailable", ""], np.nan, inplace =True)
+        # Replace NaN value to previous value
+        values.fillna(method='ffill', inplace=True)
+        # Replace NaN value to next value
+        values.fillna(method='bfill', inplace=True)
         
         return True
 
@@ -97,8 +115,8 @@ class LinearAprroximation():
     
     def analyze_heatups(self, durations, outside_temps, inside_temps, numberFloor, sensor):
         """Look at the heatup dynamics and try to build a model."""
-        initial_outside = np.array([o[1].values[0] for o in outside_temps])
-        initial_inside = np.array([o[1].values[0] for o in inside_temps])
+        initial_outside = np.array([o[1].values[0] for o in outside_temps], dtype=float)
+        initial_inside = np.array([o[1].values[0] for o in inside_temps], dtype=float)
         durations_in_minutes = np.array([d[1].total_seconds() for d in durations])/60.0
         delta = (initial_inside-initial_outside)[:,0]
         print(delta)
