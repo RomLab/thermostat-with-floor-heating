@@ -24,9 +24,22 @@ class ThermoelectricActuatorsFirstFloor(hass.Hass):
         self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_cellar_ladder")
         self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_garage_1")
         self.listen_state(self.trigger, "input_boolean.thermo_actuator_first_floor_garage_2")
+        
+        # Sets value after restart Appdaemon
+        self.trigger("input_boolean.thermo_actuator_first_floor_corridor_and_toilet", None, None, None, None)
+        self.trigger("input_boolean.thermo_actuator_first_floor_bathroom_ladder", None, None, None, None)
+        self.trigger("input_boolean.thermo_actuator_first_floor_bathroom", None, None, None, None)
+        self.trigger("input_boolean.thermo_actuator_first_floor_kitchen_door", None, None, None, None)
+        self.trigger("input_boolean.thermo_actuator_first_floor_living_room_1", None, None, None, None)
+        self.trigger("input_boolean.thermo_actuator_first_floor_living_room_2", None, None, None, None)
+        self.trigger("input_boolean.thermo_actuator_first_floor_living_room_3", None, None, None, None)
+        self.trigger("input_boolean.thermo_actuator_first_floor_kitchen_windows", None, None, None, None)
+        self.trigger("input_boolean.thermo_actuator_first_floor_cellar_ladder", None, None, None, None)
+        self.trigger("input_boolean.thermo_actuator_first_floor_garage_1", None, None, None, None)
+        self.trigger("input_boolean.thermo_actuator_first_floor_garage_2", None, None, None, None)
 
-    def trigger(self, entity, attribute, old, new, kwargs):    
-       
+    def trigger(self, entity, attribute, old, new, kwargs):
+    
         state = self.get_state(entity)
         channel = None
 
