@@ -15,7 +15,9 @@
         {%- set nextLinearApproximation = ((roomTemperature - forecastTemperature) * slope - intercept) | int -%}
         {%- set currentLinearApproximation = ((roomTemperature - outdoorTemperature) * slope - intercept) | int -%}
         {%- set diffTime = (nextStartTimeSlotMinutes - currentMinutes) | int -%} 
-        {%- if is_state('input_boolean.control_according_to_plans_with_temperature_prediction','on') -%} 
+        {%- set isRequiredHeating = state_attr('climate.second_floor_middle_room', 'current_temperature') | float < state_attr('climate.second_floor_middle_room', 'temperature') |float - 0.5 -%}
+        {%- set stateOfControlAccordingToPlansWithTempPrediction = is_state('input_boolean.control_according_to_plans_with_temperature_prediction','on') -%}
+        {%- if stateOfControlAccordingToPlansWithTempPrediction and isRequiredHeating -%} 
           {%- if nextLinearApproximation >= 0 -%}  
             {%- if diffTime >= 0 and diffTime <= nextLinearApproximation -%}
               heating
