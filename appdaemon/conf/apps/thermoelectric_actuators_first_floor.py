@@ -27,15 +27,25 @@ class ThermoelectricActuatorsFirstFloor(hass.Hass):
         
         # Sets value after restart Appdaemon
         self.trigger("input_boolean.thermo_actuator_first_floor_corridor_and_toilet", None, None, None, None)
+        time.sleep(2)
         self.trigger("input_boolean.thermo_actuator_first_floor_bathroom_ladder", None, None, None, None)
+        time.sleep(2)
         self.trigger("input_boolean.thermo_actuator_first_floor_bathroom", None, None, None, None)
+        time.sleep(2)
         self.trigger("input_boolean.thermo_actuator_first_floor_kitchen_door", None, None, None, None)
+        time.sleep(2)
         self.trigger("input_boolean.thermo_actuator_first_floor_living_room_1", None, None, None, None)
+        time.sleep(2)
         self.trigger("input_boolean.thermo_actuator_first_floor_living_room_2", None, None, None, None)
+        time.sleep(2)
         self.trigger("input_boolean.thermo_actuator_first_floor_living_room_3", None, None, None, None)
+        time.sleep(2)
         self.trigger("input_boolean.thermo_actuator_first_floor_kitchen_windows", None, None, None, None)
+        time.sleep(2)
         self.trigger("input_boolean.thermo_actuator_first_floor_cellar_ladder", None, None, None, None)
+        time.sleep(2)
         self.trigger("input_boolean.thermo_actuator_first_floor_garage_1", None, None, None, None)
+        time.sleep(2)
         self.trigger("input_boolean.thermo_actuator_first_floor_garage_2", None, None, None, None)
 
     def trigger(self, entity, attribute, old, new, kwargs):
