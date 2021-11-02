@@ -36,7 +36,7 @@
     - service: mqtt.publish
       data:
         topic: 'home/second-floor/thomas-bedroom/required-temperature-from-system'
-        payload_template: "{{ state_attr('climate.second_thomas_bedroom','temperature') | float }}"
+        payload_template: "{{ state_attr('climate.second_floor_thomas_bedroom','temperature') | float }}"
         qos: 1
 - alias: 'Restores a target temperature after restart local thermostat (second floor) – north room'
   initial_state: 'on'
