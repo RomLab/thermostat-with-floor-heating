@@ -5,4 +5,4 @@ database_cleaning:
     - service: recorder.purge
       data:
         keep_days: 7
-        repack: false
+        repack: true

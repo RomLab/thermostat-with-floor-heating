@@ -315,7 +315,7 @@ logbook:
       - input_boolean.zone_second_floor_parents_bedroom
 
 mqtt:
-  broker: 192.168.11.247
+  broker: localhost
   username: homeassistant
   password: VelmiSilneHesloProHomeassistant
 
