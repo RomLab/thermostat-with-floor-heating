@@ -4,11 +4,11 @@
 - Postupovat podle: https://www.home-assistant.io/docs/installation/raspberry-pi/
 
 **Vytvoření služby pro spuštení:**
-- Založit službu/soubor: ```sudo nano -w /etc/systemd/system/home-assistant@homeasssistant.service```
+- Založit službu/soubor: ```sudo nano -w /etc/systemd/system/home-assistant@homeassistant.service```
 - Postupovat podle: https://www.home-assistant.io/docs/autostart/systemd/ (nakopírovat obsah z části **PYTHON VIRTUAL ENVIRONMENT** do služby/souboru viz výše)
 - Pokračovat dále v části **NEXT STEPS**
 
-## Instalce Samba
+## Instalace Samba
 ```
 sudo apt-get install samba
 sudo smbpasswd -a homeassistant
@@ -36,7 +36,7 @@ force directory mode = 0777
 sudo service smbd restart
 ```
 
-## Instalce AppDaemon
+## Instalace AppDaemon
 - Postupovat podle: https://www.home-assistant.io/docs/installation/raspberry-pi/ (změna homeassistant na appdaemon, **začátek od sudo useradd …**, konec po instalaci Python balíčků)
 - Naistalovat místo pip3 install homeassistant => **pip3 install appdaemon**
 
@@ -47,8 +47,8 @@ sudo service smbd restart
 ```
 [Unit]
 Description=App Deamon
-After=home-assistant@homeasssistant.service
-Requires=home-assistant@homeasssistant.service
+After=home-assistant@homeassistant.service
+Requires=home-assistant@homeassistant.service
 
 [Service]
 Type=simple
@@ -67,8 +67,8 @@ sudo nano /etc/samba/smb.conf
 ```
 - Na konec souboru smb.conf vložit:
 ```
-[homeassistant]
-path = /home/homeassistant/.homeassistant/
+[appdaemon]
+path = /home/appdaemon/.appdaemon/
 read only = no
 valid users = homeassistant
 writable = yes
@@ -81,7 +81,9 @@ force directory mode = 0777
 
 ## LCD I2C
 - Postupovat podle: https://www.circuitbasics.com/raspberry-pi-i2c-lcd-set-up-and-programming/
-- Instalovat do systému:  ```sudo apt-get install i2c-tools ```
+- Instalovat do systému:  
+  - ```sudo apt-get install i2c-tools ``` 
+  - ```sudo apt-get install python3-smbus```
 - Přepnutí do virtual environment appdaemon:
 ```
 sudo -u appdaemon -H -s
@@ -90,6 +92,8 @@ source bin/activate
 ```
 Instalovat do virtual environment appdaemon: ```pip3 install smbus```
 
+## 1-Wire sběrnice
+- Postupovat podle: https://www.raspberrypi-spy.co.uk/2018/02/enable-1-wire-interface-raspberry-pi/
 
 ## Instalace PostgreSQL
 Instalace: ```sudo apt-get install postgresql```
@@ -142,7 +146,7 @@ sudo -u appdaemon -H -s
 cd /srv/appdaemon
 source bin/activate
 ```
-Instalace do virtual environment appdaemon: ```pip3 install RPi.GPIO```
+Instalace do virtual environment appdaemon: ```export CFLAGS=-fcommon``` ```pip3 install RPi.GPIO```
 
 **Shell command – práva:**
 - Upravení práv pro uživatel homeassistant pro spuštení shell_command skrz HA (https://community.home-assistant.io/t/is-adding-the-hass-user-to-sudoers-for-script-a-good-idea/78862)
@@ -170,7 +174,7 @@ Requires=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf -d
+ExecStart=/usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf
 ExecReload=/bin/kill -HUP $MAINPID
 PIDFile=/var/run/mosquitto.pid
 Restart=on-failure
@@ -210,7 +214,7 @@ source bin/activate
   -  ```sudo apt-get install libatlas-base-dev```
 - Instalovat do virtual environment appdaemon: 
   - ```pip3 install pandas```
-  - ```pip3.8 install numpy```
+  - ```pip3 install numpy```
   - ```pip3 install psycopg2```
   - ```pip3 install matplotlib```
 
