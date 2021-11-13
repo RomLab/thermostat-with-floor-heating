@@ -23,7 +23,7 @@
     - service: mqtt.publish
       data:
         topic: 'home/second-floor/kitchen-workroom-living-and-diving-room/required-temperature-from-system'
-        payload_template: "{{ state_attr('climate.second_kitchen_workroom_living_and_diving_room','temperature') | float }}"
+        payload_template: "{{ state_attr('climate.second_floor_kitchen_workroom_living_and_diving_room','temperature') | float }}"
         qos: 1
 - alias: 'Restores a target temperature after restart local thermostat (second floor) – thomas bedroom'
   initial_state: 'on'
