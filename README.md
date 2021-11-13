@@ -162,6 +162,7 @@ Instalace do virtual environment appdaemon: ```export CFLAGS=-fcommon``` ```pip3
 - - Přidání do souboru:
 - - - ```allow_anonymous false```
 - - - ```password_file /etc/mosquitto/users.passwd```
+- - - ```listener 1883```
 - Založit službu/soubor: ```sudo nano -w /etc/systemd/system/mosquitto.service```
 - - Vložit:
 ```
