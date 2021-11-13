@@ -134,13 +134,13 @@ recorder:
       - input_boolean.thermo_actuator_second_floor_parents_bedroom_window
       - input_boolean.thermo_actuator_second_floor_parents_bedroom_door
       - input_boolean.thermo_actuator_second_floor_corridor_and_toilet
-      #
+      # Heating circuit in first floor 
       - input_boolean.zone_first_floor_corridor_and_toilet
       - input_boolean.zone_first_floor_bathroom
       - input_boolean.zone_first_floor_living_room_and_kitchen
       - input_boolean.zone_first_floor_cellar
       - input_boolean.zone_first_floor_garage
-      #
+      # Heating circuit in second floor
       - input_boolean.zone_second_floor_bathroom
       - input_boolean.zone_second_floor_kitchen_workroom_living_and_diving_room
       - input_boolean.zone_second_floor_thomas_bedroom
@@ -149,6 +149,21 @@ recorder:
       - input_boolean.zone_second_floor_corner_room
       - input_boolean.zone_second_floor_corridor_and_toilet
       - input_boolean.zone_second_floor_parents_bedroom
+      # Detection of open window in first floor
+      - binary_sensor.first_floor_detection_of_open_window_corridor_and_toilet
+      - binary_sensor.first_floor_detection_of_open_window_bathroom
+      - binary_sensor.first_floor_detection_of_open_window_living_room_and_kitchen
+      - binary_sensor.first_floor_detection_of_open_window_cellar
+      - binary_sensor.first_floor_detection_of_open_window_garage
+       # Detection of open window in second floor
+      - binary_sensor.second_floor_detection_of_open_window_bathroom
+      - binary_sensor.second_floor_detection_of_open_window_kitchen_workroom_living_and_diving_room
+      - binary_sensor.second_floor_detection_of_open_window_thomas_bedroom
+      - binary_sensor.second_floor_detection_of_open_window_north_room
+      - binary_sensor.second_floor_detection_of_open_window_middle_room
+      - binary_sensor.second_floor_detection_of_open_window_corner_room
+      - binary_sensor.second_floor_detection_of_open_window_corridor_and_toilet
+      - binary_sensor.second_floor_detection_of_open_window_parents_bedroom
 
 
 
@@ -217,13 +232,13 @@ history:
       - input_boolean.thermo_actuator_second_floor_parents_bedroom_window
       - input_boolean.thermo_actuator_second_floor_parents_bedroom_door
       - input_boolean.thermo_actuator_second_floor_corridor_and_toilet
-      #
+      # Heating circuit in first floor
       - input_boolean.zone_first_floor_corridor_and_toilet
       - input_boolean.zone_first_floor_bathroom
       - input_boolean.zone_first_floor_living_room_and_kitchen
       - input_boolean.zone_first_floor_cellar
       - input_boolean.zone_first_floor_garage
-      #
+      # Heating circuit in second floor
       - input_boolean.zone_second_floor_bathroom
       - input_boolean.zone_second_floor_kitchen_workroom_living_and_diving_room
       - input_boolean.zone_second_floor_thomas_bedroom
@@ -232,6 +247,21 @@ history:
       - input_boolean.zone_second_floor_corner_room
       - input_boolean.zone_second_floor_corridor_and_toilet
       - input_boolean.zone_second_floor_parents_bedroom
+      # Detection of open window in first floor
+      - binary_sensor.first_floor_detection_of_open_window_corridor_and_toilet
+      - binary_sensor.first_floor_detection_of_open_window_bathroom
+      - binary_sensor.first_floor_detection_of_open_window_living_room_and_kitchen
+      - binary_sensor.first_floor_detection_of_open_window_cellar
+      - binary_sensor.first_floor_detection_of_open_window_garage
+       # Detection of open window in second floor
+      - binary_sensor.second_floor_detection_of_open_window_bathroom
+      - binary_sensor.second_floor_detection_of_open_window_kitchen_workroom_living_and_diving_room
+      - binary_sensor.second_floor_detection_of_open_window_thomas_bedroom
+      - binary_sensor.second_floor_detection_of_open_window_north_room
+      - binary_sensor.second_floor_detection_of_open_window_middle_room
+      - binary_sensor.second_floor_detection_of_open_window_corner_room
+      - binary_sensor.second_floor_detection_of_open_window_corridor_and_toilet
+      - binary_sensor.second_floor_detection_of_open_window_parents_bedroom
 
 logbook:
   include:
@@ -298,13 +328,13 @@ logbook:
       - input_boolean.thermo_actuator_second_floor_parents_bedroom_window
       - input_boolean.thermo_actuator_second_floor_parents_bedroom_door
       - input_boolean.thermo_actuator_second_floor_corridor_and_toilet
-      #
+      # Heating circuit in first floor
       - input_boolean.zone_first_floor_corridor_and_toilet
       - input_boolean.zone_first_floor_bathroom
       - input_boolean.zone_first_floor_living_room_and_kitchen
       - input_boolean.zone_first_floor_cellar
       - input_boolean.zone_first_floor_garage
-      #
+      # Heating circuit in second floor
       - input_boolean.zone_second_floor_bathroom
       - input_boolean.zone_second_floor_kitchen_workroom_living_and_diving_room
       - input_boolean.zone_second_floor_thomas_bedroom
@@ -313,6 +343,21 @@ logbook:
       - input_boolean.zone_second_floor_corner_room
       - input_boolean.zone_second_floor_corridor_and_toilet
       - input_boolean.zone_second_floor_parents_bedroom
+      # Detection of open window in first floor
+      - binary_sensor.first_floor_detection_of_open_window_corridor_and_toilet
+      - binary_sensor.first_floor_detection_of_open_window_bathroom
+      - binary_sensor.first_floor_detection_of_open_window_living_room_and_kitchen
+      - binary_sensor.first_floor_detection_of_open_window_cellar
+      - binary_sensor.first_floor_detection_of_open_window_garage
+       # Detection of open window in second floor
+      - binary_sensor.second_floor_detection_of_open_window_bathroom
+      - binary_sensor.second_floor_detection_of_open_window_kitchen_workroom_living_and_diving_room
+      - binary_sensor.second_floor_detection_of_open_window_thomas_bedroom
+      - binary_sensor.second_floor_detection_of_open_window_north_room
+      - binary_sensor.second_floor_detection_of_open_window_middle_room
+      - binary_sensor.second_floor_detection_of_open_window_corner_room
+      - binary_sensor.second_floor_detection_of_open_window_corridor_and_toilet
+      - binary_sensor.second_floor_detection_of_open_window_parents_bedroom
 
 mqtt:
   broker: localhost
