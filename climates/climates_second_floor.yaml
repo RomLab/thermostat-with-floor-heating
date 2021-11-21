@@ -10,7 +10,7 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.5
+  precision: 0.1
 # Kitchen, workroom, living and diving room
 - platform: generic_thermostat
   name: second_floor_kitchen_workroom_living_and_diving_room
@@ -23,7 +23,7 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.5
+  precision: 0.1
 # Thomas bedroom
 - platform: generic_thermostat
   name: second_floor_thomas_bedroom
@@ -36,7 +36,7 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.5
+  precision: 0.1
 # North room
 - platform: generic_thermostat
   name: second_floor_north_room
@@ -49,7 +49,7 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.5
+  precision: 0.1
 # Middle room
 - platform: generic_thermostat
   name: second_floor_middle_room
@@ -62,7 +62,7 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.5
+  precision: 0.1
 # Corner room
 - platform: generic_thermostat
   name: second_floor_corner_room
@@ -75,7 +75,7 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.5
+  precision: 0.1
 # Corridor and toilet
 - platform: generic_thermostat
   name: second_floor_corridor_and_toilet
@@ -88,7 +88,7 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.5
+  precision: 0.1
 # Parents bedroom
 - platform: generic_thermostat
   name: second_floor_parents_bedroom
@@ -101,4 +101,4 @@
   hot_tolerance: 0
   initial_hvac_mode: 'heat'
   away_temp: 16
-  precision: 0.5
+  precision: 0.1
