@@ -111,7 +111,7 @@ recorder:
       - switch.orange_led
       - switch.blue_led
       # Thermo actuators
-      - input_boolean.thermo_actuator_first_floor_corridor_and_toiler
+      - input_boolean.thermo_actuator_first_floor_corridor_and_toilet
       - input_boolean.thermo_actuator_first_floor_bathroom_ladder
       - input_boolean.thermo_actuator_first_floor_bathroom
       - input_boolean.thermo_actuator_first_floor_kitchen_door
@@ -209,7 +209,7 @@ history:
       - switch.orange_led
       - switch.blue_led
       # Thermo actuators
-      - input_boolean.thermo_actuator_first_floor_corridor_and_toiler
+      - input_boolean.thermo_actuator_first_floor_corridor_and_toilet
       - input_boolean.thermo_actuator_first_floor_bathroom_ladder
       - input_boolean.thermo_actuator_first_floor_bathroom
       - input_boolean.thermo_actuator_first_floor_kitchen_door
@@ -305,7 +305,7 @@ logbook:
       - switch.orange_led
       - switch.blue_led
       # Thermo actuators
-      - input_boolean.thermo_actuator_first_floor_corridor_and_toiler
+      - input_boolean.thermo_actuator_first_floor_corridor_and_toilet
       - input_boolean.thermo_actuator_first_floor_bathroom_ladder
       - input_boolean.thermo_actuator_first_floor_bathroom
       - input_boolean.thermo_actuator_first_floor_kitchen_door
