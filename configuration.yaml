@@ -88,7 +88,7 @@ recorder:
         # First floor
       - sensor.first_floor_corridor_and_toilet_temp
       - sensor.first_floor_bathroom_temp
-      - sensor.living_room_and_kitchen_temp
+      - sensor.first_floor_living_room_and_kitchen_temp
       - sensor.first_floor_cellar_temp
       - sensor.first_floor_garage_temp
         # Second floor
