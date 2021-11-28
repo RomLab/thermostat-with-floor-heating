@@ -1,7 +1,8 @@
 import appdaemon.plugins.hass.hassapi as hass
 import sys
-import psycopg2
-from psycopg2 import Error
+import sqlite3
+from sqlite3 import Error
+import csv
 from linearaprroximation import LinearAprroximation
 
 class DATABASE(hass.Hass):
@@ -40,11 +41,11 @@ class DATABASE(hass.Hass):
 
         outdoorSensor = "sensor.outdoor"
 
-        self.getCreateCSVFromDatabese(outdoorSensor, str(outdoorSensor)+".csv")
+        self.createCSVFromDatabase(outdoorSensor, str(outdoorSensor)+".csv")
         
         for index, value in enumerate(slopeFirstFloor):
-            self.getCreateCSVFromDatabese(heaterFristFloor[index], "heater/first_floor/"+str(heaterFristFloor[index])+".csv")
-            self.getCreateCSVFromDatabese(sensorFirstFloor[index], "temperature_inside/first_floor/"+str(sensorFirstFloor[index])+".csv")
+            self.createCSVFromDatabase(heaterFristFloor[index], "heater/first_floor/"+str(heaterFristFloor[index])+".csv")
+            self.createCSVFromDatabase(sensorFirstFloor[index], "temperature_inside/first_floor/"+str(sensorFirstFloor[index])+".csv")
             slope, intercept = aprroximation.create_line("first_floor", heaterFristFloor[index], sensorFirstFloor[index])
             if(slope != None and intercept != None):
                 self.set_state(slopeFirstFloor[index],  state = slope)
@@ -93,8 +94,8 @@ class DATABASE(hass.Hass):
             "sensor.second_floor_parents_bedroom_temp"]
 
         for index, value in enumerate(slopeSecondFloor):
-            self.getCreateCSVFromDatabese(heaterSecondFloor[index], "heater/second_floor/"+str(heaterSecondFloor[index])+".csv")
-            self.getCreateCSVFromDatabese(sensorSecondFloor[index], "temperature_inside/second_floor/"+str(sensorSecondFloor[index])+".csv")
+            self.createCSVFromDatabase(heaterSecondFloor[index], "heater/second_floor/"+str(heaterSecondFloor[index])+".csv")
+            self.createCSVFromDatabase(sensorSecondFloor[index], "temperature_inside/second_floor/"+str(sensorSecondFloor[index])+".csv")
             slope, intercept = aprroximation.create_line("second_floor", heaterSecondFloor[index], sensorSecondFloor[index])
             if(slope != None and intercept != None):
                 self.set_state(slopeSecondFloor[index],  state = slope)
@@ -104,67 +105,25 @@ class DATABASE(hass.Hass):
      
 
         
-    
-    def getCreateCSVFromDatabese(self, entity, path):
+    def createCSVFromDatabase(self, entity, path):
+        db_file = "/home/homeassistant/.homeassistant/home-assistant_v2.db"
         connection = None
+        cursor = None
         try:
-            # Connect to an existing database
-            connection = psycopg2.connect(user="appdaemon",
-                                          password="VelmiSilneHesloProHomeassistant",
-                                          host="localhost",
-                                          port="5432",
-                                          database="homeassistant")  
-            # Create a cursor to perform database operations
+            connection = sqlite3.connect(db_file)
             cursor = connection.cursor()
-             #self.log("TESTTEST222")
-            sql = "COPY (SELECT last_updated, state from states WHERE entity_id="+"'"+str(entity)+"' ORDER BY last_updated ASC) TO STDOUT WITH CSV DELIMITER ','"
-            #outputquery = "COPY ({0}) TO STDOUT WITH CSV HEADER".format("SELECT last_updated, state from states WHERE entity_id='switch.blue_led'")
-            with open("home/appdaemon/.appdaemon/conf/apps/data/"+str(path), 'w') as f:
-                cursor.copy_expert(sql, f)
-            # Print PostgreSQL details
-            #print("PostgreSQL server information")
-            #print(connection.get_dsn_parameters(), "\n")
-            # Executing a SQL query SELECT current_database()
-            #cursor.execute("SELECT * from states;")
-            # Fetch result
-            #record = cursor.fetchone()
-            #self.log("You are connected to - ", record, "\n")  
-
-            #cursor.execute("SELECT last_updated, state from states WHERE entity_id='sensor.hot_water_tank_top'")
-            #record = cursor.fetchall()
-           # self.log(record)
-
-        except (Exception, Error) as error:
-            print("Error while connecting to PostgreSQL", error)
+            cursor.execute("SELECT last_updated, state from states WHERE entity_id="+"'"+str(entity)+"' ORDER BY last_updated ASC")
+            with open("home/appdaemon/.appdaemon/conf/apps/data/"+str(path), 'w') as csv_file:
+                csv_writer = csv.writer(csv_file, delimiter=",")
+                csv_writer.writerows(cursor)
+        except Error as e:
+            self.log("Error while connecting to PostgreSQL" + e)
         finally:
             if (connection):
                 cursor.close()
                 connection.close()
-                print("PostgreSQL connection is closed")
+                #self.log("SQLITE connection is closed.")
 
-
-
-
-    def getEntityHeater(self, typeOfEntity):
-        
-        listEntity = []
-        for entity in self.get_state("input_boolean"):
-            if typeOfEntity in entity:
-                listEntity.append(entity)
-        
-        return listEntity
-    
-    def getSensorFromRoom(self, floorNumber):
-        
-        listEntity = []
-
-        for entity in self.get_state("sensor"):
-            if floorNumber in entity:
-                splitEntity = entity.split("_")
-                if splitEntity[-1] == "temp":
-                    listEntity.append(entity)
-        
-        return listEntity
 
 
        
