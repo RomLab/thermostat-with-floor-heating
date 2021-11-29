@@ -99,7 +99,7 @@ sensor.first_floor_corridor_and_toilet_temp:
 sensor.first_floor_bathroom_temp:
   friendly_name: 'Aktuální teplota – koupelna (první patro)'
   icon: mdi:thermometer
-sensor.living_room_and_kitchen_temp:
+sensor.first_floor_living_room_and_kitchen_temp:
   friendly_name: 'Aktuální teplota – obývací pokoj a kuchyň (první patro)'
   icon: mdi:thermometer
 sensor.first_floor_cellar_temp:
