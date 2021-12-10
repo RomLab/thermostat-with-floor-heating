@@ -16,6 +16,8 @@ class LinearAprroximation():
     slope = None
     intercept = None
     def create_line(self, numberFloor, heater, sensor):  
+        slope = None
+        intercept = None
         insideData,outsideData,heaterData = self.read_data(numberFloor, heater, sensor)
         
         durations = []
@@ -32,7 +34,10 @@ class LinearAprroximation():
             inside_temps = self.find_temperatures_at_times(insideData, durations)
         
         if len(durations) != 0 and len(outside_temps) != 0 and len(inside_temps) != 0:
-            self.analyze_heatups(durations, outside_temps, inside_temps, numberFloor, sensor)
+            try:
+                self.analyze_heatups(durations, outside_temps, inside_temps, numberFloor, sensor)
+            except:
+                return self.slope, self.intercept
         
         return self.slope, self.intercept
     
