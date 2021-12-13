@@ -12,8 +12,8 @@
         {%- set outdoorTemperature = states('sensor.outdoor') | float(0) -%}
         {%- set slope = states('input_number.first_floor_living_room_and_kitchen_slope') | float(0) -%}
         {%- set intercept = states('input_number.first_floor_living_room_and_kitchen_intercept') | float(0) -%}
-        {%- set nextLinearApproximation = ((roomTemperature - forecastTemperature) * slope - intercept) | int(0) -%}
-        {%- set currentLinearApproximation = ((roomTemperature - outdoorTemperature) * slope - intercept) | int(0) -%}
+        {%- set nextLinearApproximation = ((roomTemperature - forecastTemperature) * slope + intercept) | int(0) -%}
+        {%- set currentLinearApproximation = ((roomTemperature - outdoorTemperature) * slope + intercept) | int(0) -%}
         {%- set diffTime = (nextStartTimeSlotMinutes - currentMinutes) | int(0) -%} 
         {%- set isRequiredHeating = state_attr('climate.first_floor_living_room_and_kitchen', 'current_temperature') | float(0) < state_attr('climate.first_floor_living_room_and_kitchen', 'temperature') | float(0) - 0.5 | float(0) -%}
         {%- set stateOfControlAccordingToPlansWithTempPrediction = is_state('input_boolean.control_according_to_plans_with_temperature_prediction','on') -%}
